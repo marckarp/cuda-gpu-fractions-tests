@@ -65,6 +65,50 @@ Key facts:
   [Sanjana's repo](https://github.com/scheckerNV/mps-multi-gpu) for what manual
   asymmetric setup takes and why it is fragile.
 
+## Using more than one GPU
+
+A fraction is always **per GPU** and must be below 1.0 (`gpu-fraction: "1.5"`
+is rejected by KAI's admission webhook). To get more than one GPU's worth, ask
+for several GPUs with `gpu-fraction-num-devices`, and the same fraction is
+applied to each one:
+
+```yaml
+annotations:
+  gpu-fraction: "0.75"              # share of EACH GPU
+  gpu-fraction-num-devices: "2"     # how many GPUs
+  nvidia.com/container.main.gpu-compute.mode: sm-sharing
+```
+
+```
+   1.5 GPUs of capacity = 0.75 x 2 GPUs
+   ┌──────── GPU 0 ────────┐   ┌──────── GPU 1 ────────┐
+   │ ███████████████░░░░░  │   │ ███████████████░░░░░  │
+   │  this pod: 75%  free  │   │  this pod: 75%  free  │
+   └───────────────────────┘   └───────────────────────┘
+     80 of 108 SMs, 29952 MiB     80 of 108 SMs, 29952 MiB
+```
+
+Rules:
+
+- **Same node only.** One pod lives on one machine, so all its GPUs are on that
+  node. A model can still span nodes by using several pods (Dynamo `multinode`,
+  pipeline or tensor parallel), each with its own fraction on its own node.
+- **Same share on every GPU.** "1 full GPU + half of another" has no YAML option.
+  Use an even split instead (0.75 x 2), which leaves 0.25 of each GPU free for
+  other pods.
+- **The model must be split to use it.** GPU memory does not pool. A TP=1
+  engine only uses one GPU, so the second GPU's share is wasted. Use TP=2 (or
+  PP=2). If you need only a little more KV cache, a bigger share of ONE GPU
+  (e.g. 0.9 with TP=1) is simpler and avoids cross-GPU traffic.
+- **Size vLLM against the slice.** On this stack CUDA inside the pod reports the
+  capped memory (29952 MiB at 0.75; measured in test 04), so
+  `--gpu-memory-utilization` applies to the slice, not the 40 GB card. The
+  Dynamo doc says CUDA reports the physical total; our measurement differs, so
+  check `torch.cuda.mem_get_info()` in your pod before choosing the value.
+
+Tested here: test 03 (0.5 x 2, two pods packed, third refused) and test 04
+(memory and compute enforcement at 0.25, 0.5, 0.75 x 2).
+
 ## Stack status (2026-10-22)
 
 | Piece | State |
