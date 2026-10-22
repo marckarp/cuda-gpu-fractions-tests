@@ -65,6 +65,24 @@ Key facts:
   [Sanjana's repo](https://github.com/scheckerNV/mps-multi-gpu) for what manual
   asymmetric setup takes and why it is fragile.
 
+## Setting compute and memory separately
+
+`gpu-fraction` sets both to the same share. To size them independently, for
+example a compute-heavy prefill pod next to a memory-heavy decode pod on one
+GPU, set each one directly (tested in test 05):
+
+```yaml
+# prefill: most of the SMs, little memory
+nvidia.com/container.main.gpu-compute.request: "0.7"
+nvidia.com/container.main.gpu-memory.request: 10000Mi
+nvidia.com/container.main.gpu-memory.limit: 10000Mi
+nvidia.com/container.main.gpu-compute.mode: sm-sharing
+```
+
+Result on one A100: prefill 74 SMs / 10000 MiB, decode (0.3, 28000Mi) 32 SMs /
+28000 MiB. Compute is a percentage, rounded to SMs by the driver. With memory
+only, the scheduler sets compute = memory / usable GPU memory.
+
 ## Using more than one GPU
 
 A fraction is always **per GPU** and must be below 1.0 (`gpu-fraction: "1.5"`
