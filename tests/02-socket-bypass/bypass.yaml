@@ -1,0 +1,36 @@
+# Socket-bypass probe. A normal 0.5-fraction pod, but it points
+# CUDA_MPS_PIPE_DIRECTORY at an empty directory so the process cannot reach the
+# MPS server. In Default compute mode the driver then lets it open a direct
+# context and see the whole GPU. Run: kubectl apply, then read logs.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fraction-bypass
+  labels:
+    kai.scheduler/queue: default-queue
+  annotations:
+    gpu-fraction: "0.5"
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+spec:
+  schedulerName: kai-scheduler
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+  containers:
+  - name: main
+    image: nvcr.io/nvidia/k8s/cuda-sample:devicequery
+    command: ["sh","-c"]
+    args:
+      - |
+        echo "normal env PIPE_DIR=$CUDA_MPS_PIPE_DIRECTORY ATP=$CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"
+        echo "=== attempt bypass: empty pipe dir + 100% override ==="
+        mkdir -p /tmp/nomps
+        export CUDA_MPS_PIPE_DIRECTORY=/tmp/nomps
+        export CUDA_MPS_ACTIVE_THREAD_PERCENTAGE=100
+        deviceQuery 2>&1 | grep -E 'Multiprocessors|Result|[Ee]rror'
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
