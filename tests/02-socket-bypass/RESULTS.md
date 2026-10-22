@@ -1,5 +1,18 @@
 # 02 — MPS socket bypass (symmetric setup)
 
+> **Update (same day): result is INCONCLUSIVE.** Re-run with both GPUs in
+> `Exclusive_Process` and mpsd restarted (MPS server confirmed holding both GPUs)
+> ALSO reported 108 Multiprocessors. deviceQuery reads device attributes and does
+> not check that context creation succeeded, so "108" only shows the process did
+> not connect to MPS; it does not show it can execute on the GPU. Kernel-execution
+> evidence (SM-ID probes, as in scheckerNV/mps-multi-gpu) is required before
+> claiming a bypass. GPUs restored to `Default` afterwards. The text below is the
+> original, pre-update write-up.
+>
+> Related: Sanjana's exp 08 partition-override finding is addressed by the
+> CUDA 13.5 / r620 default per-device SM partition per namespace (driver ignores
+> the client env var when a default is set).
+
 **Bypass reproduced — 2026-10-22.** A non-root pod with a `gpu-fraction: "0.5"`
 cap, running with `CUDA_MPS_PIPE_DIRECTORY` pointed at an empty directory, saw
 all 108 SMs instead of the capped 54. This reproduces scheckerNV/mps-multi-gpu
