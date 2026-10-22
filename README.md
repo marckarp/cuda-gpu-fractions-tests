@@ -13,6 +13,7 @@ with evidence, and record every step so it can be reproduced.
 | [03](tests/03-multi-gpu-symmetric/RESULTS.md) | Half of 2 GPUs per pod | PASS: two pods packed, a third refused |
 | [04](tests/04-enforcement/RESULTS.md) | Memory and compute limits at 0.25 / 0.5 / 0.75 of 2 GPUs | PASS: allocation fails at the cap, speed tracks the share |
 | [05](tests/05-uneven-shares/RESULTS.md) | Uneven shares, compute set apart from memory | PASS: 0.3 / 0.7 split, prefill 74 SMs + decode 32 SMs on one GPU |
+| [06](tests/06-disagg-one-gpu/RESULTS.md) | Dynamo 1.5 disagg, prefill + decode as fractions of one GPU | PASS: requests served; NIXL KV transfer between the two fractions is CUDA IPC, 483 MB in 2.3 ms (~214 GB/s) |
 
 All of this is on the PR #147 fork, not the released stack (see
 [Stack status](#stack-status-2026-10-22)).
@@ -187,7 +188,7 @@ Tested: test 03 (0.5 x 2, two pods packed, third refused) and test 04
   when partitions are set by hand ([Sanjana's exp 08](https://github.com/scheckerNV/mps-multi-gpu/tree/main/experiments/08-two-workers-unequal-compute)).
   Driver r620 adds a per-namespace default that ignores the app's choice.
 - **Different shares per GPU in one pod:** no YAML option.
-- **Our tests are synthetic.** No model served yet, no noisy-neighbor test, no
+- **No performance comparison yet.** Test 06 served a model, but there is no noisy-neighbor test and no
   full-GPU baseline.
 
 ## Stack status (2026-10-22)
