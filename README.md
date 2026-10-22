@@ -6,8 +6,10 @@ with evidence, and record every step so it can be reproduced.
 
 ## How GPU fractions work
 
-You write two numbers on your pod: a compute share and a memory cap. Four layers
-turn them into reality:
+You write two numbers on your pod: a compute share and a memory cap. There is
+also a shorthand, `gpu-fraction: "0.5"`, meaning half of both; the scheduler
+expands it into the explicit annotations below, which is what every later layer
+reads. Four layers turn them into reality:
 
 Two projects do the work: **KAI-Scheduler** (the Kubernetes scheduler, cluster-wide)
 and **kai-gpu-fractioning** (agents on every GPU node). Below them sits the NVIDIA
