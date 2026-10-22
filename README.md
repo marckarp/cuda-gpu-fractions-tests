@@ -9,25 +9,42 @@ with evidence, and record every step so it can be reproduced.
 You write two numbers on your pod: a compute share and a memory cap. Four layers
 turn them into reality:
 
+Two projects do the work: **KAI-Scheduler** (the Kubernetes scheduler, cluster-wide)
+and **kai-gpu-fractioning** (agents on every GPU node). Below them sits the NVIDIA
+driver, which is the only layer that can actually say no.
+
 ```
-  pod annotations:  gpu-compute.request: "0.5"   gpu-memory.limit: 20480Mi
-         │
-         ▼
-  KAI SCHEDULER          picks a GPU with room, does the accounting.
-         │               Enforces nothing itself.
-         ▼
-  FRACTIOND              NRI plugin, runs at container create. Reads the
-         │               annotations, injects env + the pod's MPS pipe.
-         ▼
-  MPSD                   runs the MPS server per GPU. Creates one MPS
-         │               namespace per container and pins its SM share
-         │               on the server (compute enforcement, PR #147).
-         ▼
-  DRIVER (r615)          two hard gates:
-         │               - memory: per-process limit, alloc over cap FAILS
-         │               - EXCLUSIVE_PROCESS: only MPS may open the GPU,
-         ▼                 so nobody can go around it
-  GPU                    108 SMs, 40GB. Has no idea fractions exist.
+ your pod:   gpu-compute.request: "0.5"     gpu-memory.limit: 20480Mi
+                              │
+ ┌────────────────────────────▼────────────────────────────────────┐
+ │ KAI-SCHEDULER (scheduler, one per cluster)                      │
+ │ Picks a GPU with room, does the bookkeeping, writes the         │
+ │ decision onto the pod. Enforces nothing itself.                 │
+ └────────────────────────────┬────────────────────────────────────┘
+                              │
+ ┌────────────────────────────▼────────────────────────────────────┐
+ │ KAI-GPU-FRACTIONING (agents on every GPU node)                  │
+ │                                                                 │
+ │  fractiond   at container start: reads KAI's decision, injects  │
+ │              the env vars and the pod's private MPS pipe        │
+ │                                                                 │
+ │  mpsd        runs the MPS server per GPU; gives each container  │
+ │              its own MPS namespace pinned to its SM share       │
+ │              (server-side compute enforcement = PR #147)        │
+ │                                                                 │
+ │  (also: metricsd for metrics, operator to manage these agents)  │
+ └────────────────────────────┬────────────────────────────────────┘
+                              │
+ ┌────────────────────────────▼────────────────────────────────────┐
+ │ NVIDIA DRIVER (r615) — the hard gates                           │
+ │  memory cap     per-process limit; alloc over cap FAILS         │
+ │  EXCLUSIVE_PROCESS   only the MPS server may open the GPU,      │
+ │                      so no process can go around MPS            │
+ └────────────────────────────┬────────────────────────────────────┘
+                              │
+ ┌────────────────────────────▼────────────────────────────────────┐
+ │ GPU — 108 SMs, 40GB. Has no idea fractions exist.               │
+ └─────────────────────────────────────────────────────────────────┘
 ```
 
 Key facts:
