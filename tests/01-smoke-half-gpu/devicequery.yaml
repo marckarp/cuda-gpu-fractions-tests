@@ -1,0 +1,28 @@
+# Enforcement probe: half-GPU pod that tries to override its SM share to 100%.
+# PASS = deviceQuery reports 54 of 108 multiprocessors anyway.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fraction-devicequery
+  labels:
+    kai.scheduler/queue: default-queue
+  annotations:
+    gpu-fraction: "0.5"
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+spec:
+  schedulerName: kai-scheduler
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+  containers:
+  - name: main
+    image: nvcr.io/nvidia/k8s/cuda-sample:devicequery
+    env:
+    - name: CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+      value: "100"
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]

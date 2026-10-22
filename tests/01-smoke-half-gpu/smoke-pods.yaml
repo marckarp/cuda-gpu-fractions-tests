@@ -1,0 +1,52 @@
+# Two half-GPU pods; KAI bin-packs them onto one GPU, mpsd pins each
+# container's MPS namespace at 50% SMs. Container must be named "main"
+# (the annotations name the container they apply to).
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fraction-smoke-a
+  labels:
+    kai.scheduler/queue: default-queue
+  annotations:
+    gpu-fraction: "0.5"
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+spec:
+  schedulerName: kai-scheduler
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext:
+    runAsNonRoot: true   # root could raise its own cap via MPS control; keep non-root
+    runAsUser: 1000
+  containers:
+  - name: main
+    image: nvidia/cuda:13.3.1-base-ubuntu24.04
+    command: ["sleep", "3600"]
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fraction-smoke-b
+  labels:
+    kai.scheduler/queue: default-queue
+  annotations:
+    gpu-fraction: "0.5"
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+spec:
+  schedulerName: kai-scheduler
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+  containers:
+  - name: main
+    image: nvidia/cuda:13.3.1-base-ubuntu24.04
+    command: ["sleep", "3600"]
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
