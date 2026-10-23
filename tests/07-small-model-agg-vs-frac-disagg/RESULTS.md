@@ -107,9 +107,38 @@ For reference, the single idle request in test 06 moved 483 MB in 2.3 ms
 - HBM bandwidth contention between fractions is still unmeasured; the transfer
   problem hid it.
 
+## Isolating test: standalone NIXL, same GPU, no vLLM (2026-10-23)
+
+[`nixl_bench.py`](nixl_bench.py), run inside the decode pod (whole A100, UCX 1.21,
+`device(cuda_ipc/cuda)` selected): a target process holds 565 MB, an initiator
+READs it over NIXL as 28 large descriptors or 8,640 x 64 KB descriptors, polling
+completion tightly or once per 40 ms. "busy" adds a third process running a
+matmul loop on the same GPU.
+
+| GPU | descriptors | poll | time | MB/s |
+|---|---|---|---|---|
+| idle | 28 | tight | 2.2 ms | 267,000 |
+| idle | 8,640 x 64 KB | tight | 76 ms | 7,750 |
+| idle | 8,640 x 64 KB | every 40 ms | 123 ms | 4,800 |
+| busy | 28 | tight | 10 ms | 59,000 |
+| busy | 8,640 x 64 KB | tight | 0.55 s | 1,070 |
+| busy | 8,640 x 64 KB | every 40 ms | 0.69 s | 860 |
+
+(The first run printed `ok: False` for the 8,640 case; that was the script
+checking bytes past the covered range because 8,640 does not divide 565 MB. Fixed
+in the checked-in script; the transfer itself completed.)
+
+**Verdict:** NIXL/UCX cuda_ipc is not the bottleneck. The worst standalone case,
+8,640 small descriptors on a busy GPU polled only every 40 ms, finishes in
+0.7 s. Under vLLM the same shape took 20 to 85 s, 30 to 100x slower. Small
+descriptors do cost real overhead in NIXL (76 ms vs 2 ms idle, 0.55 s vs 10 ms
+busy), so coalescing would still help, but the seconds-long transfers come from
+how vLLM's NIXL connector drives the pull (`kv_connector/v1/nixl/pull_worker.py`),
+not from the transport. That is the layer to raise with the vLLM/Dynamo team.
+
 ## Next steps
 
-1. Raise the transfer behavior with the Dynamo/NIXL team with this setup:
+1. Raise the transfer behavior with the Dynamo and vLLM connector owners (NIXL itself is cleared by the isolating test) with this setup:
    Qwen3-4B, 1P1D on one node, A100 NVLink, vLLM runtime 1.5.0, concurrency 32,
    4k prompts: transfers of 565 MB taking 20 to 85 s. Ask what single-node
    disagg is expected to use (cuda_ipc versus IB loopback) and whether the
