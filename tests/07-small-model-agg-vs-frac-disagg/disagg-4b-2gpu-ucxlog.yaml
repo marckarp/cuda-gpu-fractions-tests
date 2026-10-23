@@ -1,0 +1,135 @@
+# 07-C4: 2-GPU disagg in host namespaces + UCX logging + explicit UCX_TLS
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  labels: { app: dyn-frac, role: frontend }
+spec:
+  hostNetwork: true            # curl localhost:8000 from the box
+  restartPolicy: Never
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.frontend"]
+      args: ["--http-port", "8000", "--router-mode", "round-robin"]
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_LOG, value: info }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prefill
+  labels: { app: dyn-frac, role: prefill }
+spec:
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  hostNetwork: true           # same host identity for UCX -> cuda_ipc eligible
+  hostIPC: true
+  hostPID: true
+  dnsPolicy: ClusterFirstWithHostNet
+  securityContext: { runAsNonRoot: true, runAsUser: 1000, runAsGroup: 1000 }
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.vllm"]
+      args:
+        - --model
+        - Qwen/Qwen3-4B
+        - --disaggregation-mode
+        - prefill
+        - --kv-transfer-config
+        - '{"kv_connector":"NixlConnector","kv_role":"kv_producer"}'
+        - --gpu-memory-utilization
+        - "0.88"
+        - --max-model-len
+        - "8192"
+        - --enforce-eager
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_SYSTEM_PORT, value: "8082" }
+        - { name: HF_HOME, value: /opt/hf-cache }
+        - { name: VLLM_NIXL_SIDE_CHANNEL_PORT, value: "20097" }
+        - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+          valueFrom: { fieldRef: { fieldPath: status.podIP } }
+        - { name: DYN_LOG, value: info }
+        - { name: UCX_RCACHE_MAX_UNRELEASED, value: "1024" }
+        - { name: UCX_LOG_LEVEL, value: info }                       # prints the transport UCX selects per endpoint
+        - { name: UCX_TLS, value: "cuda_ipc,cuda_copy,sm,tcp" }       # explicit, so a fallback to tcp is visible
+      resources: { limits: { nvidia.com/gpu: 1 } }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+        - { name: hf, mountPath: /opt/hf-cache }
+        - { name: shm, mountPath: /dev/shm }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+    - name: hf
+      hostPath: { path: /opt/hf-cache, type: Directory }
+    - name: shm
+      emptyDir: { medium: Memory, sizeLimit: 8Gi }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: decode
+  labels: { app: dyn-frac, role: decode }
+spec:
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  hostNetwork: true           # same host identity for UCX -> cuda_ipc eligible
+  hostIPC: true
+  hostPID: true
+  dnsPolicy: ClusterFirstWithHostNet
+  securityContext: { runAsNonRoot: true, runAsUser: 1000, runAsGroup: 1000 }
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.vllm"]
+      args:
+        - --model
+        - Qwen/Qwen3-4B
+        - --disaggregation-mode
+        - decode
+        - --kv-transfer-config
+        - '{"kv_connector":"NixlConnector","kv_role":"kv_consumer"}'
+        - --gpu-memory-utilization
+        - "0.88"
+        - --max-model-len
+        - "8192"
+        - --enforce-eager
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_SYSTEM_PORT, value: "8081" }
+        - { name: HF_HOME, value: /opt/hf-cache }
+        - { name: VLLM_NIXL_SIDE_CHANNEL_PORT, value: "20098" }
+        - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+          valueFrom: { fieldRef: { fieldPath: status.podIP } }
+        - { name: DYN_LOG, value: info }
+        - { name: UCX_RCACHE_MAX_UNRELEASED, value: "1024" }
+        - { name: UCX_LOG_LEVEL, value: info }                       # prints the transport UCX selects per endpoint
+        - { name: UCX_TLS, value: "cuda_ipc,cuda_copy,sm,tcp" }       # explicit, so a fallback to tcp is visible
+      resources: { limits: { nvidia.com/gpu: 1 } }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+        - { name: hf, mountPath: /opt/hf-cache }
+        - { name: shm, mountPath: /dev/shm }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+    - name: hf
+      hostPath: { path: /opt/hf-cache, type: Directory }
+    - name: shm
+      emptyDir: { medium: Memory, sizeLimit: 8Gi }

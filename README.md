@@ -14,6 +14,7 @@ with evidence, and record every step so it can be reproduced.
 | [04](tests/04-enforcement/RESULTS.md) | Memory and compute limits at 0.25 / 0.5 / 0.75 of 2 GPUs | PASS: allocation fails at the cap, speed tracks the share |
 | [05](tests/05-uneven-shares/RESULTS.md) | Uneven shares, compute set apart from memory | PASS: 0.3 / 0.7 split, prefill 74 SMs + decode 32 SMs on one GPU |
 | [06](tests/06-disagg-one-gpu/RESULTS.md) | Dynamo 1.5 disagg, prefill + decode as fractions of one GPU | PASS: requests served; NIXL KV transfer between the two fractions is CUDA IPC, 483 MB in 2.3 ms (~214 GB/s) |
+| [07](tests/07-small-model-agg-vs-frac-disagg/RESULTS.md) | Qwen3-4B at concurrency 32: agg on 1 GPU vs fraction disagg on 1 GPU vs disagg on 2 GPUs (AIPerf) | NOT PROVEN: agg 374 tok/s; every disagg layout 38 to 54 tok/s because KV transfers take 6 to 85 s under load. Not a fractions problem (2 whole GPUs collapse the same way); fraction disagg matched 2-GPU disagg on half the hardware with better ITL (43 vs 77 ms) |
 
 All of this is on the PR #147 fork, not the released stack (see
 [Stack status](#stack-status-2026-10-22)).
