@@ -148,6 +148,85 @@ Key facts:
   only sets an env var the app can change. Server-side enforcement needs the
   PR #147 fork.
 
+## Disaggregated serving on one GPU with fractions
+
+Fractions make a new disaggregation layout possible: prefill and decode as two
+engines on the **same** GPU, each with its own SM share and memory cap.
+
+```
+ one A100-40GB
+ ┌─────────────────────────────┬─────────────────────┐
+ │ prefill engine              │ decode engine       │
+ │ 60% SMs, 14 GB              │ 40% SMs, 25 GB      │
+ │ compute heavy, little KV    │ bandwidth heavy,    │
+ │                             │ holds the live KV   │
+ └──────────────┬──────────────┴──────────┬──────────┘
+                └── KV handoff: copy inside the GPU ───┘
+                    (NIXL over CUDA IPC, no network)
+```
+
+### Why it is attractive
+
+- **Isolation without a second GPU.** In aggregated serving a long prefill runs
+  inside the same step as decode and stretches it. With fractions decode keeps
+  its own SM budget, so inter-token latency stays flat. Measured (test 07,
+  Qwen3-4B, 4k prompts, concurrency 32): ITL p99 45 ms split vs 83 ms aggregated.
+- **The KV handoff is physically free.** Both engines sit on one GPU, so the
+  transfer is a device-local copy: 483 MB in 2.3 ms when idle (test 06).
+- **No network, no NIC.** Nothing leaves the card.
+
+What it is not: more capacity. It is one GPU's SMs and HBM bandwidth, split. The
+goal is the same tokens per GPU as aggregated serving with better tail latency,
+not higher throughput. HBM bandwidth is not partitioned by MPS, so a busy prefill
+still competes with decode for memory bandwidth; that cost is not measured yet.
+
+### What we measured (tests 06 and 07)
+
+| Layout | Output tok/s | ITL avg / p99 | TTFT avg |
+|---|---|---|---|
+| Aggregated, one whole GPU | **374** | 77 / 83 ms | 1.0 s |
+| Prefill + decode as fractions, one GPU | 38 | **43 / 45 ms** | 96 s |
+| Prefill + decode on two whole GPUs (NVLink) | 50 | 44 / 47 ms | 76 s |
+
+Isolation works (ITL), but both disaggregated layouts lost to aggregated by
+about 10x at this load, and the fraction layout matched the two-GPU layout on
+half the hardware. The reason is not fractions.
+
+### What is slow, in plain terms
+
+When decode pulls a request's KV from prefill, vLLM gives NIXL a list of copy
+instructions ("descriptors"), **one per KV block per layer**. A 4k-token prompt
+becomes thousands of 64 KB copies, and under load the blocks are fragmented so
+none of them merge. Over an RDMA NIC that is fine, the NIC processes thousands of
+descriptors in hardware. Over CUDA IPC, the path used inside one GPU or across
+NVLink, each descriptor costs about 0.3 ms on a busy GPU, and the aggregate tops
+out around 250 MB/s no matter how many transfers run at once. With 32 requests
+in flight at 565 MB each, that is 20 to 85 s per handoff, which is what vLLM
+showed. The same bytes as 28 large descriptors move in 0.04 s on the same path
+(standalone NIXL benchmark, `tests/07-.../nixl_bench.py`).
+
+So: small descriptors x fragmentation x concurrency, on a transport with no NIC
+to hide the per-descriptor cost. This hits every NVLink-only or same-GPU
+disaggregated deployment, not just fractions. Dynamo's own recipes route
+intra-node prefill/decode traffic over InfiniBand (`UCX_TLS=^cuda_ipc`) for a
+reason.
+
+### What has to change to make it fast
+
+1. **vLLM NIXL connector: coalesce descriptors.** Allocate a request's blocks
+   contiguously or build descriptors per contiguous run, so a handoff is a few
+   large copies. This is the prerequisite; it also fixes NVLink-only disagg.
+2. **Shared KV on the device: no copy at all.** On one GPU the ideal handoff is
+   a pointer, not a transfer: one owner of the KV pool, prefill writes a block,
+   decode references it by ID. Dynamo's GMS already does this pattern for
+   weights. It is an engine-level change, larger than item 1.
+3. **Elastic SM split.** MPS caps are fixed; a 60/40 split cannot lend idle SMs.
+   Letting the split follow load keeps either side from idling.
+
+Then measure the open question: decode ITL while prefill is saturated on the
+same GPU (HBM contention). Until item 1 lands, do not deploy fraction
+disaggregation for performance; it loses to aggregated serving at load.
+
 ## Using more than one GPU
 
 A fraction is always **per GPU** and must be below 1.0 (`gpu-fraction: "1.5"`
