@@ -205,17 +205,20 @@ in flight at 565 MB each, that is 20 to 85 s per handoff, which is what vLLM
 showed. The same bytes as 28 large descriptors move in 0.04 s on the same path
 (standalone NIXL benchmark, `tests/07-.../nixl_bench.py`).
 
-So: small descriptors x fragmentation x concurrency, on a transport with no NIC
-to hide the per-descriptor cost. This hits every NVLink-only or same-GPU
-disaggregated deployment, not just fractions. Dynamo's own recipes route
-intra-node prefill/decode traffic over InfiniBand (`UCX_TLS=^cuda_ipc`) for a
-reason.
+That was the first theory. A contiguous-allocation patch cut descriptors to 54 and
+changed nothing (test 07, deep dive), and standalone NIXL transfers between the
+same two pods are fast in every configuration tried, including vLLM's own NIXL
+settings and a busy peer. What remains is something inside vLLM's NIXL connector
+path that only shows under serving load; it needs instrumentation in the engine,
+not more deployment variants. It hits every NVLink-only or same-GPU disaggregated
+deployment, not just fractions.
 
 ### What has to change to make it fast
 
-1. **vLLM NIXL connector: coalesce descriptors.** Allocate a request's blocks
-   contiguously or build descriptors per contiguous run, so a handoff is a few
-   large copies. This is the prerequisite; it also fixes NVLink-only disagg.
+1. **Find and fix the slow pull inside vLLM's NIXL connector.** Descriptor
+   coalescing alone does not do it (tested); the engine-side cause still has to
+   be instrumented. Also note KAI does not yet allow two fractional containers in
+   one pod, so prefill and decode must be separate pods today.
 2. **Shared KV on the device: no copy at all.** On one GPU the ideal handoff is
    a pointer, not a transfer: one owner of the KV pool, prefill writes a block,
    decode references it by ID. Dynamo's GMS already does this pattern for

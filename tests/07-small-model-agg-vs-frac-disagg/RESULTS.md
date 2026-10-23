@@ -156,9 +156,62 @@ behind, so the fix has to be fewer, larger descriptors (contiguous block
 allocation for a request, larger blocks, layer-contiguous layouts) or a
 zero-copy handoff of the blocks themselves.
 
+## Deep dive (2026-10-23, later): what is NOT the cause
+
+A PoC and a series of isolating runs, all on the fraction layout unless noted.
+
+**Contiguous block allocation PoC** ([`patch_block_pool.py`](patch_block_pool.py),
+mounted over vLLM 0.28.0's `block_pool.py` via hostPath, manifests `*-contig.yaml`):
+when an allocation needs >= 4 blocks it takes a run of consecutive block IDs so
+NIXL can merge descriptors. It works: decode's transfer metrics went from
+1,782 to 8,484 descriptors down to **54**. Throughput did not move: run B6 gave
+41 tok/s, TTFT 87 s, ITL 43 ms, transfers still 17 s (33 MB/s). So descriptor
+count was not the limiter inside vLLM.
+
+**Standalone NIXL, every configuration tried, all fast** (`nixl_bench.py` inside
+one pod, `nixl_cross.py` across the prefill and decode pods through the shared
+hostPath):
+
+| Setup | 28 descriptors | 8,640 x 64 KB | 4 in flight x 8,640 |
+|---|---|---|---|
+| same pod, GPU idle | 2 ms | 76 ms | |
+| same pod, busy matmul in another process | 10 to 40 ms | 0.5 to 2.9 s | 8.3 s (aggregate 290 MB/s) |
+| same pod, under MPS 40% cap | 41 ms | 104 ms | |
+| same pod, busy compute inside the initiator process | 41 ms | 0.5 s | |
+| **across the two pods** (engine topology) | 81 ms | 133 ms | 265 ms |
+| across pods, `num_threads=4` like vLLM, 40 ms polls | 81 ms | 108 ms | 205 ms |
+| across pods, target running a busy loop | 81 ms | 111 ms | 201 ms |
+
+Worst standalone case is single-digit seconds; vLLM under load is 17 to 85 s.
+
+**Other things excluded:** `UCX_RCACHE_MAX_UNRELEASED`, the recipe UCX tuning
+(`UCX_RNDV_SCHEME=get_zcopy`, `UCX_RNDV_THRESH=0`, `UCX_MEMTYPE_CACHE=n`), host
+net/IPC/PID namespaces for the pods, KV buffers on host (they are on `cuda`,
+`use_host_buffer: False`), NIXL progress-thread config (`num_threads=4` is fast
+standalone). UCX's own endpoint summary in the engine shows the peer as
+intra-node with a cuda_ipc lane: `intra-node cfg#2 rma_am(tcp/eth0) ...
+device(cuda_ipc/cuda) am(tcp/eth0 cuda_ipc/cuda)`.
+
+**Two findings along the way:**
+- KAI refuses one pod with two fractional containers ("kai doesn't support
+  multiple containers with fractional GPU requests"). Prefill and decode as two
+  containers in one pod is the natural shape for intra-GPU disaggregation; today
+  it has to be two pods.
+- Running the two fraction pods with `hostNetwork/hostIPC/hostPID` made the
+  decode pull fail outright (`NIXL_ERR_INVALID_PARAM` from `make_prepped_xfer`).
+
+**Where this leaves the root cause:** inside vLLM's NIXL connector path under
+load, specifically something that only appears when the engine is serving many
+requests. The transport, the topology, the descriptor layout and the UCX
+configuration have each been shown fast in isolation with the same bytes, the
+same pods and the same GPU state. The next step is instrumentation inside the
+connector (timestamps per transfer handle from post to first `PROC` to `DONE`,
+plus UCX statistics in the engine process), which is a vLLM debugging session
+rather than a deployment experiment.
+
 ## Next steps
 
-1. Raise the transfer behavior with the Dynamo, vLLM connector and NIXL owners with this setup:
+1. Hand this to the vLLM connector / Dynamo owners with the reproducer (this directory) and this setup:
    Qwen3-4B, 1P1D on one node, A100 NVLink, vLLM runtime 1.5.0, concurrency 32,
    4k prompts: transfers of 565 MB taking 20 to 85 s. Ask what single-node
    disagg is expected to use (cuda_ipc versus IB loopback) and whether the

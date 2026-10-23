@@ -35,8 +35,18 @@ def busy(stop):
         torch.cuda.synchronize()
 
 
-def initiator(cases, out):
-    import torch
+def initiator(cases, out, busy_inproc=False):
+    import torch, threading
+    stop_t = threading.Event()
+    if busy_inproc:
+        def spin():
+            x = torch.randn(4096, 4096, device="cuda", dtype=torch.float16)
+            while not stop_t.is_set():
+                for _ in range(20):
+                    x = (x @ x).clamp_(-1, 1)
+                torch.cuda.synchronize()
+        threading.Thread(target=spin, daemon=True).start()
+        time.sleep(2)
     from nixl._api import nixl_agent, nixl_agent_config
     buf = torch.zeros(TOTAL, dtype=torch.uint8, device="cuda")
     a = nixl_agent("initiator", nixl_agent_config(backends=["UCX"]))
@@ -73,12 +83,14 @@ def initiator(cases, out):
         results.append({"nconc": nconc, "ndesc": ndesc, "desc_kb": size // 1024, "poll_ms": poll_ms, "sec": round(dt, 4),
                         "MBps_total": round(nconc * TOTAL / 1e6 / dt, 1), "polls": polls, "ok": ok})
         buf.zero_()
+    stop_t.set()
     out.put(results)
 
 
 if __name__ == "__main__":
     mp.set_start_method("spawn")
-    busy_mode = len(sys.argv) > 1 and sys.argv[1] == "busy"
+    mode = sys.argv[1] if len(sys.argv) > 1 else "idle"
+    busy_mode = mode == "busy"
     ready, stop = mp.Event(), mp.Event()
     t = mp.Process(target=target, args=(ready, stop)); t.start()
     ready.wait(120)
@@ -87,10 +99,10 @@ if __name__ == "__main__":
         b = mp.Process(target=busy, args=(stop,)); b.start(); time.sleep(3)
     out = mp.Queue()
     cases = [(8640, 40, 1), (8640, 40, 4), (28, 40, 8)]
-    i = mp.Process(target=initiator, args=(cases, out)); i.start()
+    i = mp.Process(target=initiator, args=(cases, out, mode == "busyin")); i.start()
     res = out.get(timeout=1800)
     i.join(); stop.set(); t.join()
     if b: b.join()
-    print(f"mode={'busy' if busy_mode else 'idle'}")
+    print(f"mode={mode}")
     for r in res:
         print(r)

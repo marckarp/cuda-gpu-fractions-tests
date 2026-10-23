@@ -1,0 +1,101 @@
+# 07-B8: prefill + decode as TWO CONTAINERS IN ONE POD, each with its own GPU fraction.
+# Same net/IPC/PID namespaces, so UCX treats the peer as local and uses cuda_ipc instead of
+# falling back to tcp (which is what happened with two separate pods, see RESULTS.md).
+# Keeps the contiguous-allocation PoC patch and UCX protocol logging.
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pd
+  labels: { app: dyn-frac, role: pd, kai.scheduler/queue: default-queue }
+  annotations:
+    nvidia.com/container.prefill.gpu-compute.request: "0.6"
+    nvidia.com/container.prefill.gpu-memory.request: 14000Mi
+    nvidia.com/container.prefill.gpu-memory.limit: 14000Mi
+    nvidia.com/container.prefill.gpu-compute.mode: sm-sharing
+    nvidia.com/container.decode.gpu-compute.request: "0.4"
+    nvidia.com/container.decode.gpu-memory.request: 25000Mi
+    nvidia.com/container.decode.gpu-memory.limit: 25000Mi
+    nvidia.com/container.decode.gpu-compute.mode: sm-sharing
+spec:
+  schedulerName: kai-scheduler
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  shareProcessNamespace: true
+  securityContext: { runAsNonRoot: true, runAsUser: 1000, runAsGroup: 1000 }
+  containers:
+    - name: prefill
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.vllm"]
+      args:
+        - --model
+        - Qwen/Qwen3-4B
+        - --disaggregation-mode
+        - prefill
+        - --kv-transfer-config
+        - '{"kv_connector":"NixlConnector","kv_role":"kv_producer"}'
+        - --gpu-memory-utilization
+        - "0.85"                 # of the 14000 MiB cap
+        - --max-model-len
+        - "8192"
+        - --enforce-eager
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_SYSTEM_PORT, value: "8082" }
+        - { name: HF_HOME, value: /opt/hf-cache }
+        - { name: VLLM_NIXL_SIDE_CHANNEL_PORT, value: "20097" }
+        - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+          valueFrom: { fieldRef: { fieldPath: status.podIP } }
+        - { name: DYN_LOG, value: info }
+        - { name: UCX_RCACHE_MAX_UNRELEASED, value: "1024" }
+        - { name: UCX_PROTO_INFO, value: "y" }
+        - { name: UCX_LOG_LEVEL, value: info }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+        - { name: hf, mountPath: /opt/hf-cache }
+        - { name: shm, mountPath: /dev/shm }
+        - { name: vllm-patch, mountPath: /usr/local/lib/python3.12/dist-packages/vllm/v1/core/block_pool.py, subPath: block_pool.py, readOnly: true }
+    - name: decode
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.vllm"]
+      args:
+        - --model
+        - Qwen/Qwen3-4B
+        - --disaggregation-mode
+        - decode
+        - --kv-transfer-config
+        - '{"kv_connector":"NixlConnector","kv_role":"kv_consumer"}'
+        - --gpu-memory-utilization
+        - "0.88"                 # of the 25000 MiB cap
+        - --max-model-len
+        - "8192"
+        - --enforce-eager
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_SYSTEM_PORT, value: "8081" }
+        - { name: HF_HOME, value: /opt/hf-cache }
+        - { name: VLLM_NIXL_SIDE_CHANNEL_PORT, value: "20098" }
+        - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+          valueFrom: { fieldRef: { fieldPath: status.podIP } }
+        - { name: DYN_LOG, value: info }
+        - { name: UCX_RCACHE_MAX_UNRELEASED, value: "1024" }
+        - { name: UCX_PROTO_INFO, value: "y" }
+        - { name: UCX_LOG_LEVEL, value: info }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+        - { name: hf, mountPath: /opt/hf-cache }
+        - { name: shm, mountPath: /dev/shm }
+        - { name: vllm-patch, mountPath: /usr/local/lib/python3.12/dist-packages/vllm/v1/core/block_pool.py, subPath: block_pool.py, readOnly: true }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+    - name: hf
+      hostPath: { path: /opt/hf-cache, type: Directory }
+    - name: shm
+      emptyDir: { medium: Memory, sizeLimit: 8Gi }
+    - name: vllm-patch
+      hostPath: { path: /opt/vllm-patch, type: Directory }
