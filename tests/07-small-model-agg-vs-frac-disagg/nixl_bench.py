@@ -44,29 +44,34 @@ def initiator(cases, out):
     remote = a.add_remote_agent(open(f"{META}/target.meta", "rb").read())
     rptr = json.load(open(f"{META}/target.json"))["ptr"]
     results = []
-    for ndesc, poll_ms in cases:
+    for ndesc, poll_ms, nconc in cases:
         size = TOTAL // ndesc
         ld = a.get_xfer_descs([(buf.data_ptr() + i * size, size, 0) for i in range(ndesc)], "VRAM")
         rd = a.get_xfer_descs([(rptr + i * size, size, 0) for i in range(ndesc)], "VRAM")
-        h = a.initialize_xfer("READ", ld, rd, remote)
+        hs = [a.initialize_xfer("READ", ld, rd, remote) for _ in range(nconc)]
         t0 = time.perf_counter()
-        a.transfer(h)
-        polls = 0
-        while True:
-            s = a.check_xfer_state(h)
+        for h in hs:
+            a.transfer(h)
+        polls, pending = 0, list(hs)
+        while pending:
             polls += 1
-            if s == "DONE":
-                break
-            if s == "ERR":
-                raise RuntimeError("xfer ERR")
-            if poll_ms:
+            still = []
+            for h in pending:
+                s = a.check_xfer_state(h)
+                if s == "ERR":
+                    raise RuntimeError("xfer ERR")
+                if s != "DONE":
+                    still.append(h)
+            pending = still
+            if pending and poll_ms:
                 time.sleep(poll_ms / 1000)
         dt = time.perf_counter() - t0
-        a.release_xfer_handle(h)
+        for h in hs:
+            a.release_xfer_handle(h)
         covered = size * ndesc
         ok = bool((buf[:covered:max(1, covered // 97)] == 1).all().item())
-        results.append({"ndesc": ndesc, "desc_kb": size // 1024, "poll_ms": poll_ms, "sec": round(dt, 4),
-                        "MBps": round(TOTAL / 1e6 / dt, 1), "polls": polls, "ok": ok})
+        results.append({"nconc": nconc, "ndesc": ndesc, "desc_kb": size // 1024, "poll_ms": poll_ms, "sec": round(dt, 4),
+                        "MBps_total": round(nconc * TOTAL / 1e6 / dt, 1), "polls": polls, "ok": ok})
         buf.zero_()
     out.put(results)
 
@@ -81,7 +86,7 @@ if __name__ == "__main__":
     if busy_mode:
         b = mp.Process(target=busy, args=(stop,)); b.start(); time.sleep(3)
     out = mp.Queue()
-    cases = [(28, 0), (8640, 0), (28, 40), (8640, 40)]
+    cases = [(8640, 40, 1), (8640, 40, 4), (28, 40, 8)]
     i = mp.Process(target=initiator, args=(cases, out)); i.start()
     res = out.get(timeout=1800)
     i.join(); stop.set(); t.join()

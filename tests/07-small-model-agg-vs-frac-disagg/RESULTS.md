@@ -128,17 +128,37 @@ matmul loop on the same GPU.
 checking bytes past the covered range because 8,640 does not divide 565 MB. Fixed
 in the checked-in script; the transfer itself completed.)
 
-**Verdict:** NIXL/UCX cuda_ipc is not the bottleneck. The worst standalone case,
-8,640 small descriptors on a busy GPU polled only every 40 ms, finishes in
-0.7 s. Under vLLM the same shape took 20 to 85 s, 30 to 100x slower. Small
-descriptors do cost real overhead in NIXL (76 ms vs 2 ms idle, 0.55 s vs 10 ms
-busy), so coalescing would still help, but the seconds-long transfers come from
-how vLLM's NIXL connector drives the pull (`kv_connector/v1/nixl/pull_worker.py`),
-not from the transport. That is the layer to raise with the vLLM/Dynamo team.
+Concurrent transfers (second run, busy GPU, poll every 40 ms, 565 MB each):
+
+| in flight | descriptors each | wall time | aggregate MB/s |
+|---|---|---|---|
+| 1 | 8,640 x 64 KB | 2.9 s | 200 |
+| 4 | 8,640 x 64 KB | 8.3 s | 290 |
+| 8 | 28 x 20 MB | 0.04 s | 112,000 |
+
+**Verdict (corrected):** the bottleneck is the per-descriptor cost of UCX cuda_ipc
+on a busy GPU, multiplied by vLLM's per-block descriptor layout and by the
+number of pulls in flight. Small-descriptor transfers top out at roughly 200 to
+300 MB/s aggregate no matter how many run concurrently, while the same bytes in
+large descriptors move at over 100 GB/s. With 32 requests in flight at 565 MB
+each, 18 GB at 0.25 GB/s is about 70 s per transfer, which is what vLLM showed
+(20 to 85 s). A single transfer looked acceptable (0.6 to 3 s); the aggregate is
+what collapses. The earlier statement that NIXL/UCX was cleared was wrong: one
+transfer is fine, the small-descriptor throughput ceiling is not.
+
+Where it sits: vLLM's connector emits one descriptor per KV block per layer
+(64 KB here, thousands per request once blocks fragment); UCX cuda_ipc pays a
+fixed cost per descriptor that a busy GPU stretches; nothing coalesces them.
+RDMA NICs process thousands of descriptors in hardware, which is why the same
+layout performs on InfiniBand/EFA and why recipes disable cuda_ipc in favor of
+IB even on one node. For same-GPU or NVLink-only disagg there is no NIC to hide
+behind, so the fix has to be fewer, larger descriptors (contiguous block
+allocation for a request, larger blocks, layer-contiguous layouts) or a
+zero-copy handoff of the blocks themselves.
 
 ## Next steps
 
-1. Raise the transfer behavior with the Dynamo and vLLM connector owners (NIXL itself is cleared by the isolating test) with this setup:
+1. Raise the transfer behavior with the Dynamo, vLLM connector and NIXL owners with this setup:
    Qwen3-4B, 1P1D on one node, A100 NVLink, vLLM runtime 1.5.0, concurrency 32,
    4k prompts: transfers of 565 MB taking 20 to 85 s. Ask what single-node
    disagg is expected to use (cuda_ipc versus IB loopback) and whether the
