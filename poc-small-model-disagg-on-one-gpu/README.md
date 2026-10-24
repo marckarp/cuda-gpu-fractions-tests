@@ -102,10 +102,23 @@ All commands run on the node. Manifests are in [`manifests/`](manifests/).
 - Measure HBM contention directly: decode ITL while prefill is saturated.
 - Larger models (8B, 32B) where decode is more clearly bandwidth-bound.
 
+## What needs to be fixed to support disaggregation on GPU fractions properly
+
+The PoC works with two workarounds. To make this a supported deployment shape,
+four things need to change, in order of importance:
+
+| # | Problem today | Who owns it | What "fixed" looks like |
+|---|---|---|---|
+| 1 | **CUDA IPC fails when two containers' engines have the same PID.** Each container numbers PIDs from 1, so identical images produce identical EngineCore PIDs; the IPC open fails and UCX silently falls back to TCP (50x slower). | CUDA driver / MPS, with a possible workaround in UCX `cuda_ipc` | Equal PIDs in different PID namespaces are treated as different processes. Until then: UCX/NIXL detect the case and use a handle type that works, or at least log an error instead of a silent fallback. |
+| 2 | **Silent transport fallback.** Nothing at normal log levels says the KV path dropped from cuda_ipc to TCP. | UCX, NIXL, vLLM connector | A warning when a transfer uses an unexpected transport, and the transport name in vLLM's `KV Transfer metrics` line. |
+| 3 | **IPC mapping counts against the importer's MPS memory cap.** Decode must leave headroom at least the size of prefill's KV arena or transfers fail. | MPS / gpu-fractioning docs, Dynamo operator | Either the mapping is not charged twice, or the sizing rule is documented and the operator reserves the headroom automatically when it sees a disaggregated pair on one GPU. |
+| 4 | **KAI rejects two fractional containers in one pod.** One pod (one PID namespace) is the natural shape and would also sidestep problem 1. | KAI-Scheduler, kai-gpu-fractioning | Per-container fractions in a single pod. |
+
+Longer term, the handoff on one GPU should not be a copy at all: a KV pool owned
+once and referenced by both engines (the pattern Dynamo's GMS already uses for
+weights) removes problems 1 and 3 together.
+
 ## Known gaps to raise
 
-- CUDA IPC across containers with equal PIDs (CUDA/MPS or UCX): silent TCP fallback.
-- KAI does not allow two fractional containers in one pod yet; one pod would also
-  avoid the PID collision.
-- The IPC mapping counting against the importer's MPS memory cap needs a documented
-  sizing rule or a shared KV pool design.
+- Items 1 to 4 above, each with the evidence in
+  [`../tests/07-small-model-agg-vs-frac-disagg/RESULTS.md`](../tests/07-small-model-agg-vs-frac-disagg/RESULTS.md).
