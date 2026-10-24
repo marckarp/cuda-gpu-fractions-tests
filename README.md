@@ -219,10 +219,10 @@ cuda_ipc, not just fractions.
 
 ### What has to change to make it fast
 
-1. **Fix the PID-collision CUDA IPC bug properly** (UCX cuda_ipc or NIXL should
-   not treat equal PIDs in different PID namespaces as the same process); until
-   then, shift one worker's PID or run the two engines in one pod (KAI does not
-   yet allow two fractional containers in one pod).
+1. **Fix the PID-collision CUDA IPC bug properly** (the CUDA/MPS layer, or UCX
+   cuda_ipc as a workaround, must not treat equal PIDs in different PID namespaces
+   as the same process); until then, shift one worker's PID. Prefill and decode
+   stay in separate pods so they can scale independently; one pod is not the fix.
 2. **Shared KV on the device: no copy at all.** On one GPU the ideal handoff is
    a pointer, not a transfer: one owner of the KV pool, prefill writes a block,
    decode references it by ID. Dynamo's GMS already does this pattern for
