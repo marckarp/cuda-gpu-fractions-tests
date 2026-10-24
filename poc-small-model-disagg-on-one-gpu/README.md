@@ -60,10 +60,17 @@ Same deployment, only this change: one 560 MB transfer went from 3.3 s to 0.015 
 It is a hack. The right number depends on the image and launch path, so always
 check that the two engines differ: `kubectl exec <pod> -- pgrep -f EngineCore`.
 
-**Workaround 2: leave memory headroom.** After the PID fix, decode at 0.88
-utilization still failed at transfer time. Under MPS the IPC mapping of prefill's
-memory is charged against decode's memory cap. Decode at 0.75 and prefill at 0.80
-work. Rule of thumb: headroom at least the size of the peer's KV arena.
+**Workaround 2: leave memory headroom.** Fractions are not two virtual GPUs. They
+are two processes on the same physical GPU, and MPS enforces two caps per process:
+an SM share and a memory limit. For decode to read prefill's KV cache it must map
+prefill's memory into its own address space (that is what CUDA IPC is), and MPS
+counts that mapped memory against **decode's** cap even though the bytes belong to
+prefill. Decode at 0.88 utilization (about 22 GB of its own) plus about 3 GB of
+mapped prefill KV goes over its 25 GB cap, and the transfer fails. Decode at 0.75
+(about 19 GB) plus the mapping fits. Prefill at 0.80 and decode at 0.75 work. Rule
+of thumb: leave headroom at least the size of the peer's KV cache. This rule is
+inferred from the failures and successes observed, not from MPS documentation; it
+is item 3 in the list below for the MPS owners to confirm.
 
 ## Steps to reproduce
 
