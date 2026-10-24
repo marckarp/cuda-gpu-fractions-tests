@@ -1,14 +1,16 @@
 # 07: can fraction disagg on one GPU beat aggregated serving for a small model?
 
-**NOT PROVEN, 2026-10-23. Blocked by a KV transfer problem that is not about
-fractions.** Under load, every disaggregated layout on this box (fractions on one
-GPU, or two whole NVLink GPUs) delivered about 10x less throughput than
-aggregated serving on one GPU, because NIXL/UCX KV transfers that take 2 ms when
-the system is idle take 6 to 85 seconds when decode is busy. The fraction layout
-performed the same as the two-GPU layout while using half the hardware, and its
-inter-token latency was better than aggregated, so the idea is still open; the
-transfer path has to be fixed first.
+**RESULT, 2026-10-24: throughput parity with aggregated serving on the same single
+GPU, with 45% lower inter-token latency.** Qwen3-4B, A100, 4k-token prompts,
+concurrency 32: aggregated 374 tok/s with ITL p99 83 ms; prefill+decode as two
+fractions of the same GPU 377 tok/s with ITL p99 45 ms. TTFT is worse (4.7 s vs
+1.0 s avg) with the 60/40 SM split used; that is the tunable trade-off.
 
+Getting there took finding a real bug: every disaggregated layout on this box
+first ran about 10x slower than aggregated because the KV transfer silently fell
+back from CUDA IPC to TCP. Root cause and fix are in "The real bug" below.
+
+## Question
 ## Question
 
 AISimulate was asked for a small model and workload where it prefers aggregated
@@ -209,9 +211,59 @@ connector (timestamps per transfer handle from post to first `PROC` to `DONE`,
 plus UCX statistics in the engine process), which is a vLLM debugging session
 rather than a deployment experiment.
 
+## The real bug: identical PIDs in two containers break CUDA IPC
+
+vLLM's EngineCore process gets the **same PID in both containers** (348 in both
+pods here, because each container has its own PID namespace and the process tree
+is identical). CUDA IPC handles carry the exporting process's PID. When decode
+(PID 348) opened a handle exported by prefill (also PID 348), the driver treated it
+as the same process and `cuIpcOpenMemHandle` failed (`invalid device context`, or
+`out of memory` when the GPU was nearly full). UCX then silently fell back to
+software-emulated RMA over TCP at ~175 MB/s. Nothing logged an error at INFO
+level; only `UCX_LOG_LEVEL=debug` showed it.
+
+Proof (same deployment, one change): shifting decode's EngineCore to PID 549 by
+forking 200 throwaway processes before `exec` in the container command:
+
+| | post->done for one 560 MB transfer | IPC open errors |
+|---|---|---|
+| decode EngineCore PID 348 (= prefill) | 3.3 s | 1 |
+| decode EngineCore PID 549 | **0.015 s** | 0 |
+
+This is not specific to fractions: the two-whole-GPU runs (C, C2, C3, C5) had the
+same PID collision and the same collapse. Any two containerized workers with
+identical process trees on one node that talk over cuda_ipc can hit it.
+
+Second constraint on fractions: after the PID fix, decode at 0.88 utilization
+still failed at transfer post (`NIXL_ERR_INVALID_PARAM`); the IPC mapping of the
+peer's memory appears to count against the importer's MPS memory cap, so decode
+needs headroom. Prefill 0.80 / decode 0.75 worked.
+
+Manifest with both: [`frac-disagg-4b-pidfix-headroom.yaml`](frac-disagg-4b-pidfix-headroom.yaml)
+(no vLLM patches at all). The debugging patches used along the way are checked
+in for reference: `patch_block_pool.py` (contiguous allocation, not needed),
+`patch_xfer_debug.py` (transfer timing), `patch_ipc_probe.py`, `patch_dump_regions*.py`,
+`nixl_bench.py`, `nixl_cross.py`.
+
+## Final comparison (B21 vs A)
+
+| @ concurrency 32 | Output tok/s | tok/s per GPU | ITL avg / p99 | TTFT avg / p99 | KV transfer |
+|---|---|---|---|---|---|
+| A: aggregated, one whole GPU | 374 | 374 | 77 / 83 ms | 1.0 / 6.4 s | n/a |
+| **B21: fraction disagg, one GPU (60/40 SMs), PID fix + headroom** | **377** | **377** | **43 / 45 ms** | 4.7 / 9.2 s | 565 MB in 61 ms avg, 9.3 GB/s |
+
+Same GPU, same model, same load: equal throughput, inter-token latency nearly
+halved and flat (p99 45 ms vs 83 ms). TTFT is the cost of giving prefill only 60%
+of the SMs at this load; a different split or a second prefill fraction would
+move that trade-off. AISimulate's whole-GPU verdict ("agg wins per GPU, disagg
+wins ITL") is beaten on the per-GPU axis and matched on the ITL axis.
+
+Caveats: single run per config; all engines `--enforce-eager`; HBM contention is
+folded into these numbers rather than measured separately; 4B model only.
+
 ## Next steps
 
-1. Hand this to the vLLM connector / Dynamo owners with the reproducer (this directory) and this setup:
+1. Report the PID-collision bug (UCX/NIXL/CUDA IPC in containers) with the A/B above; a robust fix belongs in UCX cuda_ipc (compare PID namespace, not bare PID) or NIXL. Also hand over the earlier reproducer:
    Qwen3-4B, 1P1D on one node, A100 NVLink, vLLM runtime 1.5.0, concurrency 32,
    4k prompts: transfers of 565 MB taking 20 to 85 s. Ask what single-node
    disagg is expected to use (cuda_ipc versus IB loopback) and whether the

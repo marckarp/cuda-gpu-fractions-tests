@@ -14,7 +14,7 @@ with evidence, and record every step so it can be reproduced.
 | [04](tests/04-enforcement/RESULTS.md) | Memory and compute limits at 0.25 / 0.5 / 0.75 of 2 GPUs | PASS: allocation fails at the cap, speed tracks the share |
 | [05](tests/05-uneven-shares/RESULTS.md) | Uneven shares, compute set apart from memory | PASS: 0.3 / 0.7 split, prefill 74 SMs + decode 32 SMs on one GPU |
 | [06](tests/06-disagg-one-gpu/RESULTS.md) | Dynamo 1.5 disagg, prefill + decode as fractions of one GPU | PASS: requests served; NIXL KV transfer between the two fractions is CUDA IPC, 483 MB in 2.3 ms (~214 GB/s) |
-| [07](tests/07-small-model-agg-vs-frac-disagg/RESULTS.md) | Qwen3-4B at concurrency 32: agg on 1 GPU vs fraction disagg on 1 GPU vs disagg on 2 GPUs (AIPerf) | NOT PROVEN: agg 374 tok/s; every disagg layout 38 to 54 tok/s because KV transfers take 6 to 85 s under load. Not a fractions problem (2 whole GPUs collapse the same way); fraction disagg matched 2-GPU disagg on half the hardware with better ITL (43 vs 77 ms) |
+| [07](tests/07-small-model-agg-vs-frac-disagg/RESULTS.md) | Qwen3-4B at concurrency 32: agg on 1 GPU vs prefill+decode as fractions of the same GPU (AIPerf) | PASS: 377 vs 374 tok/s on one GPU with ITL p99 45 ms vs 83 ms. Needed a real bug fix first: identical EngineCore PIDs in the two containers break CUDA IPC and UCX silently falls back to TCP (10x slower); shifting one PID fixes it |
 
 All of this is on the PR #147 fork, not the released stack (see
 [Stack status](#stack-status-2026-10-22)).
@@ -185,12 +185,13 @@ still competes with decode for memory bandwidth; that cost is not measured yet.
 | Layout | Output tok/s | ITL avg / p99 | TTFT avg |
 |---|---|---|---|
 | Aggregated, one whole GPU | **374** | 77 / 83 ms | 1.0 s |
-| Prefill + decode as fractions, one GPU | 38 | **43 / 45 ms** | 96 s |
+| Prefill + decode as fractions, one GPU, before the fix | 38 | 43 / 45 ms | 96 s |
+| **Prefill + decode as fractions, one GPU, PID fix + headroom** | **377** | **43 / 45 ms** | 4.7 s |
 | Prefill + decode on two whole GPUs (NVLink) | 50 | 44 / 47 ms | 76 s |
 
-Isolation works (ITL), but both disaggregated layouts lost to aggregated by
-about 10x at this load, and the fraction layout matched the two-GPU layout on
-half the hardware. The reason is not fractions.
+With the bug fixed, fraction disaggregation on one GPU matches aggregated
+throughput on the same GPU and nearly halves inter-token latency; TTFT is the
+trade-off at a 60/40 SM split.
 
 ### What is slow, in plain terms
 
@@ -205,20 +206,20 @@ in flight at 565 MB each, that is 20 to 85 s per handoff, which is what vLLM
 showed. The same bytes as 28 large descriptors move in 0.04 s on the same path
 (standalone NIXL benchmark, `tests/07-.../nixl_bench.py`).
 
-That was the first theory. A contiguous-allocation patch cut descriptors to 54 and
-changed nothing (test 07, deep dive), and standalone NIXL transfers between the
-same two pods are fast in every configuration tried, including vLLM's own NIXL
-settings and a busy peer. What remains is something inside vLLM's NIXL connector
-path that only shows under serving load; it needs instrumentation in the engine,
-not more deployment variants. It hits every NVLink-only or same-GPU disaggregated
-deployment, not just fractions.
+That was the first theory and it was wrong. The actual cause (test 07, "The real
+bug"): vLLM's EngineCore gets the same PID in both containers, CUDA IPC refuses to
+open a handle whose exporter PID equals the importer's, and UCX silently falls
+back to TCP at ~175 MB/s. Shifting one container's PID restores CUDA IPC at
+9 GB/s. Decode also needs memory headroom under its MPS cap for the IPC mapping
+of prefill's memory. It hits every same-node disaggregated deployment over
+cuda_ipc, not just fractions.
 
 ### What has to change to make it fast
 
-1. **Find and fix the slow pull inside vLLM's NIXL connector.** Descriptor
-   coalescing alone does not do it (tested); the engine-side cause still has to
-   be instrumented. Also note KAI does not yet allow two fractional containers in
-   one pod, so prefill and decode must be separate pods today.
+1. **Fix the PID-collision CUDA IPC bug properly** (UCX cuda_ipc or NIXL should
+   not treat equal PIDs in different PID namespaces as the same process); until
+   then, shift one worker's PID or run the two engines in one pod (KAI does not
+   yet allow two fractional containers in one pod).
 2. **Shared KV on the device: no copy at all.** On one GPU the ideal handoff is
    a pointer, not a transfer: one owner of the KV pool, prefill writes a block,
    decode references it by ID. Dynamo's GMS already does this pattern for
