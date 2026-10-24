@@ -32,8 +32,12 @@ case; on one GPU the fraction layout matches it while fixing the ITL tail.
    back to TCP at ~175 MB/s, about 50x slower, with no error at normal log levels.
    Fix in this PoC: the decode container forks 200 throwaway processes before
    `exec`, so its EngineCore gets a different PID. (Same deployment, only this
-   change: one 560 MB transfer went from 3.3 s to 0.015 s.) The proper fix belongs
-   in the CUDA/MPS or UCX layer; see `../tests/07-small-model-agg-vs-frac-disagg/RESULTS.md`.
+   change: one 560 MB transfer went from 3.3 s to 0.015 s.) This is a hack: it only
+   works because the two containers would otherwise produce the same PID, and the
+   exact number depends on the image and launch path. Always verify with
+   `pgrep -f EngineCore` in both pods (step 3). The proper fix belongs in the
+   CUDA/MPS or UCX layer; see `../tests/07-small-model-agg-vs-frac-disagg/RESULTS.md`.
+   The workaround lives in `manifests/20-frac-disagg-1gpu.yaml` (decode `command:`).
 2. **Memory headroom for the IPC mapping.** Under MPS the mapping of the peer's
    memory counts against the importer's cap. Decode at 0.88 utilization failed at
    transfer post; 0.75 works. Rule of thumb: leave headroom at least the size of the
