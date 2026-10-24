@@ -16,6 +16,19 @@ one for the other. Against real two-GPU disaggregation, the fraction layout deli
 29% more tokens per GPU with the same ITL; the two-GPU layout wins on TTFT because
 prefill has a whole GPU, and gives 1.56x total throughput for 2x hardware.
 
+## Why this is new
+
+- **Disaggregation never made sense for small models.** It needed at least two
+  GPUs, and a small model cannot fill even one, so it always lost per GPU to
+  aggregated serving. With fractions, one GPU is enough, and the result above is
+  the first time it comes out ahead: same throughput, half the inter-token latency.
+- **Compute and memory could never be balanced between prefill and decode.** The
+  only knobs were whole GPUs: tensor-parallel size and replica count per role.
+  Fractions let prefill take most of the SMs with little memory and decode take
+  most of the memory with fewer SMs, on the same card. That applies to large
+  models too: a node can be carved so decode gets the HBM it needs and prefill the
+  compute it needs, instead of both being forced to whole-GPU granularity.
+
 ## The idea in one paragraph
 
 In aggregated serving, prefill and decode share one engine, so every long prompt
