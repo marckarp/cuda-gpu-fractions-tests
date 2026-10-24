@@ -261,6 +261,28 @@ wins ITL") is beaten on the per-GPU axis and matched on the ITL axis.
 Caveats: single run per config; all engines `--enforce-eager`; HBM contention is
 folded into these numbers rather than measured separately; 4B model only.
 
+## Two-GPU control with the fixes (2026-10-24)
+
+The earlier two-GPU runs (C, C2, C3, C5) were all broken by the same PID collision.
+With the decode PID shift alone, two whole GPUs were still slow (36 s per transfer,
+15 MB/s): `cuIpcOpenMemHandle() failed: invalid argument`, because each pod sees
+only its own GPU (`nvidia-smi -L` shows one device per pod) and a process cannot
+IPC-map memory on a device it cannot see. With both GPUs visible to both pods
+(privileged, `NVIDIA_VISIBLE_DEVICES=all`, engine pinned by `CUDA_VISIBLE_DEVICES`
+order; [`disagg-4b-2gpu-bothvisible.yaml`](disagg-4b-2gpu-bothvisible.yaml)) the
+transfer runs at 30 GB/s over NVLink (621 MB in 21 ms).
+
+| Run C9: prefill on GPU 0, decode on GPU 1, whole GPUs | value |
+|---|---|
+| Output tok/s | 586 (293 per GPU) |
+| ITL avg / p99 | 44 / 48 ms |
+| TTFT avg / p99 | 0.93 / 5.6 s |
+| KV transfer | 565 MB in 52 ms avg, 10.8 GB/s |
+
+Against B21 (fractions, one GPU, 377 tok/s, ITL p99 45 ms, TTFT 4.7 s): the fraction
+layout gives 29% more tokens per GPU at the same ITL; two whole GPUs win TTFT because
+prefill is not SM-capped.
+
 ## Next steps
 
 1. Report the PID-collision bug (UCX/NIXL/CUDA IPC in containers) with the A/B above; a robust fix belongs in UCX cuda_ipc (compare PID namespace, not bare PID) or NIXL. Also hand over the earlier reproducer:

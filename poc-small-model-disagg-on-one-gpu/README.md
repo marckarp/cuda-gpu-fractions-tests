@@ -4,14 +4,17 @@
 
 Qwen3-4B on one A100-40GB, 4k-token prompts, 128 output tokens, 32 concurrent requests:
 
-| Layout | Output tok/s | ITL avg / p99 | TTFT avg |
-|---|---|---|---|
-| Aggregated: one engine, whole GPU | 374 | 77 / 83 ms | 1.0 s |
-| **Disaggregated: prefill + decode as two fractions of the same GPU** | **377** | **43 / 45 ms** | 4.7 s |
+| Layout | GPUs | Output tok/s | tok/s per GPU | ITL avg / p99 | TTFT avg |
+|---|---|---|---|---|---|
+| Aggregated: one engine, whole GPU | 1 | 374 | 374 | 77 / 83 ms | 1.0 s |
+| **Disaggregated: prefill + decode as two fractions of the same GPU** | 1 | **377** | **377** | **43 / 45 ms** | 4.7 s |
+| Disaggregated: prefill on one whole GPU, decode on the other (NVLink) | 2 | 586 | 293 | 44 / 48 ms | 0.9 s |
 
-Same GPU, same throughput, inter-token latency nearly halved. TTFT is higher
-because prefill only gets 60% of the SMs here; change the split to trade one for
-the other.
+On one GPU: same throughput as aggregated, inter-token latency nearly halved. TTFT
+is higher because prefill only gets 60% of the SMs here; change the split to trade
+one for the other. Against real two-GPU disaggregation, the fraction layout delivers
+29% more tokens per GPU with the same ITL; the two-GPU layout wins on TTFT because
+prefill has a whole GPU, and gives 1.56x total throughput for 2x hardware.
 
 ## The idea in one paragraph
 
@@ -122,6 +125,7 @@ sudo microk8s ctr --namespace k8s.io images pull nvcr.io/nvidia/ai-dynamo/vllm-r
 | 1 | CUDA IPC fails when the two containers' engines have the same PID; UCX falls back to TCP silently. | CUDA driver / MPS, or UCX `cuda_ipc` as a workaround | Equal PIDs in different PID namespaces are treated as different processes; or UCX detects the case and errors out instead of falling back. |
 | 2 | The fallback to TCP is silent. | UCX, NIXL, vLLM connector | A warning on unexpected transport, and the transport name in vLLM's KV transfer metrics. |
 | 3 | The IPC mapping is charged against the importer's MPS memory cap. | MPS / fractioning docs, Dynamo operator | Stop charging it twice, or document the headroom rule and have the operator reserve it. |
+| 4 | **Across two GPUs on one node**, each pod sees only its own GPU, so CUDA IPC over NVLink is impossible and UCX falls back to TCP (15 MB/s). Making both GPUs visible to both pods (privileged, `NVIDIA_VISIBLE_DEVICES=all`, engine pinned by `CUDA_VISIBLE_DEVICES` order) gave 30 GB/s over NVLink. | Dynamo operator / device plugin | Same-node disaggregated workers need the peer GPU visible (or an RDMA NIC); the operator should set this up, or document that NVLink P/D on Kubernetes requires it. Not needed for the one-GPU fraction layout. |
 
 Prefill and decode stay in separate pods so they scale independently; one pod would
 avoid problem 1 but defeats the purpose. Longer term, a KV pool owned once and

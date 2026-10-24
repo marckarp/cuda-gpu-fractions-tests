@@ -1,0 +1,121 @@
+# 07-C7: real disagg on TWO whole A100s (NVLink) + decode PID shift
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  labels: { app: dyn-frac, role: frontend }
+spec:
+  hostNetwork: true            # curl localhost:8000 from the box
+  restartPolicy: Never
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.frontend"]
+      args: ["--http-port", "8000", "--router-mode", "round-robin"]
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_LOG, value: info }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prefill
+  labels: { app: dyn-frac, role: prefill }
+spec:
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext: { runAsNonRoot: true, runAsUser: 1000, runAsGroup: 1000 }
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-m", "dynamo.vllm"]
+      args:
+        - --model
+        - Qwen/Qwen3-4B
+        - --disaggregation-mode
+        - prefill
+        - --kv-transfer-config
+        - '{"kv_connector":"NixlConnector","kv_role":"kv_producer"}'
+        - --gpu-memory-utilization
+        - "0.88"
+        - --max-model-len
+        - "8192"
+        - --enforce-eager
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_SYSTEM_PORT, value: "8082" }
+        - { name: HF_HOME, value: /opt/hf-cache }
+        - { name: VLLM_NIXL_SIDE_CHANNEL_PORT, value: "20097" }
+        - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+          valueFrom: { fieldRef: { fieldPath: status.podIP } }
+        - { name: DYN_LOG, value: info }
+      resources: { limits: { nvidia.com/gpu: 1 } }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+        - { name: hf, mountPath: /opt/hf-cache }
+        - { name: shm, mountPath: /dev/shm }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+    - name: hf
+      hostPath: { path: /opt/hf-cache, type: Directory }
+    - name: shm
+      emptyDir: { medium: Memory, sizeLimit: 8Gi }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: decode
+  labels: { app: dyn-frac, role: decode }
+spec:
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext: { runAsNonRoot: true, runAsUser: 1000, runAsGroup: 1000 }
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["sh", "-c", "for i in $(seq 200); do /bin/true; done; exec python3 -m dynamo.vllm \"$@\"", "--"]   # shift EngineCore PID away from prefill (CUDA IPC same-PID bug)
+      args:
+        - --model
+        - Qwen/Qwen3-4B
+        - --disaggregation-mode
+        - decode
+        - --kv-transfer-config
+        - '{"kv_connector":"NixlConnector","kv_role":"kv_consumer"}'
+        - --gpu-memory-utilization
+        - "0.88"
+        - --max-model-len
+        - "8192"
+        - --enforce-eager
+      env:
+        - { name: DYN_DISCOVERY_BACKEND, value: file }
+        - { name: DYN_FILE_KV, value: /opt/dyn-discovery }
+        - { name: DYN_SYSTEM_PORT, value: "8081" }
+        - { name: HF_HOME, value: /opt/hf-cache }
+        - { name: VLLM_NIXL_SIDE_CHANNEL_PORT, value: "20098" }
+        - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+          valueFrom: { fieldRef: { fieldPath: status.podIP } }
+        - { name: DYN_LOG, value: info }
+      resources: { limits: { nvidia.com/gpu: 1 } }
+      volumeMounts:
+        - { name: discovery, mountPath: /opt/dyn-discovery }
+        - { name: hf, mountPath: /opt/hf-cache }
+        - { name: shm, mountPath: /dev/shm }
+  volumes:
+    - name: discovery
+      hostPath: { path: /opt/dyn-discovery, type: Directory }
+    - name: hf
+      hostPath: { path: /opt/hf-cache, type: Directory }
+    - name: shm
+      emptyDir: { medium: Memory, sizeLimit: 8Gi }
