@@ -36,7 +36,9 @@ and restart independently), each a KAI GPU fraction:
 | decode | 40% | 25000 MiB | 0.75 |
 
 Plus a frontend pod and an AIPerf pod. Stock `vllm-runtime:1.5.0` image, Dynamo
-defaults, no code patches. Manifests in [`manifests/`](manifests/).
+defaults, no code patches. Manifests in [`manifests/`](manifests/):
+`00-helpers.yaml` (model download + AIPerf), `10-agg-1gpu.yaml` (baseline),
+`20-frac-disagg-1gpu.yaml` (the PoC), `30-disagg-2gpu-reference.yaml` (two-GPU reference).
 
 ## The problem we hit, and the workaround
 
@@ -117,6 +119,17 @@ sudo microk8s ctr --namespace k8s.io images pull nvcr.io/nvidia/ai-dynamo/vllm-r
    ```
 5. Compare `A-agg` and `B-frac`: Output Token Throughput, Inter Token Latency p99,
    Time to First Token. Both logs are in `/opt/aiperf-results/` on the node.
+6. Optional reference, real disaggregation on two whole GPUs (needs a second A100):
+   ```bash
+   kubectl delete pod prefill decode --wait=true
+   kubectl apply -f manifests/30-disagg-2gpu-reference.yaml
+   until kubectl logs prefill | grep -q "dynamo.prefill.generate" && kubectl logs decode | grep -q "dynamo.backend.generate"; do sleep 5; done
+   kubectl exec decode -- nvidia-smi -L   # must list BOTH GPUs, see the header of the manifest
+   ./run-benchmark.sh C-2gpu
+   kubectl logs decode | grep "KV Transfer metrics" | tail -1   # healthy: ~50 ms per transfer, ~10 GB/s
+   ```
+   The manifest runs the pods privileged so both GPUs are visible; that is a PoC
+   shortcut, not a production pattern.
 
 ## What has to be fixed to support this without hacks
 
