@@ -22,8 +22,12 @@ In aggregated serving, prefill and decode share one engine, so every long prompt
 stretches decode's step and jitters token latency. Disaggregation separates them,
 but normally costs a second GPU and a network hop for the KV cache. GPU fractions
 give each engine its own SM share and memory cap on **one** GPU, so decode is
-protected from prefill, and the KV handoff is a copy inside the card (CUDA IPC,
-~9 GB/s measured) instead of a network transfer.
+protected from prefill, and the KV handoff is a copy inside the card (via CUDA
+IPC) instead of a network transfer. Under serving load that copy ran at ~9 GB/s,
+about the same as NVLink between two GPUs under the same load (~11 GB/s); both
+are limited by how the per-block copies are issued on a busy GPU, not by the
+fabric (idle, the on-chip copy hit 214 GB/s vs 30 GB/s over NVLink). The win on
+one GPU is not a faster copy, it is no second GPU and, eventually, no copy at all.
 
 ## What we deployed
 
