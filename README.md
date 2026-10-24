@@ -150,6 +150,9 @@ Key facts:
 
 ## Disaggregated serving on one GPU with fractions
 
+> **Reproduce it:** [`poc-small-model-disagg-on-one-gpu/`](poc-small-model-disagg-on-one-gpu/) has the
+> three manifests, a benchmark script, and step-by-step instructions.
+
 Fractions make a new disaggregation layout possible: prefill and decode as two
 engines on the **same** GPU, each with its own SM share and memory cap.
 

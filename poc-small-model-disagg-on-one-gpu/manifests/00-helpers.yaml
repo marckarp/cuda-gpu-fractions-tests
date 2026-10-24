@@ -1,0 +1,32 @@
+# Helpers for test 07: model download into the shared HF cache, and an AIPerf runner.
+---
+apiVersion: v1
+kind: Pod
+metadata: {name: dl-qwen3-4b}
+spec:
+  restartPolicy: Never
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["python3", "-c", "from huggingface_hub import snapshot_download; print(snapshot_download('Qwen/Qwen3-4B'))"]
+      env: [{name: HF_HOME, value: /opt/hf-cache}]
+      volumeMounts: [{name: hf, mountPath: /opt/hf-cache}]
+  volumes:
+    - name: hf
+      hostPath: {path: /opt/hf-cache, type: Directory}
+---
+apiVersion: v1
+kind: Pod
+metadata: {name: aiperf}
+spec:
+  hostNetwork: true            # reach the frontend on localhost:8000
+  restartPolicy: Never
+  containers:
+    - name: main
+      image: python:3.11-slim
+      command: ["sh", "-c", "pip install -q aiperf && echo AIPERF_READY && sleep infinity"]
+      volumeMounts: [{name: results, mountPath: /results}]
+  volumes:
+    - name: results
+      hostPath: {path: /opt/aiperf-results, type: DirectoryOrCreate}
