@@ -4,6 +4,30 @@ Hands-on tests of CUDA GPU fractions (KAI-Scheduler + kai-gpu-fractioning + MPS)
 with Dynamo, on a 2x A100-40GB test box. Goal: check what is actually enforced,
 with evidence, and record every step so it can be reproduced.
 
+## Background: what makes this possible
+
+GPU fractions need a new NVIDIA driver plus a new container toolkit. We
+upgraded our box from driver 580 / CUDA 13.0 to **driver 615.71.09 / CUDA 13.4**.
+
+| Piece | Version | What it adds |
+|---|---|---|
+| NVIDIA driver | r615 (CUDA 13.4) | **MPS namespaces**: one shared MPS server per GPU holds separate groups of clients, each with its own compute limit stored on the server. This is how each pod gets its own share that it cannot raise. Also a multi-user MPS server and static SM partitions. |
+| Container toolkit | 1.20.1 (GPU Operator v26.7.1) | A hook that sets a **per-container GPU memory limit** in the driver at container start. Allocation past the cap fails. |
+| kai-gpu-fractioning (PR #147 fork) | `af0544e4` | Node agents that use the two pieces above: `mpsd` creates a namespace per container, `fractiond` wires each container to it. |
+| KAI-Scheduler (PR #2368 fork) | `44d1d0a9` | Places pods on GPUs with room and books compute and memory per GPU. |
+
+Check that a node has the driver piece:
+
+```bash
+nvidia-smi --query-gpu=driver_version --format=csv,noheader   # 615.x or newer
+nvidia-cuda-mps-control -p 3 namespace --help                # lists create, set, list, ...
+```
+
+Older drivers have no `namespace` command, so there is no per-pod compute limit
+on them. The next driver, **r620 / CUDA 13.5**, adds a default SM partition per
+namespace and GPU that the driver enforces over the app's own choice (the fix for
+the partition-override issue under Known gaps).
+
 ## What we have proven
 
 | Test | What | Result |
