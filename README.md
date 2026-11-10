@@ -41,10 +41,16 @@ the partition-override issue under Known gaps).
 | [07](tests/07-small-model-agg-vs-frac-disagg/RESULTS.md) | Qwen3-4B at concurrency 32: agg on 1 GPU vs prefill+decode as fractions of the same GPU (AIPerf) | PASS: 377 vs 374 tok/s on one GPU with ITL p99 45 ms vs 83 ms. Needed a real bug fix first: identical EngineCore PIDs in the two containers break CUDA IPC and UCX silently falls back to TCP (10x slower); shifting one PID fixes it |
 | [08](tests/08-live-resize-and-shared-weights/RESULTS.md) | Change a fraction's limits while it runs; prefill + decode sharing one copy of the weights through Dynamo GMS | MIXED: MPS refuses any change while a client is attached; a new process in the same pod picks up a new SM share (10% to 100%). Shared weights work (23.0 GB used instead of 31.4 GB) but the mapping counts against each pod's cap and vLLM can oversize the KV cache. Restarting an engine at a new share takes about 67 s with or without GMS |
 | [09](tests/09-resize-by-pod-replacement/RESULTS.md) | Resize the prefill/decode SM split by replacing pods under load, plain and with standby (shadow) engines | MIXED: the split matters (480 vs 295 tok/s at 16 clients). Kill-then-start is an 80 to 96 s outage per role. A standby decode takes over in 3 to 8 s but in-flight requests are lost and prefill can stall 30 s. A standby prefill does not work in Dynamo 1.5.0. Ten Dynamo/KAI gaps listed |
-| [10](tests/10-multi-model-frontends/README.md) | Two models as fractions of one GPU: one frontend or many, one DGD or many | PASS: one frontend serves both models, in one DGD or across DGDs (worker namespace must start with the frontend's prefix); two frontends in one DGD both serve both; requests reach the right engine (12 / 7 counted per engine) |
 
 All of this is on the PR #147 fork, not the released stack (see
 [Stack status](#stack-status-2026-10-22)).
+
+## Separate topic: several models behind one frontend
+
+[`multi-model-dgd-frontends/`](multi-model-dgd-frontends/README.md): two models as
+fractions of one GPU. One frontend serves both, in one DGD or across DGDs; two
+frontends in one DGD both serve both; requests reach the right engine (counted
+per engine).
 
 ## How to request a GPU fraction
 

@@ -1,4 +1,4 @@
-# Changelog: test 10
+# Changelog: multi-model frontends
 
 All times UTC on 2026-11-10. No Dynamo or KAI code was changed.
 
@@ -6,7 +6,7 @@ All times UTC on 2026-11-10. No Dynamo or KAI code was changed.
 
 - **Installed the Dynamo platform 1.5.0** with Helm into `dynamo-system` (operator,
   etcd, NATS), the same way as Dynamo's `examples/gpu-sharing/common/install-dynamo-platform.sh`
-  but at 1.5.0 to match the runtime image. Tests 06 to 09 ran without the operator.
+  but at 1.5.0 to match the runtime image. The disaggregation tests in `tests/` ran without the operator.
   It is still installed.
 - Downloaded `Qwen/Qwen3-0.6B` into `/opt/hf-cache`.
 - Created `/opt/t10`.
@@ -17,7 +17,7 @@ All times UTC on 2026-11-10. No Dynamo or KAI code was changed.
 1. First `helm repo add` failed on a DNS timeout; the retry worked.
 2. Shapes A, A2, B, C, D deployed one after another, each checked with `check.sh`;
    A2, B, C and D also with `routing.sh`. Nothing failed.
-3. The workers did not set `--enforce-eager` (unlike tests 06 to 09) and came up
+3. The workers did not set `--enforce-eager` (unlike the disaggregation tests) and came up
    with CUDA graphs.
 
 ## Notes

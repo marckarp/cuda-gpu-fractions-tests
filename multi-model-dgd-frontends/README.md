@@ -1,4 +1,4 @@
-# 10: several models, one frontend or many, one DGD or many
+# Multi-model: several models, one frontend or many, one DGD or many
 
 **Run 2026-11-10.** One A100 80GB, driver 615.71.09, KAI-Scheduler +
 kai-gpu-fractioning forks, Dynamo platform 1.5.0 (operator, Kubernetes discovery)
