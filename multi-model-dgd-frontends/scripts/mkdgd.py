@@ -3,11 +3,12 @@
 
     mkdgd.py <dgd-name> <frontend-names, comma separated or "-"> <worker> [<worker> ...]
 
-    worker = <component-name>:<model>:<sm-share>:<memory-MiB>[:<dynamo-namespace>]
+    worker = <component-name>:<model>:<sm-share>:<memory-MiB>[:<dynamo-namespace>[:<served-name>]]
 
 Each worker is an aggregated vLLM engine in its own GPU fraction. If the fifth
-field is given the worker's DYN_NAMESPACE is set to it; if not, the operator's
-default is left alone.
+field is given (and is not "-") the worker's DYN_NAMESPACE is set to it; if not,
+the operator's default is left alone. A sixth field registers the model under
+that name (--served-model-name), so many workers can serve the same weights.
 """
 import sys
 
@@ -31,8 +32,9 @@ for w in sys.argv[3:]:
     parts = w.split(":")
     comp, model, share, mem = parts[:4]
     env = [{"name": "HF_HOME", "value": "/opt/hf-cache"}, {"name": "HF_HUB_OFFLINE", "value": "1"}]
-    if len(parts) > 4:
+    if len(parts) > 4 and parts[4] != "-":
         env.append({"name": "DYN_NAMESPACE", "value": parts[4]})
+    served = ["--served-model-name", parts[5]] if len(parts) > 5 else []
     components.append({
         "name": comp, "type": "worker", "replicas": 1,
         "podTemplate": {
@@ -51,7 +53,7 @@ for w in sys.argv[3:]:
                 "containers": [{
                     "name": "main", "image": IMAGE, "imagePullPolicy": "IfNotPresent",
                     "command": ["python3", "-m", "dynamo.vllm"],
-                    "args": ["--model", model, "--gpu-memory-utilization", "0.80", "--max-model-len", "8192"],
+                    "args": ["--model", model, "--gpu-memory-utilization", "0.80", "--max-model-len", "8192"] + served,
                     "env": env,
                     "volumeMounts": [{"name": "hf", "mountPath": "/opt/hf-cache"},
                                      {"name": "shm", "mountPath": "/dev/shm"}],

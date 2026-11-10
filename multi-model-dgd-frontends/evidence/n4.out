@@ -1,0 +1,9 @@
+## N=4 (n4): 5 of 5 pods Running after 124 s
+   +184 s: frontend lists 4 of 4; missing: none
+   +274 s: frontend lists 4 of 4; missing: none
+   +364 s: frontend lists 4 of 4; missing: none
+## frontend log: model registration errors
+   error lines: 0
+## one request to the first and last model
+   m01 -> {'message': 'Model not found', 'type': 'Not Found', 'code': 404}
+   m04 -> {'message': 'Model not found', 'type': 'Not Found', 'code': 404}

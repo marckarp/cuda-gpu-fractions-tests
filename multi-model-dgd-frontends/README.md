@@ -10,7 +10,7 @@ vLLM worker in its own GPU fraction of the same GPU (40% SMs / 14000 MiB and
 
 | Question | Answer |
 |---|---|
-| Does it need a frontend per model? | **No, for two models.** One frontend serves both. Not shown for larger numbers (see the warning below). |
+| Does it need a frontend per model? | **No.** One frontend served both models, and listed all of 4, 8 and 16 models in the larger runs below. |
 | One frontend and several models in **one DGD**? | **Yes.** |
 | Several frontends in one DGD? | **Yes.** Each frontend serves all the models of that DGD. |
 | One frontend for models in **different DGDs**? | **Yes**, if the other DGD's worker sets a Dynamo namespace that starts with the frontend's prefix. Without that, each DGD's frontend sees only its own models. |
@@ -65,29 +65,58 @@ The per-model namespace is still accepted (shape A) but no longer required.
 
 - One DGD per model, each with its own frontend (the layout in Dynamo's public
   `examples/gpu-sharing`), is not required for two models. One frontend fronted
-  both, in one DGD or spread over two. **This was only tested with two models;
-  see the warning below before relying on it for more.**
+  both, in one DGD or spread over two. The routing check was done with two models;
+  registration was also checked with 4, 8 and 16 (next section).
 - One DGD holding all models is the simplest. Separate DGDs with one shared
   frontend (shape D) keep each model's lifecycle independent, at the cost of
   setting one environment variable per worker.
 - Several frontends in one DGD give more than one entry point to the same set of
   models; they do not partition the models between them.
 
-## Warning: more than two models
+## More than two models: 4, 8 and 16 behind one frontend
 
-Two models is all this test covers. An earlier test of the same shape on Dynamo
-1.3.0 (one frontend, N workers started together, all serving the same weights
-under different names) lost models: 1 of 4 at N=4 and 9 of 16 at N=16, twice,
-while N=1, 2 and 8 were clean. Every pod was Running; the frontend failed to
-resolve some models' tokenizer files while resolving several at once, did not
-retry, and `/v1/models` silently listed fewer models than were deployed. Whether
-1.5.0 still does this is being tested; until then, check `/v1/models` against
-the number of models deployed.
+An earlier test of this shape on Dynamo 1.3.0 (one frontend, N workers started
+together, all serving the same weights under different names) lost models: 1 of
+4 at N=4 and 9 of 16 at N=16, twice, while N=1, 2 and 8 were clean. Every pod
+was Running; the frontend failed to resolve some models' tokenizer files while
+resolving several at once on one shared cache path, did not retry, and
+`/v1/models` silently listed fewer models than were deployed.
+
+The same shape rerun here on Dynamo 1.5.0: one DGD, one frontend, N workers
+started together, all serving `Qwen/Qwen3-0.6B` as `m01`..`mNN`, each a GPU
+fraction (5% SMs, 4500 MiB). `scripts/n-models.sh`.
+
+| N | Pods Running | Frontend lists, checked 3 times over 3 minutes | Registration errors in the frontend log | Manifest, output |
+|---|---|---|---|---|
+| 4 | 5 of 5 | 4 of 4 | 0 | [`n4-same-weights.yaml`](manifests/n4-same-weights.yaml), [output](evidence/n4.out) |
+| 8 | 9 of 9 | 8 of 8 | 0 | [output](evidence/n8.out) |
+| 16, first run | 17 of 17 | 16 of 16 | 0 | [`n16-same-weights.yaml`](manifests/n16-same-weights.yaml), [output](evidence/n16a.out), [frontend log](evidence/fe-n16a.log) |
+| 16, second run | 17 of 17 | 16 of 16 | 0 | [output](evidence/n16b.out) |
+
+**No model was lost in any run.** In the 1.5.0 frontend log each model's files
+sit under a directory of their own, named after the served model
+(`.../.cache/dynamo/mdc/by-slug/m10/...`), not under one shared path for the
+weights repository. That is consistent with the earlier race being gone, since
+the frontend no longer resolves several models against the same files; the
+cause of the difference was not traced further than that.
+
+What this does and does not show:
+
+- Four clean runs, two of them at the N that failed twice out of twice before.
+  A race can still hide; this is evidence, not proof of absence.
+- It differs from the earlier test in more than the Dynamo version: Qwen3-0.6B
+  instead of Qwen3-8B, GPU fractions instead of MIG slices, Kubernetes discovery.
+- At N=16 only the first and last model were sent a request (both answered). In
+  the N=4 and N=8 outputs the request lines say "Model not found": the script
+  asked for `m01` while those runs registered `m1`. That was a script bug, since
+  fixed; the listing lines are the evidence for those runs.
+- Sixteen pods took about 270 s to all be Running.
 
 ## Not tested
 
-More than two models; disaggregated (prefill + decode) workers per model; more
-than one replica of a model; load on both models at once; a frontend from one
+Requests to every one of 16 models, or load on many models at once;
+disaggregated (prefill + decode) workers per model; more than one replica of a
+model; a frontend from one
 Kubernetes namespace serving workers in another.
 
 ## Files

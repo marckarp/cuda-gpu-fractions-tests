@@ -1,0 +1,9 @@
+## N=8 (n8): 9 of 9 pods Running after 158 s
+   +218 s: frontend lists 8 of 8; missing: none
+   +308 s: frontend lists 8 of 8; missing: none
+   +398 s: frontend lists 8 of 8; missing: none
+## frontend log: model registration errors
+   error lines: 0
+## one request to the first and last model
+   m01 -> {'message': 'Model not found', 'type': 'Not Found', 'code': 404}
+   m08 -> {'message': 'Model not found', 'type': 'Not Found', 'code': 404}
