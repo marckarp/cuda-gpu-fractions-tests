@@ -18,11 +18,11 @@ vLLM worker in its own GPU fraction of the same GPU (40% SMs / 14000 MiB and
 
 | Shape | Manifest | Frontends see | Routing check |
 |---|---|---|---|
-| A. One DGD, one frontend, two models, a Dynamo namespace per model | `a-one-dgd-one-frontend.yaml` | both models | not counted (A2 covers the same path) |
-| A2. Same, workers left in the DGD's default namespace | `a2-no-namespaces.yaml` | both models | PASS |
-| B. One DGD, two frontends, two models | `b-one-dgd-two-frontends.yaml` | both frontends: both models | PASS through each frontend |
-| C. Two DGDs, each a frontend and one model | `c1.yaml`, `c2.yaml` | each frontend: only its own model; the other returns 404 | PASS for the model each frontend owns |
-| D. C's first DGD plus a worker-only DGD for the second model, namespace `default-mm-c1-qwen06b` | `c1.yaml`, `d-worker-only-dgd.yaml` | the one frontend: both models | PASS |
+| A. One DGD, one frontend, two models, a Dynamo namespace per model | [`a-one-dgd-one-frontend.yaml`](manifests/a-one-dgd-one-frontend.yaml) | both models | not counted (A2 covers the same path); [output](evidence/a.out) |
+| A2. Same, workers left in the DGD's default namespace | [`a2-no-namespaces.yaml`](manifests/a2-no-namespaces.yaml) | both models | PASS: [check](evidence/a2.out), [routing](evidence/a2-routing.out) |
+| B. One DGD, two frontends, two models | [`b-one-dgd-two-frontends.yaml`](manifests/b-one-dgd-two-frontends.yaml) | both frontends: both models | PASS through each frontend: [check](evidence/b.out), [routing](evidence/b-routing.out) |
+| C. Two DGDs, each a frontend and one model | [`c1.yaml`](manifests/c1.yaml), [`c2.yaml`](manifests/c2.yaml) | each frontend: only its own model; the other returns 404 | PASS for the model each frontend owns: [check](evidence/c.out), [routing](evidence/c-routing.out) |
+| D. C's first DGD plus a worker-only DGD for the second model, namespace `default-mm-c1-qwen06b` | [`c1.yaml`](manifests/c1.yaml), [`d-worker-only-dgd.yaml`](manifests/d-worker-only-dgd.yaml) | the one frontend: both models | PASS: [check](evidence/d.out), [routing](evidence/d-routing.out) |
 
 ## How routing was checked
 
