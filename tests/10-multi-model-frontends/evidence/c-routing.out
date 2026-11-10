@@ -1,0 +1,12 @@
+--- through mm-c1-frontend
+    http status counts:      12 200
+    http status counts:       7 404
+    unknown model -> http 404
+    mm-c1-qwen4b-2cadcff1-7f5f98784b-nzjnk: +12 requests (expected +12) PASS
+    mm-c2-qwen06b-9b226a47-977db99bc-kxfks: +0 requests (expected +7) FAIL
+--- through mm-c2-frontend
+    http status counts:       7 200
+    http status counts:      12 404
+    unknown model -> http 404
+    mm-c1-qwen4b-2cadcff1-7f5f98784b-nzjnk: +0 requests (expected +12) FAIL
+    mm-c2-qwen06b-9b226a47-977db99bc-kxfks: +7 requests (expected +7) PASS

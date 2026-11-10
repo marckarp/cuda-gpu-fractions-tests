@@ -1,0 +1,5 @@
+--- through mm-a2-frontend
+    http status counts:      19 200
+    unknown model -> http 404
+    mm-a2-qwen06b-a1b21b04-7bb68dbf87-4r7bm: +7 requests (expected +7) PASS
+    mm-a2-qwen4b-a1b21b04-b4899547d-6m55h: +12 requests (expected +12) PASS

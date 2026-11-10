@@ -1,0 +1,10 @@
+--- through mm-b-frontend1
+    http status counts:      19 200
+    unknown model -> http 404
+    mm-b-qwen06b-3853017c-6d5f79444f-jn4qc: +7 requests (expected +7) PASS
+    mm-b-qwen4b-3853017c-695f6668b4-9mwh5: +12 requests (expected +12) PASS
+--- through mm-b-frontend2
+    http status counts:      19 200
+    unknown model -> http 404
+    mm-b-qwen06b-3853017c-6d5f79444f-jn4qc: +7 requests (expected +7) PASS
+    mm-b-qwen4b-3853017c-695f6668b4-9mwh5: +12 requests (expected +12) PASS

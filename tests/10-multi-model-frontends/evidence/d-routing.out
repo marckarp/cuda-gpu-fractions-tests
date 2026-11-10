@@ -1,0 +1,5 @@
+--- through mm-c1-frontend
+    http status counts:      19 200
+    unknown model -> http 404
+    mm-c1-qwen4b-2cadcff1-7f5f98784b-nzjnk: +12 requests (expected +12) PASS
+    mm-d-qwen06b-cac17695-dd56d46bd-kfwwf: +7 requests (expected +7) PASS

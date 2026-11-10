@@ -1,0 +1,23 @@
+## DGDs
+NAME    READY   BACKEND   AGE
+mm-c1   True    vllm      2m14s
+mm-c2   True    vllm      2m14s
+## pods
+mm-c1-frontend-748bb754d-jwkmt           1/1   Running   0     2m14s
+mm-c1-qwen4b-2cadcff1-7f5f98784b-nzjnk   1/1   Running   0     2m14s
+mm-c2-frontend-74bddf9cd8-df57c          1/1   Running   0     2m13s
+mm-c2-qwen06b-9b226a47-977db99bc-kxfks   1/1   Running   0     2m13s
+## each pod's Dynamo namespace as the operator set it
+mm-c1-frontend-748bb754d-jwkmt: DYN_NAMESPACE=default-mm-c1 DYN_NAMESPACE_PREFIX=default-mm-c1 DYN_DISCOVERY_BACKEND=kubernetes
+mm-c1-qwen4b-2cadcff1-7f5f98784b-nzjnk: DYN_NAMESPACE=default-mm-c1 DYN_NAMESPACE_PREFIX= DYN_DISCOVERY_BACKEND=kubernetes
+mm-c2-frontend-74bddf9cd8-df57c: DYN_NAMESPACE=default-mm-c2 DYN_NAMESPACE_PREFIX=default-mm-c2 DYN_DISCOVERY_BACKEND=kubernetes
+mm-c2-qwen06b-9b226a47-977db99bc-kxfks: DYN_NAMESPACE=default-mm-c2 DYN_NAMESPACE_PREFIX= DYN_DISCOVERY_BACKEND=kubernetes
+## frontends
+--- mm-c1-frontend (<cluster-ip>) lists: ['Qwen/Qwen3-4B']
+    Qwen/Qwen3-4B -> OK, served by model Qwen/Qwen3-4B
+    Qwen/Qwen3-0.6B -> FAIL: {'message': 'Model not found', 'type': 'Not Found', 'code': 404}
+--- mm-c2-frontend (<cluster-ip>) lists: ['Qwen/Qwen3-0.6B']
+    Qwen/Qwen3-4B -> FAIL: {'message': 'Model not found', 'type': 'Not Found', 'code': 404}
+    Qwen/Qwen3-0.6B -> OK, served by model Qwen/Qwen3-0.6B
+## pods not Running, and why
+16386 MiB

@@ -1,0 +1,22 @@
+## DGDs
+NAME   READY   BACKEND   AGE
+mm-b   True    vllm      2m14s
+## pods
+mm-b-frontend1-6b8786b59d-d4qj7          1/1   Running   0     2m14s
+mm-b-frontend2-5fdc5989fb-vk72w          1/1   Running   0     2m13s
+mm-b-qwen06b-3853017c-6d5f79444f-jn4qc   1/1   Running   0     2m13s
+mm-b-qwen4b-3853017c-695f6668b4-9mwh5    1/1   Running   0     2m13s
+## each pod's Dynamo namespace as the operator set it
+mm-b-frontend1-6b8786b59d-d4qj7: DYN_NAMESPACE=default-mm-b DYN_NAMESPACE_PREFIX=default-mm-b DYN_DISCOVERY_BACKEND=kubernetes
+mm-b-frontend2-5fdc5989fb-vk72w: DYN_NAMESPACE=default-mm-b DYN_NAMESPACE_PREFIX=default-mm-b DYN_DISCOVERY_BACKEND=kubernetes
+mm-b-qwen06b-3853017c-6d5f79444f-jn4qc: DYN_NAMESPACE=default-mm-b-qwen06b DYN_NAMESPACE_PREFIX= DYN_DISCOVERY_BACKEND=kubernetes
+mm-b-qwen4b-3853017c-695f6668b4-9mwh5: DYN_NAMESPACE=default-mm-b-qwen4b DYN_NAMESPACE_PREFIX= DYN_DISCOVERY_BACKEND=kubernetes
+## frontends
+--- mm-b-frontend1 (<cluster-ip>) lists: ['Qwen/Qwen3-0.6B', 'Qwen/Qwen3-4B']
+    Qwen/Qwen3-4B -> OK, served by model Qwen/Qwen3-4B
+    Qwen/Qwen3-0.6B -> OK, served by model Qwen/Qwen3-0.6B
+--- mm-b-frontend2 (<cluster-ip>) lists: ['Qwen/Qwen3-0.6B', 'Qwen/Qwen3-4B']
+    Qwen/Qwen3-4B -> OK, served by model Qwen/Qwen3-4B
+    Qwen/Qwen3-0.6B -> OK, served by model Qwen/Qwen3-0.6B
+## pods not Running, and why
+16386 MiB
