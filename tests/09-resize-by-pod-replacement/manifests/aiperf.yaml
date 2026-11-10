@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata: {name: aiperf}
+spec:
+  hostNetwork: true
+  restartPolicy: Never
+  containers:
+    - name: main
+      image: python:3.11-slim
+      command: ["sh", "-c", "pip install -q aiperf && echo AIPERF_READY && sleep infinity"]
+      volumeMounts: [{name: results, mountPath: /results}]
+  volumes:
+    - name: results
+      hostPath: {path: /opt/aiperf-results, type: DirectoryOrCreate}

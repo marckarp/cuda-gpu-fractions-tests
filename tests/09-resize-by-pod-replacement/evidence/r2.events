@@ -1,0 +1,9 @@
+1794336973.547010774 load started (16 clients), active decode-s0 35%
+1794337018.549892543 delete decode-s0 (active, 35%)
+1794337026.038006541 decode-s1 active (15%)
+1794337026.229238137 decode-s0 pod gone
+1794337046.232510628 create standby decode-s2 (35%)
+1794337116.852904237 decode-s2 parked
+1794337136.856247079 delete decode-s1 (active, 15%)
+1794337144.323808846 decode-s2 active (35%)
+1794337268.226947479 load finished

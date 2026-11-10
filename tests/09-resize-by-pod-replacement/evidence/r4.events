@@ -1,0 +1,7 @@
+1794338007.555904406 load started (16 clients); prefill-s 45% and prefill-p0 10% both active
+1794338047.558978087 delete prefill-s (45%)
+1794338078.691464642 prefill-s gone; create standby prefill-p1 (45%)
+1794338145.090779670 prefill-p1 parked
+1794338165.093694277 delete prefill-p0 (active, 10%)
+1794338195.924455382 prefill-p1 active (45%)
+1794338322.827937162 load finished

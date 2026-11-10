@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+    nvidia.com/container.main.gpu-compute.request: '0.05'
+    nvidia.com/container.main.gpu-memory.limit: 4000Mi
+    nvidia.com/container.main.gpu-memory.request: 4000Mi
+  labels:
+    app: dyn-frac
+    kai.scheduler/queue: default-queue
+    role: gms
+  name: gms-prefill-kv
+spec:
+  containers:
+  - args:
+    - --device
+    - '0'
+    - --tag
+    - kv_cache
+    - --verbose
+    - --socket-path
+    - /opt/gms-prefill/gms_GPU-<uuid>_kv_cache.sock
+    command:
+    - python3
+    - -m
+    - gpu_memory_service
+    env:
+    - name: GMS_SOCKET_DIR
+      value: /opt/gms
+    image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+    imagePullPolicy: IfNotPresent
+    name: main
+    volumeMounts:
+    - mountPath: /opt/gms
+      name: gms
+    - mountPath: /opt/gms-prefill
+      name: gmsp
+  restartPolicy: Never
+  runtimeClassName: nvidia
+  schedulerName: kai-scheduler
+  securityContext:
+    runAsGroup: 1000
+    runAsNonRoot: true
+    runAsUser: 1000
+  volumes:
+  - hostPath:
+      path: /opt/gms
+      type: Directory
+    name: gms
+  - hostPath:
+      path: /opt/gms-prefill
+      type: Directory
+    name: gmsp
+

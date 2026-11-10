@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: dyn-frac
+    role: frontend
+  name: frontend
+spec:
+  containers:
+  - args:
+    - --http-port
+    - '8000'
+    - --router-mode
+    - round-robin
+    command:
+    - python3
+    - -m
+    - dynamo.frontend
+    env:
+    - name: DYN_DISCOVERY_BACKEND
+      value: file
+    - name: DYN_FILE_KV
+      value: /opt/dyn-discovery
+    - name: DYN_LOG
+      value: info
+    image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+    imagePullPolicy: IfNotPresent
+    name: main
+    volumeMounts:
+    - mountPath: /opt/dyn-discovery
+      name: discovery
+  hostNetwork: true
+  restartPolicy: Never
+  volumes:
+  - hostPath:
+      path: /opt/dyn-discovery
+      type: Directory
+    name: discovery

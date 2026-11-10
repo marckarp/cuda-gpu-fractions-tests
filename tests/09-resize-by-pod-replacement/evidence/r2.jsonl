@@ -1,0 +1,1105 @@
+{"w": 11, "seq": 0, "start": 1794336973.586917, "ttft": 9.345836162567139, "end": 1794336986.3703325, "chunks": 128, "err": null}
+{"w": 13, "seq": 0, "start": 1794336973.5874574, "ttft": 9.345391511917114, "end": 1794336986.37042, "chunks": 128, "err": null}
+{"w": 2, "seq": 0, "start": 1794336973.5824137, "ttft": 9.350237369537354, "end": 1794336986.3704412, "chunks": 128, "err": null}
+{"w": 4, "seq": 0, "start": 1794336973.5833232, "ttft": 9.349055290222168, "end": 1794336986.3707747, "chunks": 127, "err": null}
+{"w": 1, "seq": 0, "start": 1794336973.5812514, "ttft": 9.373087406158447, "end": 1794336986.396253, "chunks": 128, "err": null}
+{"w": 0, "seq": 0, "start": 1794336973.580792, "ttft": 9.822474002838135, "end": 1794336987.0404677, "chunks": 128, "err": null}
+{"w": 7, "seq": 0, "start": 1794336973.5848007, "ttft": 10.168519496917725, "end": 1794336987.3959863, "chunks": 128, "err": null}
+{"w": 15, "seq": 0, "start": 1794336973.5885086, "ttft": 10.533608198165894, "end": 1794336987.8323674, "chunks": 128, "err": null}
+{"w": 3, "seq": 0, "start": 1794336973.582939, "ttft": 10.698338985443115, "end": 1794336988.0361273, "chunks": 128, "err": null}
+{"w": 12, "seq": 0, "start": 1794336973.5872154, "ttft": 11.077420234680176, "end": 1794336988.5964196, "chunks": 128, "err": null}
+{"w": 6, "seq": 0, "start": 1794336973.5841782, "ttft": 11.459858179092407, "end": 1794336989.1555688, "chunks": 128, "err": null}
+{"w": 9, "seq": 0, "start": 1794336973.5857768, "ttft": 12.994431018829346, "end": 1794336990.5899785, "chunks": 128, "err": null}
+{"w": 8, "seq": 0, "start": 1794336973.5852861, "ttft": 18.925053119659424, "end": 1794336995.9074569, "chunks": 128, "err": null}
+{"w": 10, "seq": 0, "start": 1794336973.5863528, "ttft": 18.92371392250061, "end": 1794336995.9078655, "chunks": 128, "err": null}
+{"w": 5, "seq": 0, "start": 1794336973.5838852, "ttft": 18.92640733718872, "end": 1794336995.9082701, "chunks": 128, "err": null}
+{"w": 14, "seq": 0, "start": 1794336973.588063, "ttft": 18.922128438949585, "end": 1794336995.9090788, "chunks": 128, "err": null}
+{"w": 4, "seq": 1, "start": 1794336986.3714201, "ttft": 6.568167209625244, "end": 1794336996.3539152, "chunks": 128, "err": null}
+{"w": 2, "seq": 1, "start": 1794336986.371117, "ttft": 6.929405212402344, "end": 1794336996.7070472, "chunks": 128, "err": null}
+{"w": 11, "seq": 1, "start": 1794336986.3704917, "ttft": 7.293840646743774, "end": 1794336997.1037433, "chunks": 128, "err": null}
+{"w": 13, "seq": 1, "start": 1794336986.3708386, "ttft": 7.535004138946533, "end": 1794336997.3744068, "chunks": 128, "err": null}
+{"w": 1, "seq": 1, "start": 1794336986.3963048, "ttft": 7.8329737186431885, "end": 1794336997.704875, "chunks": 128, "err": null}
+{"w": 0, "seq": 1, "start": 1794336987.0405216, "ttft": 7.5871758460998535, "end": 1794336998.1123397, "chunks": 128, "err": null}
+{"w": 7, "seq": 1, "start": 1794336987.3960364, "ttft": 7.568471431732178, "end": 1794336998.4120934, "chunks": 128, "err": null}
+{"w": 15, "seq": 1, "start": 1794336987.832433, "ttft": 7.336430788040161, "end": 1794336998.6097465, "chunks": 128, "err": null}
+{"w": 3, "seq": 1, "start": 1794336988.036178, "ttft": 7.5241076946258545, "end": 1794336998.9717765, "chunks": 128, "err": null}
+{"w": 12, "seq": 1, "start": 1794336988.596484, "ttft": 7.309976577758789, "end": 1794336999.309094, "chunks": 128, "err": null}
+{"w": 6, "seq": 1, "start": 1794336989.1556365, "ttft": 7.128671169281006, "end": 1794336999.68589, "chunks": 128, "err": null}
+{"w": 9, "seq": 1, "start": 1794336990.5900273, "ttft": 5.879409313201904, "end": 1794336999.9029958, "chunks": 128, "err": null}
+{"w": 8, "seq": 1, "start": 1794336995.907524, "ttft": 0.9564385414123535, "end": 1794337000.2905867, "chunks": 128, "err": null}
+{"w": 14, "seq": 1, "start": 1794336995.9091158, "ttft": 1.3339564800262451, "end": 1794337000.68768, "chunks": 128, "err": null}
+{"w": 5, "seq": 1, "start": 1794336995.908322, "ttft": 1.512866497039795, "end": 1794337000.85563, "chunks": 128, "err": null}
+{"w": 10, "seq": 1, "start": 1794336995.9079359, "ttft": 1.8676998615264893, "end": 1794337001.2131016, "chunks": 128, "err": null}
+{"w": 4, "seq": 2, "start": 1794336996.3539746, "ttft": 1.8061590194702148, "end": 1794337001.5681953, "chunks": 128, "err": null}
+{"w": 2, "seq": 2, "start": 1794336996.7071168, "ttft": 1.8251354694366455, "end": 1794337001.9336748, "chunks": 128, "err": null}
+{"w": 11, "seq": 2, "start": 1794336997.103804, "ttft": 1.6290223598480225, "end": 1794337002.1275172, "chunks": 128, "err": null}
+{"w": 13, "seq": 2, "start": 1794336997.3744733, "ttft": 1.7263684272766113, "end": 1794337002.486479, "chunks": 128, "err": null}
+{"w": 1, "seq": 2, "start": 1794336997.7049558, "ttft": 1.7701301574707031, "end": 1794337002.8556683, "chunks": 128, "err": null}
+{"w": 0, "seq": 2, "start": 1794336998.1124067, "ttft": 1.7375819683074951, "end": 1794337003.2697923, "chunks": 128, "err": null}
+{"w": 7, "seq": 2, "start": 1794336998.4121559, "ttft": 1.6008167266845703, "end": 1794337003.448131, "chunks": 128, "err": null}
+{"w": 15, "seq": 2, "start": 1794336998.609793, "ttft": 1.8043668270111084, "end": 1794337003.8688085, "chunks": 128, "err": null}
+{"w": 3, "seq": 2, "start": 1794336998.9718425, "ttft": 1.7992453575134277, "end": 1794337004.2365694, "chunks": 128, "err": null}
+{"w": 12, "seq": 2, "start": 1794336999.3091574, "ttft": 1.680107831954956, "end": 1794337004.4605312, "chunks": 128, "err": null}
+{"w": 6, "seq": 2, "start": 1794336999.6859512, "ttft": 1.6438007354736328, "end": 1794337005.0614386, "chunks": 128, "err": null}
+{"w": 9, "seq": 2, "start": 1794336999.9030576, "ttft": 1.8212838172912598, "end": 1794337005.42643, "chunks": 128, "err": null}
+{"w": 8, "seq": 2, "start": 1794337000.290634, "ttft": 1.7932460308074951, "end": 1794337005.9113963, "chunks": 128, "err": null}
+{"w": 14, "seq": 2, "start": 1794337000.6877263, "ttft": 1.615863561630249, "end": 1794337006.1783204, "chunks": 128, "err": null}
+{"w": 5, "seq": 2, "start": 1794337000.8556783, "ttft": 1.810054063796997, "end": 1794337006.6688256, "chunks": 128, "err": null}
+{"w": 4, "seq": 3, "start": 1794337001.5682461, "ttft": 1.8305833339691162, "end": 1794337007.544704, "chunks": 128, "err": null}
+{"w": 2, "seq": 3, "start": 1794337001.9337344, "ttft": 1.654482364654541, "end": 1794337007.7115061, "chunks": 128, "err": null}
+{"w": 11, "seq": 3, "start": 1794337002.1275654, "ttft": 1.846801996231079, "end": 1794337008.1033547, "chunks": 127, "err": null}
+{"w": 13, "seq": 3, "start": 1794337002.4865475, "ttft": 2.6863951683044434, "end": 1794337009.0208564, "chunks": 128, "err": null}
+{"w": 10, "seq": 2, "start": 1794337001.2131822, "ttft": 3.959893226623535, "end": 1794337009.0214303, "chunks": 128, "err": null}
+{"w": 15, "seq": 3, "start": 1794337003.8688653, "ttft": 3.630201816558838, "end": 1794337010.9843183, "chunks": 128, "err": null}
+{"w": 7, "seq": 3, "start": 1794337003.4481971, "ttft": 4.050803184509277, "end": 1794337010.9850922, "chunks": 128, "err": null}
+{"w": 0, "seq": 3, "start": 1794337003.269844, "ttft": 4.228815317153931, "end": 1794337010.9856856, "chunks": 128, "err": null}
+{"w": 3, "seq": 3, "start": 1794337004.2366338, "ttft": 3.2622430324554443, "end": 1794337010.986052, "chunks": 128, "err": null}
+{"w": 1, "seq": 3, "start": 1794337002.855732, "ttft": 4.643000841140747, "end": 1794337010.9861238, "chunks": 128, "err": null}
+{"w": 12, "seq": 3, "start": 1794337004.4605956, "ttft": 3.479461669921875, "end": 1794337011.473477, "chunks": 128, "err": null}
+{"w": 6, "seq": 3, "start": 1794337005.0614882, "ttft": 3.2555317878723145, "end": 1794337011.785832, "chunks": 127, "err": null}
+{"w": 9, "seq": 3, "start": 1794337005.4264789, "ttft": 3.2535877227783203, "end": 1794337012.2211008, "chunks": 128, "err": null}
+{"w": 8, "seq": 3, "start": 1794337005.9114707, "ttft": 2.971137523651123, "end": 1794337012.4434657, "chunks": 128, "err": null}
+{"w": 14, "seq": 3, "start": 1794337006.1783845, "ttft": 3.058973789215088, "end": 1794337012.7674243, "chunks": 128, "err": null}
+{"w": 5, "seq": 3, "start": 1794337006.6688895, "ttft": 2.934150218963623, "end": 1794337013.0765119, "chunks": 128, "err": null}
+{"w": 4, "seq": 4, "start": 1794337007.5447574, "ttft": 2.4336414337158203, "end": 1794337013.4468954, "chunks": 128, "err": null}
+{"w": 2, "seq": 4, "start": 1794337007.711566, "ttft": 2.4700734615325928, "end": 1794337013.6560802, "chunks": 124, "err": null}
+{"w": 11, "seq": 4, "start": 1794337008.1034186, "ttft": 2.4510185718536377, "end": 1794337014.0157707, "chunks": 128, "err": null}
+{"w": 13, "seq": 4, "start": 1794337009.0209198, "ttft": 1.9164214134216309, "end": 1794337014.3814116, "chunks": 119, "err": null}
+{"w": 10, "seq": 3, "start": 1794337009.021475, "ttft": 2.1245322227478027, "end": 1794337014.5963287, "chunks": 128, "err": null}
+{"w": 7, "seq": 4, "start": 1794337010.9853528, "ttft": 0.5339736938476562, "end": 1794337014.9601235, "chunks": 128, "err": null}
+{"w": 3, "seq": 4, "start": 1794337010.9863784, "ttft": 0.93324875831604, "end": 1794337015.351434, "chunks": 128, "err": null}
+{"w": 1, "seq": 4, "start": 1794337010.9866338, "ttft": 1.285811185836792, "end": 1794337015.6526039, "chunks": 128, "err": null}
+{"w": 15, "seq": 4, "start": 1794337010.9843864, "ttft": 1.4894905090332031, "end": 1794337015.8353012, "chunks": 128, "err": null}
+{"w": 0, "seq": 4, "start": 1794337010.9858806, "ttft": 1.8321473598480225, "end": 1794337016.1490066, "chunks": 128, "err": null}
+{"w": 12, "seq": 4, "start": 1794337011.4735403, "ttft": 1.7359578609466553, "end": 1794337016.5306733, "chunks": 128, "err": null}
+{"w": 6, "seq": 4, "start": 1794337011.7858956, "ttft": 1.7970128059387207, "end": 1794337016.920706, "chunks": 128, "err": null}
+{"w": 9, "seq": 4, "start": 1794337012.2211745, "ttft": 1.5451915264129639, "end": 1794337017.1266284, "chunks": 128, "err": null}
+{"w": 8, "seq": 4, "start": 1794337012.4435163, "ttft": 1.6953704357147217, "end": 1794337017.5042973, "chunks": 128, "err": null}
+{"w": 14, "seq": 4, "start": 1794337012.7674904, "ttft": 1.7816100120544434, "end": 1794337017.9259229, "chunks": 128, "err": null}
+{"w": 5, "seq": 4, "start": 1794337013.0765839, "ttft": 1.8339190483093262, "end": 1794337018.3134305, "chunks": 128, "err": null}
+{"w": 4, "seq": 5, "start": 1794337013.4469626, "ttft": 1.637563705444336, "end": 1794337018.4822984, "chunks": 128, "err": null}
+{"w": 2, "seq": 5, "start": 1794337013.656125, "ttft": 1.809708595275879, "end": 1794337018.866573, "chunks": 128, "err": null}
+{"w": 2, "seq": 6, "start": 1794337018.8666358, "ttft": null, "end": 1794337018.8674977, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 5, "start": 1794337017.1266763, "ttft": null, "end": 1794337018.909079, "chunks": 0, "err": "http 503: {\"message\":\"Service temporarily unavailable\",\"type\":\"Service Unavailable\",\"code\":503}"}
+{"w": 11, "seq": 5, "start": 1794337014.015836, "ttft": 1.8411874771118164, "end": 1794337019.2421865, "chunks": 128, "err": null}
+{"w": 11, "seq": 6, "start": 1794337019.2422516, "ttft": null, "end": 1794337019.2436955, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 5, "start": 1794337017.5043588, "ttft": null, "end": 1794337019.2881036, "chunks": 0, "err": "http 503: {\"message\":\"Service temporarily unavailable\",\"type\":\"Service Unavailable\",\"code\":503}"}
+{"w": 2, "seq": 7, "start": 1794337019.3680468, "ttft": null, "end": 1794337019.3688438, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 5, "start": 1794337014.381473, "ttft": 1.6549429893493652, "end": 1794337019.403298, "chunks": 128, "err": null}
+{"w": 13, "seq": 6, "start": 1794337019.4033303, "ttft": null, "end": 1794337019.4039288, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 6, "start": 1794337019.409656, "ttft": null, "end": 1794337019.4105349, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 5, "start": 1794337017.9259841, "ttft": null, "end": 1794337019.4915218, "chunks": 0, "err": "http 503: {\"message\":\"Service temporarily unavailable\",\"type\":\"Service Unavailable\",\"code\":503}"}
+{"w": 11, "seq": 7, "start": 1794337019.7442703, "ttft": null, "end": 1794337019.7466135, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 6, "start": 1794337019.7888546, "ttft": null, "end": 1794337019.789986, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 4, "start": 1794337014.596389, "ttft": 1.8171515464782715, "end": 1794337019.7960558, "chunks": 128, "err": null}
+{"w": 10, "seq": 5, "start": 1794337019.796104, "ttft": null, "end": 1794337019.7969534, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 5, "start": 1794337018.3134968, "ttft": null, "end": 1794337019.8580396, "chunks": 0, "err": "http 503: {\"message\":\"Service temporarily unavailable\",\"type\":\"Service Unavailable\",\"code\":503}"}
+{"w": 2, "seq": 8, "start": 1794337019.869403, "ttft": null, "end": 1794337019.8701308, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 7, "start": 1794337019.9044847, "ttft": null, "end": 1794337019.905287, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 7, "start": 1794337019.9110858, "ttft": null, "end": 1794337019.9119475, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 6, "start": 1794337019.992078, "ttft": null, "end": 1794337019.9928102, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 6, "start": 1794337018.482367, "ttft": null, "end": 1794337020.1367862, "chunks": 0, "err": "http 503: {\"message\":\"Service temporarily unavailable\",\"type\":\"Service Unavailable\",\"code\":503}"}
+{"w": 7, "seq": 5, "start": 1794337014.9601808, "ttft": 1.8559999465942383, "end": 1794337020.1576254, "chunks": 128, "err": null}
+{"w": 7, "seq": 6, "start": 1794337020.1576838, "ttft": null, "end": 1794337020.1587296, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 8, "start": 1794337020.2471726, "ttft": null, "end": 1794337020.2480538, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 7, "start": 1794337020.2901385, "ttft": null, "end": 1794337020.2908607, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 6, "start": 1794337020.2975092, "ttft": null, "end": 1794337020.2982745, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 6, "start": 1794337020.358499, "ttft": null, "end": 1794337020.359586, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 9, "start": 1794337020.3706934, "ttft": null, "end": 1794337020.371727, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 8, "start": 1794337020.405418, "ttft": null, "end": 1794337020.4062603, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 8, "start": 1794337020.412717, "ttft": null, "end": 1794337020.413628, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 5, "start": 1794337015.3514965, "ttft": 1.8362340927124023, "end": 1794337020.4796777, "chunks": 128, "err": null}
+{"w": 3, "seq": 6, "start": 1794337020.4797225, "ttft": null, "end": 1794337020.480494, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 7, "start": 1794337020.493367, "ttft": null, "end": 1794337020.4941509, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 5, "start": 1794337015.6526544, "ttft": 1.700277328491211, "end": 1794337020.6136138, "chunks": 126, "err": null}
+{"w": 1, "seq": 6, "start": 1794337020.6136699, "ttft": null, "end": 1794337020.6144707, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 7, "start": 1794337020.63736, "ttft": null, "end": 1794337020.6380377, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 7, "start": 1794337020.6593072, "ttft": null, "end": 1794337020.6601393, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 9, "start": 1794337020.7486036, "ttft": null, "end": 1794337020.7493227, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 8, "start": 1794337020.7913969, "ttft": null, "end": 1794337020.7920284, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 7, "start": 1794337020.7988303, "ttft": null, "end": 1794337020.7994258, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 7, "start": 1794337020.8601558, "ttft": null, "end": 1794337020.8607624, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 10, "start": 1794337020.8722892, "ttft": null, "end": 1794337020.8731236, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 9, "start": 1794337020.9068232, "ttft": null, "end": 1794337020.9076827, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 9, "start": 1794337020.9141006, "ttft": null, "end": 1794337020.9148695, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 5, "start": 1794337015.8353496, "ttft": 1.9009554386138916, "end": 1794337020.9596903, "chunks": 127, "err": null}
+{"w": 15, "seq": 6, "start": 1794337020.9597416, "ttft": null, "end": 1794337020.960601, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 7, "start": 1794337020.9808805, "ttft": null, "end": 1794337020.981607, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 8, "start": 1794337020.9947019, "ttft": null, "end": 1794337020.9953284, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 7, "start": 1794337021.1150198, "ttft": null, "end": 1794337021.115961, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 8, "start": 1794337021.1381166, "ttft": null, "end": 1794337021.1388142, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 8, "start": 1794337021.1607192, "ttft": null, "end": 1794337021.1613483, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 10, "start": 1794337021.2495644, "ttft": null, "end": 1794337021.2502506, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 5, "start": 1794337016.1490607, "ttft": 1.9621620178222656, "end": 1794337021.2648869, "chunks": 128, "err": null}
+{"w": 0, "seq": 6, "start": 1794337021.2649212, "ttft": null, "end": 1794337021.265861, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 9, "start": 1794337021.292587, "ttft": null, "end": 1794337021.2931929, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 8, "start": 1794337021.2999747, "ttft": null, "end": 1794337021.300512, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 8, "start": 1794337021.3613324, "ttft": null, "end": 1794337021.3621771, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 11, "start": 1794337021.3736932, "ttft": null, "end": 1794337021.3744242, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 10, "start": 1794337021.4082453, "ttft": null, "end": 1794337021.408789, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 10, "start": 1794337021.415419, "ttft": null, "end": 1794337021.4161003, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 7, "start": 1794337021.4611597, "ttft": null, "end": 1794337021.4619858, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 8, "start": 1794337021.482099, "ttft": null, "end": 1794337021.4826329, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 9, "start": 1794337021.4967709, "ttft": null, "end": 1794337021.4986124, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 5, "start": 1794337016.530737, "ttft": 1.9513940811157227, "end": 1794337021.5987074, "chunks": 128, "err": null}
+{"w": 12, "seq": 6, "start": 1794337021.598752, "ttft": null, "end": 1794337021.5997772, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 8, "start": 1794337021.6165328, "ttft": null, "end": 1794337021.6172001, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 9, "start": 1794337021.6393692, "ttft": null, "end": 1794337021.6399295, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 9, "start": 1794337021.661899, "ttft": null, "end": 1794337021.6624424, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 5, "start": 1794337016.9207652, "ttft": 1.7586963176727295, "end": 1794337021.7275555, "chunks": 128, "err": null}
+{"w": 6, "seq": 6, "start": 1794337021.7276034, "ttft": null, "end": 1794337021.7285612, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 11, "start": 1794337021.7507977, "ttft": null, "end": 1794337021.7516966, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 7, "start": 1794337021.766102, "ttft": null, "end": 1794337021.7668443, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 10, "start": 1794337021.7936633, "ttft": null, "end": 1794337021.794303, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 9, "start": 1794337021.8010566, "ttft": null, "end": 1794337021.801654, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 9, "start": 1794337021.8627336, "ttft": null, "end": 1794337021.863307, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 12, "start": 1794337021.8744838, "ttft": null, "end": 1794337021.8752348, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 11, "start": 1794337021.9089444, "ttft": null, "end": 1794337021.9096034, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 11, "start": 1794337021.916654, "ttft": null, "end": 1794337021.9173248, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 8, "start": 1794337021.9625065, "ttft": null, "end": 1794337021.963182, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 9, "start": 1794337021.983183, "ttft": null, "end": 1794337021.9838872, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 10, "start": 1794337021.999195, "ttft": null, "end": 1794337021.9998782, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 7, "start": 1794337022.100341, "ttft": null, "end": 1794337022.1012552, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 9, "start": 1794337022.1177566, "ttft": null, "end": 1794337022.1185358, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 10, "start": 1794337022.1404767, "ttft": null, "end": 1794337022.1410825, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 10, "start": 1794337022.1629863, "ttft": null, "end": 1794337022.1635625, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 7, "start": 1794337022.2291226, "ttft": null, "end": 1794337022.229834, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 12, "start": 1794337022.252247, "ttft": null, "end": 1794337022.2529182, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 8, "start": 1794337022.2673888, "ttft": null, "end": 1794337022.267976, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 11, "start": 1794337022.2948456, "ttft": null, "end": 1794337022.2954586, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 10, "start": 1794337022.301767, "ttft": null, "end": 1794337022.302383, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 10, "start": 1794337022.363849, "ttft": null, "end": 1794337022.3644679, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 13, "start": 1794337022.375792, "ttft": null, "end": 1794337022.3765023, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 12, "start": 1794337022.410105, "ttft": null, "end": 1794337022.4108248, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 12, "start": 1794337022.417874, "ttft": null, "end": 1794337022.418572, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 9, "start": 1794337022.4637365, "ttft": null, "end": 1794337022.4643545, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 10, "start": 1794337022.4841535, "ttft": null, "end": 1794337022.484763, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 11, "start": 1794337022.5004315, "ttft": null, "end": 1794337022.501185, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 8, "start": 1794337022.6018152, "ttft": null, "end": 1794337022.6026862, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 10, "start": 1794337022.6190052, "ttft": null, "end": 1794337022.61968, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 11, "start": 1794337022.6416333, "ttft": null, "end": 1794337022.6423936, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 11, "start": 1794337022.6640174, "ttft": null, "end": 1794337022.664721, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 8, "start": 1794337022.730102, "ttft": null, "end": 1794337022.7308846, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 13, "start": 1794337022.7534754, "ttft": null, "end": 1794337022.754251, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 9, "start": 1794337022.7685275, "ttft": null, "end": 1794337022.7692149, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 12, "start": 1794337022.7955594, "ttft": null, "end": 1794337022.796112, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 11, "start": 1794337022.802939, "ttft": null, "end": 1794337022.803587, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 11, "start": 1794337022.8650079, "ttft": null, "end": 1794337022.865676, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 14, "start": 1794337022.877047, "ttft": null, "end": 1794337022.877629, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 13, "start": 1794337022.9109468, "ttft": null, "end": 1794337022.9115417, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 13, "start": 1794337022.9191184, "ttft": null, "end": 1794337022.9196503, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 10, "start": 1794337022.9648979, "ttft": null, "end": 1794337022.9654303, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 11, "start": 1794337022.9853013, "ttft": null, "end": 1794337022.9858675, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 12, "start": 1794337023.001744, "ttft": null, "end": 1794337023.0025306, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 9, "start": 1794337023.1032495, "ttft": null, "end": 1794337023.1039221, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 11, "start": 1794337023.120239, "ttft": null, "end": 1794337023.1209037, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 12, "start": 1794337023.142497, "ttft": null, "end": 1794337023.1431448, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 12, "start": 1794337023.1652718, "ttft": null, "end": 1794337023.1658866, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 9, "start": 1794337023.231444, "ttft": null, "end": 1794337023.2321754, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 14, "start": 1794337023.2548034, "ttft": null, "end": 1794337023.2554, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 10, "start": 1794337023.2697613, "ttft": null, "end": 1794337023.2703915, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 13, "start": 1794337023.2966638, "ttft": null, "end": 1794337023.2973108, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 12, "start": 1794337023.3041277, "ttft": null, "end": 1794337023.3047347, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 12, "start": 1794337023.3660982, "ttft": null, "end": 1794337023.3667586, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 15, "start": 1794337023.3781743, "ttft": null, "end": 1794337023.3787825, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 14, "start": 1794337023.4120927, "ttft": null, "end": 1794337023.412757, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 14, "start": 1794337023.4198656, "ttft": null, "end": 1794337023.420511, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 11, "start": 1794337023.4656215, "ttft": null, "end": 1794337023.4662156, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 12, "start": 1794337023.4863124, "ttft": null, "end": 1794337023.4869025, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 13, "start": 1794337023.503096, "ttft": null, "end": 1794337023.503763, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 10, "start": 1794337023.604443, "ttft": null, "end": 1794337023.605059, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 12, "start": 1794337023.6211073, "ttft": null, "end": 1794337023.621697, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 13, "start": 1794337023.6436968, "ttft": null, "end": 1794337023.6445322, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 13, "start": 1794337023.6660993, "ttft": null, "end": 1794337023.667084, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 10, "start": 1794337023.7327297, "ttft": null, "end": 1794337023.733762, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 15, "start": 1794337023.7558653, "ttft": null, "end": 1794337023.7567148, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 11, "start": 1794337023.7709396, "ttft": null, "end": 1794337023.7718692, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 14, "start": 1794337023.797747, "ttft": null, "end": 1794337023.7986617, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 13, "start": 1794337023.8052928, "ttft": null, "end": 1794337023.80621, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 13, "start": 1794337023.8673167, "ttft": null, "end": 1794337023.868218, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 16, "start": 1794337023.8793309, "ttft": null, "end": 1794337023.8800344, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 15, "start": 1794337023.9133146, "ttft": null, "end": 1794337023.9141605, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 15, "start": 1794337023.9210527, "ttft": null, "end": 1794337023.9216967, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 12, "start": 1794337023.9667666, "ttft": null, "end": 1794337023.9675786, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 13, "start": 1794337023.9874616, "ttft": null, "end": 1794337023.9881854, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 14, "start": 1794337024.0041082, "ttft": null, "end": 1794337024.004704, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 11, "start": 1794337024.1053028, "ttft": null, "end": 1794337024.1060207, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 13, "start": 1794337024.1222494, "ttft": null, "end": 1794337024.1228848, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 14, "start": 1794337024.1447055, "ttft": null, "end": 1794337024.1453168, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 14, "start": 1794337024.1676455, "ttft": null, "end": 1794337024.1682773, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 11, "start": 1794337024.2342556, "ttft": null, "end": 1794337024.2350855, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 16, "start": 1794337024.2572803, "ttft": null, "end": 1794337024.2579696, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 12, "start": 1794337024.272216, "ttft": null, "end": 1794337024.273001, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 15, "start": 1794337024.299248, "ttft": null, "end": 1794337024.3001206, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 14, "start": 1794337024.3067813, "ttft": null, "end": 1794337024.3076854, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 14, "start": 1794337024.3688056, "ttft": null, "end": 1794337024.3700726, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 17, "start": 1794337024.3805847, "ttft": null, "end": 1794337024.3815444, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 16, "start": 1794337024.4147265, "ttft": null, "end": 1794337024.4156706, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 16, "start": 1794337024.4221008, "ttft": null, "end": 1794337024.4227529, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 13, "start": 1794337024.4681587, "ttft": null, "end": 1794337024.4689915, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 14, "start": 1794337024.48875, "ttft": null, "end": 1794337024.4899156, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 15, "start": 1794337024.5052555, "ttft": null, "end": 1794337024.505962, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 12, "start": 1794337024.6065826, "ttft": null, "end": 1794337024.6074235, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 14, "start": 1794337024.6234367, "ttft": null, "end": 1794337024.624096, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 15, "start": 1794337024.6458743, "ttft": null, "end": 1794337024.6466815, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 15, "start": 1794337024.6688297, "ttft": null, "end": 1794337024.6695895, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 12, "start": 1794337024.7356489, "ttft": null, "end": 1794337024.736659, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 17, "start": 1794337024.7585251, "ttft": null, "end": 1794337024.7594368, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 13, "start": 1794337024.7735689, "ttft": null, "end": 1794337024.774367, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 16, "start": 1794337024.8007066, "ttft": null, "end": 1794337024.8015153, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 15, "start": 1794337024.808242, "ttft": null, "end": 1794337024.809037, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 15, "start": 1794337024.870695, "ttft": null, "end": 1794337024.871798, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 18, "start": 1794337024.882107, "ttft": null, "end": 1794337024.883242, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 17, "start": 1794337024.9162486, "ttft": null, "end": 1794337024.9172683, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 17, "start": 1794337024.9233103, "ttft": null, "end": 1794337024.924028, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 14, "start": 1794337024.969065, "ttft": null, "end": 1794337024.9697864, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 15, "start": 1794337024.9905062, "ttft": null, "end": 1794337024.9914718, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 16, "start": 1794337025.0061023, "ttft": null, "end": 1794337025.007002, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 13, "start": 1794337025.1079922, "ttft": null, "end": 1794337025.108926, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 15, "start": 1794337025.1246538, "ttft": null, "end": 1794337025.1255834, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 16, "start": 1794337025.1472387, "ttft": null, "end": 1794337025.1479082, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 16, "start": 1794337025.1701074, "ttft": null, "end": 1794337025.17091, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 13, "start": 1794337025.237225, "ttft": null, "end": 1794337025.2381096, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 18, "start": 1794337025.259649, "ttft": null, "end": 1794337025.2604878, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 14, "start": 1794337025.2749345, "ttft": null, "end": 1794337025.275706, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 17, "start": 1794337025.3021023, "ttft": null, "end": 1794337025.3028183, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 16, "start": 1794337025.30962, "ttft": null, "end": 1794337025.3103216, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 16, "start": 1794337025.3723805, "ttft": null, "end": 1794337025.373372, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 19, "start": 1794337025.3838246, "ttft": null, "end": 1794337025.3845892, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 18, "start": 1794337025.4178486, "ttft": null, "end": 1794337025.4189458, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 18, "start": 1794337025.424286, "ttft": null, "end": 1794337025.4250755, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 15, "start": 1794337025.4701128, "ttft": null, "end": 1794337025.4710698, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 16, "start": 1794337025.4917617, "ttft": null, "end": 1794337025.4927194, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 17, "start": 1794337025.507564, "ttft": null, "end": 1794337025.5082493, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 14, "start": 1794337025.6094966, "ttft": null, "end": 1794337025.6105385, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 16, "start": 1794337025.6261024, "ttft": null, "end": 1794337025.6268926, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 17, "start": 1794337025.6484613, "ttft": null, "end": 1794337025.649112, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 17, "start": 1794337025.6718528, "ttft": null, "end": 1794337025.672512, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 14, "start": 1794337025.7386372, "ttft": null, "end": 1794337025.7394078, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 19, "start": 1794337025.7610524, "ttft": null, "end": 1794337025.7618322, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 15, "start": 1794337025.776218, "ttft": null, "end": 1794337025.7769058, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 18, "start": 1794337025.8032856, "ttft": null, "end": 1794337025.8041995, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 17, "start": 1794337025.8108785, "ttft": null, "end": 1794337025.8117466, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 17, "start": 1794337025.8739502, "ttft": null, "end": 1794337025.8749657, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 20, "start": 1794337025.88514, "ttft": null, "end": 1794337025.8879392, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 19, "start": 1794337025.9195187, "ttft": null, "end": 1794337025.9204137, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 19, "start": 1794337025.9251509, "ttft": null, "end": 1794337025.9259024, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 16, "start": 1794337025.9712203, "ttft": null, "end": 1794337025.972105, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 17, "start": 1794337025.9932876, "ttft": null, "end": 1794337025.994377, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 18, "start": 1794337026.0088012, "ttft": null, "end": 1794337026.0096154, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 15, "start": 1794337026.1111038, "ttft": null, "end": 1794337026.1121132, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 17, "start": 1794337026.127013, "ttft": null, "end": 1794337026.127874, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 18, "start": 1794337026.1494594, "ttft": null, "end": 1794337026.1501439, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 18, "start": 1794337026.1727304, "ttft": null, "end": 1794337026.1735888, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 15, "start": 1794337026.2399843, "ttft": null, "end": 1794337026.2409475, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 20, "start": 1794337026.2621255, "ttft": null, "end": 1794337026.2667718, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 16, "start": 1794337026.2774699, "ttft": null, "end": 1794337026.2785296, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 19, "start": 1794337026.304753, "ttft": null, "end": 1794337026.3055234, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 18, "start": 1794337026.3134596, "ttft": null, "end": 1794337026.3140981, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 18, "start": 1794337026.3751009, "ttft": null, "end": 1794337026.3760247, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 21, "start": 1794337026.3885067, "ttft": null, "end": 1794337026.3893902, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 20, "start": 1794337026.4209793, "ttft": null, "end": 1794337026.4218762, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 20, "start": 1794337026.4264715, "ttft": null, "end": 1794337026.4272575, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 17, "start": 1794337026.4725928, "ttft": null, "end": 1794337026.4732993, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 18, "start": 1794337026.4944544, "ttft": null, "end": 1794337026.4952672, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 19, "start": 1794337026.5101042, "ttft": null, "end": 1794337026.5110254, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 16, "start": 1794337026.6124718, "ttft": null, "end": 1794337026.613454, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 18, "start": 1794337026.6284235, "ttft": null, "end": 1794337026.629166, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 19, "start": 1794337026.6507044, "ttft": null, "end": 1794337026.6516287, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 19, "start": 1794337026.674103, "ttft": null, "end": 1794337026.6749363, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 16, "start": 1794337026.7412555, "ttft": null, "end": 1794337026.7423096, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 21, "start": 1794337026.7673638, "ttft": null, "end": 1794337026.7682297, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 17, "start": 1794337026.7790947, "ttft": null, "end": 1794337026.7797742, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 20, "start": 1794337026.8057795, "ttft": null, "end": 1794337026.806669, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 19, "start": 1794337026.814661, "ttft": null, "end": 1794337026.8153172, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 19, "start": 1794337026.8765848, "ttft": null, "end": 1794337026.8775532, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 22, "start": 1794337026.8899581, "ttft": null, "end": 1794337026.8908505, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 21, "start": 1794337026.9221144, "ttft": null, "end": 1794337026.9230216, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 21, "start": 1794337026.9274504, "ttft": null, "end": 1794337026.9280126, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 18, "start": 1794337026.9738586, "ttft": null, "end": 1794337026.9749029, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 19, "start": 1794337026.995816, "ttft": null, "end": 1794337026.996607, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 20, "start": 1794337027.0116017, "ttft": null, "end": 1794337027.0123506, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 17, "start": 1794337027.1140282, "ttft": 22.284380674362183, "end": 1794337053.5526252, "chunks": 128, "err": null}
+{"w": 1, "seq": 19, "start": 1794337027.1297243, "ttft": 22.606178045272827, "end": 1794337054.0951772, "chunks": 128, "err": null}
+{"w": 4, "seq": 20, "start": 1794337027.1522083, "ttft": 22.90050482749939, "end": 1794337054.6534395, "chunks": 128, "err": null}
+{"w": 7, "seq": 20, "start": 1794337027.1755142, "ttft": 23.19771647453308, "end": 1794337055.1512911, "chunks": 128, "err": null}
+{"w": 6, "seq": 17, "start": 1794337027.242885, "ttft": 23.452608585357666, "end": 1794337055.6261559, "chunks": 128, "err": null}
+{"w": 11, "seq": 22, "start": 1794337027.268804, "ttft": 23.8318874835968, "end": 1794337056.1901124, "chunks": 126, "err": null}
+{"w": 0, "seq": 18, "start": 1794337027.2803376, "ttft": 24.181236267089844, "end": 1794337056.6813037, "chunks": 128, "err": null}
+{"w": 8, "seq": 21, "start": 1794337027.3072374, "ttft": 24.316752195358276, "end": 1794337056.8890917, "chunks": 127, "err": null}
+{"w": 10, "seq": 20, "start": 1794337027.3158727, "ttft": 24.66680645942688, "end": 1794337057.439797, "chunks": 128, "err": null}
+{"w": 5, "seq": 20, "start": 1794337027.3781118, "ttft": 24.97744917869568, "end": 1794337057.87114, "chunks": 128, "err": null}
+{"w": 2, "seq": 23, "start": 1794337027.3914099, "ttft": 25.319261074066162, "end": 1794337058.2360704, "chunks": 127, "err": null}
+{"w": 13, "seq": 22, "start": 1794337027.4235888, "ttft": 25.481189727783203, "end": 1794337058.4711683, "chunks": 128, "err": null}
+{"w": 9, "seq": 22, "start": 1794337027.4288065, "ttft": 25.828534841537476, "end": 1794337058.8822062, "chunks": 128, "err": null}
+{"w": 15, "seq": 19, "start": 1794337027.4757342, "ttft": 26.17200517654419, "end": 1794337059.3334284, "chunks": 128, "err": null}
+{"w": 3, "seq": 20, "start": 1794337027.4967957, "ttft": 26.574331283569336, "end": 1794337059.693485, "chunks": 128, "err": null}
+{"w": 14, "seq": 21, "start": 1794337027.5129132, "ttft": 26.66583824157715, "end": 1794337059.84034, "chunks": 128, "err": null}
+{"w": 12, "seq": 18, "start": 1794337053.5526948, "ttft": 0.9429881572723389, "end": 1794337060.163122, "chunks": 127, "err": null}
+{"w": 1, "seq": 20, "start": 1794337054.0952563, "ttft": 0.6597163677215576, "end": 1794337060.4532013, "chunks": 128, "err": null}
+{"w": 4, "seq": 21, "start": 1794337054.653487, "ttft": 0.5378098487854004, "end": 1794337060.896364, "chunks": 128, "err": null}
+{"w": 7, "seq": 21, "start": 1794337055.1513412, "ttft": 0.5143704414367676, "end": 1794337061.412063, "chunks": 127, "err": null}
+{"w": 6, "seq": 18, "start": 1794337055.62623, "ttft": 0.5234889984130859, "end": 1794337061.8995702, "chunks": 128, "err": null}
+{"w": 11, "seq": 23, "start": 1794337056.190172, "ttft": 0.5252206325531006, "end": 1794337062.4574735, "chunks": 128, "err": null}
+{"w": 0, "seq": 19, "start": 1794337056.681392, "ttft": 0.5296304225921631, "end": 1794337062.9419265, "chunks": 128, "err": null}
+{"w": 8, "seq": 22, "start": 1794337056.8891397, "ttft": 0.6463446617126465, "end": 1794337063.2432837, "chunks": 128, "err": null}
+{"w": 10, "seq": 21, "start": 1794337057.4398458, "ttft": 0.5341355800628662, "end": 1794337063.7090678, "chunks": 128, "err": null}
+{"w": 5, "seq": 21, "start": 1794337057.871207, "ttft": 0.5563721656799316, "end": 1794337064.1422205, "chunks": 128, "err": null}
+{"w": 2, "seq": 24, "start": 1794337058.2361326, "ttft": 0.5584502220153809, "end": 1794337064.4902012, "chunks": 128, "err": null}
+{"w": 13, "seq": 23, "start": 1794337058.4712286, "ttft": 0.6450884342193604, "end": 1794337064.8144886, "chunks": 126, "err": null}
+{"w": 9, "seq": 23, "start": 1794337058.8822682, "ttft": 0.5494658946990967, "end": 1794337065.1489997, "chunks": 128, "err": null}
+{"w": 15, "seq": 20, "start": 1794337059.3335981, "ttft": 0.5645601749420166, "end": 1794337065.6261191, "chunks": 128, "err": null}
+{"w": 3, "seq": 21, "start": 1794337059.6935334, "ttft": 0.5541799068450928, "end": 1794337065.942413, "chunks": 128, "err": null}
+{"w": 14, "seq": 22, "start": 1794337059.8404167, "ttft": 0.6860196590423584, "end": 1794337066.2075455, "chunks": 128, "err": null}
+{"w": 12, "seq": 19, "start": 1794337060.163173, "ttft": 0.6881601810455322, "end": 1794337066.5276232, "chunks": 128, "err": null}
+{"w": 1, "seq": 21, "start": 1794337060.4532661, "ttft": 0.7273077964782715, "end": 1794337066.84077, "chunks": 128, "err": null}
+{"w": 4, "seq": 22, "start": 1794337060.8964143, "ttft": 0.5933294296264648, "end": 1794337067.151245, "chunks": 128, "err": null}
+{"w": 7, "seq": 22, "start": 1794337061.4121106, "ttft": 0.5218050479888916, "end": 1794337067.6345775, "chunks": 128, "err": null}
+{"w": 6, "seq": 19, "start": 1794337061.8996322, "ttft": 0.5167107582092285, "end": 1794337068.1037552, "chunks": 128, "err": null}
+{"w": 11, "seq": 24, "start": 1794337062.4575264, "ttft": 0.5253784656524658, "end": 1794337068.647343, "chunks": 128, "err": null}
+{"w": 0, "seq": 20, "start": 1794337062.9419887, "ttft": 0.5329174995422363, "end": 1794337069.1286073, "chunks": 128, "err": null}
+{"w": 8, "seq": 23, "start": 1794337063.2433448, "ttft": 0.5434601306915283, "end": 1794337069.431309, "chunks": 128, "err": null}
+{"w": 10, "seq": 22, "start": 1794337063.7091286, "ttft": 0.5073263645172119, "end": 1794337069.9011855, "chunks": 128, "err": null}
+{"w": 5, "seq": 22, "start": 1794337064.1422882, "ttft": 0.6015088558197021, "end": 1794337070.378065, "chunks": 128, "err": null}
+{"w": 2, "seq": 25, "start": 1794337064.4902666, "ttft": 0.5675942897796631, "end": 1794337070.6661854, "chunks": 128, "err": null}
+{"w": 13, "seq": 24, "start": 1794337064.8145447, "ttft": 0.5507230758666992, "end": 1794337070.9948182, "chunks": 128, "err": null}
+{"w": 9, "seq": 24, "start": 1794337065.1490781, "ttft": 0.5411834716796875, "end": 1794337071.315113, "chunks": 128, "err": null}
+{"w": 15, "seq": 21, "start": 1794337065.6261673, "ttft": 0.5367114543914795, "end": 1794337071.815461, "chunks": 128, "err": null}
+{"w": 3, "seq": 22, "start": 1794337065.9424763, "ttft": 0.5401291847229004, "end": 1794337072.1181574, "chunks": 128, "err": null}
+{"w": 14, "seq": 23, "start": 1794337066.20762, "ttft": 0.5883088111877441, "end": 1794337072.442182, "chunks": 128, "err": null}
+{"w": 12, "seq": 20, "start": 1794337066.5276802, "ttft": 0.580329418182373, "end": 1794337072.7671928, "chunks": 128, "err": null}
+{"w": 1, "seq": 22, "start": 1794337066.84082, "ttft": 0.5921518802642822, "end": 1794337073.0959685, "chunks": 128, "err": null}
+{"w": 4, "seq": 23, "start": 1794337067.1513062, "ttft": 0.5835373401641846, "end": 1794337073.4157302, "chunks": 128, "err": null}
+{"w": 7, "seq": 23, "start": 1794337067.6346283, "ttft": 0.5450656414031982, "end": 1794337073.8987982, "chunks": 128, "err": null}
+{"w": 6, "seq": 20, "start": 1794337068.1038136, "ttft": 0.5074660778045654, "end": 1794337074.3591065, "chunks": 128, "err": null}
+{"w": 11, "seq": 25, "start": 1794337068.64741, "ttft": 0.5220839977264404, "end": 1794337074.8880975, "chunks": 128, "err": null}
+{"w": 0, "seq": 21, "start": 1794337069.1286747, "ttft": 0.5377590656280518, "end": 1794337075.3789074, "chunks": 128, "err": null}
+{"w": 8, "seq": 24, "start": 1794337069.4313617, "ttft": 0.5321969985961914, "end": 1794337075.679194, "chunks": 128, "err": null}
+{"w": 10, "seq": 23, "start": 1794337069.9012375, "ttft": 0.5494024753570557, "end": 1794337076.1909862, "chunks": 128, "err": null}
+{"w": 5, "seq": 23, "start": 1794337070.37823, "ttft": 0.5216054916381836, "end": 1794337076.6728406, "chunks": 128, "err": null}
+{"w": 2, "seq": 26, "start": 1794337070.6662383, "ttft": 0.6034481525421143, "end": 1794337076.983206, "chunks": 128, "err": null}
+{"w": 13, "seq": 25, "start": 1794337070.9948773, "ttft": 0.5525755882263184, "end": 1794337077.262458, "chunks": 128, "err": null}
+{"w": 9, "seq": 25, "start": 1794337071.3151765, "ttft": 0.5416903495788574, "end": 1794337077.589193, "chunks": 128, "err": null}
+{"w": 15, "seq": 22, "start": 1794337071.8155286, "ttft": 0.5388131141662598, "end": 1794337078.0963178, "chunks": 127, "err": null}
+{"w": 3, "seq": 23, "start": 1794337072.118207, "ttft": 0.5590970516204834, "end": 1794337078.3941522, "chunks": 128, "err": null}
+{"w": 14, "seq": 24, "start": 1794337072.442254, "ttft": 0.5629103183746338, "end": 1794337078.7162676, "chunks": 127, "err": null}
+{"w": 12, "seq": 21, "start": 1794337072.76726, "ttft": 0.5608091354370117, "end": 1794337079.0421875, "chunks": 128, "err": null}
+{"w": 1, "seq": 23, "start": 1794337073.096038, "ttft": 0.5528519153594971, "end": 1794337079.3643095, "chunks": 128, "err": null}
+{"w": 4, "seq": 24, "start": 1794337073.4157832, "ttft": 0.5450468063354492, "end": 1794337079.6873286, "chunks": 128, "err": null}
+{"w": 7, "seq": 24, "start": 1794337073.8988512, "ttft": 0.5703585147857666, "end": 1794337080.1878397, "chunks": 128, "err": null}
+{"w": 6, "seq": 21, "start": 1794337074.3591616, "ttft": 0.5284378528594971, "end": 1794337080.6489115, "chunks": 128, "err": null}
+{"w": 11, "seq": 26, "start": 1794337074.8881657, "ttft": 0.5278756618499756, "end": 1794337081.1455953, "chunks": 128, "err": null}
+{"w": 0, "seq": 22, "start": 1794337075.3789728, "ttft": 0.5395381450653076, "end": 1794337081.6389096, "chunks": 128, "err": null}
+{"w": 8, "seq": 25, "start": 1794337075.6793106, "ttft": 0.5522501468658447, "end": 1794337081.9198089, "chunks": 128, "err": null}
+{"w": 10, "seq": 24, "start": 1794337076.1910565, "ttft": 0.5338273048400879, "end": 1794337082.4318755, "chunks": 128, "err": null}
+{"w": 5, "seq": 24, "start": 1794337076.6729085, "ttft": 0.5457313060760498, "end": 1794337082.9067721, "chunks": 128, "err": null}
+{"w": 2, "seq": 27, "start": 1794337076.983271, "ttft": 0.5603702068328857, "end": 1794337083.193937, "chunks": 128, "err": null}
+{"w": 13, "seq": 26, "start": 1794337077.2625213, "ttft": 0.6087079048156738, "end": 1794337083.519823, "chunks": 126, "err": null}
+{"w": 9, "seq": 26, "start": 1794337077.5892463, "ttft": 0.5486965179443359, "end": 1794337083.8010712, "chunks": 128, "err": null}
+{"w": 15, "seq": 23, "start": 1794337078.0963697, "ttft": 0.5530221462249756, "end": 1794337084.3140078, "chunks": 128, "err": null}
+{"w": 3, "seq": 24, "start": 1794337078.3942063, "ttft": 0.5570082664489746, "end": 1794337084.60319, "chunks": 128, "err": null}
+{"w": 14, "seq": 25, "start": 1794337078.7165012, "ttft": 0.5591659545898438, "end": 1794337084.916401, "chunks": 128, "err": null}
+{"w": 12, "seq": 22, "start": 1794337079.0424304, "ttft": 0.5574147701263428, "end": 1794337085.2401748, "chunks": 126, "err": null}
+{"w": 1, "seq": 24, "start": 1794337079.364403, "ttft": 0.5551309585571289, "end": 1794337085.5631626, "chunks": 128, "err": null}
+{"w": 4, "seq": 25, "start": 1794337079.6873965, "ttft": 0.5403966903686523, "end": 1794337085.8831916, "chunks": 123, "err": null}
+{"w": 7, "seq": 25, "start": 1794337080.1879117, "ttft": 0.5406019687652588, "end": 1794337086.3841088, "chunks": 128, "err": null}
+{"w": 6, "seq": 22, "start": 1794337080.6489828, "ttft": 0.5357522964477539, "end": 1794337086.880809, "chunks": 126, "err": null}
+{"w": 11, "seq": 27, "start": 1794337081.1456616, "ttft": 0.5552694797515869, "end": 1794337087.405548, "chunks": 128, "err": null}
+{"w": 0, "seq": 23, "start": 1794337081.63898, "ttft": 0.5486781597137451, "end": 1794337087.8948429, "chunks": 128, "err": null}
+{"w": 8, "seq": 26, "start": 1794337081.919858, "ttft": 0.5795638561248779, "end": 1794337088.1994905, "chunks": 128, "err": null}
+{"w": 10, "seq": 25, "start": 1794337082.4319425, "ttft": 0.5415682792663574, "end": 1794337088.713223, "chunks": 128, "err": null}
+{"w": 5, "seq": 25, "start": 1794337082.9068356, "ttft": 0.5683333873748779, "end": 1794337089.2049825, "chunks": 128, "err": null}
+{"w": 2, "seq": 28, "start": 1794337083.1940122, "ttft": 0.5609340667724609, "end": 1794337089.4661562, "chunks": 128, "err": null}
+{"w": 13, "seq": 27, "start": 1794337083.519885, "ttft": 0.5501413345336914, "end": 1794337089.804972, "chunks": 128, "err": null}
+{"w": 9, "seq": 27, "start": 1794337083.801207, "ttft": 0.5826935768127441, "end": 1794337090.1288917, "chunks": 128, "err": null}
+{"w": 15, "seq": 24, "start": 1794337084.3140595, "ttft": 0.5137701034545898, "end": 1794337090.617579, "chunks": 123, "err": null}
+{"w": 3, "seq": 25, "start": 1794337084.6032414, "ttft": 0.5909090042114258, "end": 1794337090.9538317, "chunks": 128, "err": null}
+{"w": 14, "seq": 26, "start": 1794337084.916465, "ttft": 0.5586955547332764, "end": 1794337091.2348826, "chunks": 128, "err": null}
+{"w": 12, "seq": 23, "start": 1794337085.240224, "ttft": 0.5530035495758057, "end": 1794337091.560424, "chunks": 128, "err": null}
+{"w": 1, "seq": 25, "start": 1794337085.5632288, "ttft": 0.5574061870574951, "end": 1794337091.8863628, "chunks": 128, "err": null}
+{"w": 4, "seq": 26, "start": 1794337085.8832576, "ttft": 0.5413475036621094, "end": 1794337092.2133307, "chunks": 128, "err": null}
+{"w": 7, "seq": 26, "start": 1794337086.3841622, "ttft": 0.5326921939849854, "end": 1794337092.7240798, "chunks": 128, "err": null}
+{"w": 6, "seq": 23, "start": 1794337086.8808606, "ttft": 0.5250296592712402, "end": 1794337093.2039165, "chunks": 128, "err": null}
+{"w": 11, "seq": 28, "start": 1794337087.4056013, "ttft": 0.5294766426086426, "end": 1794337093.7305849, "chunks": 128, "err": null}
+{"w": 0, "seq": 24, "start": 1794337087.8949075, "ttft": 0.5418257713317871, "end": 1794337094.2271419, "chunks": 128, "err": null}
+{"w": 8, "seq": 27, "start": 1794337088.199559, "ttft": 0.5547871589660645, "end": 1794337094.5131996, "chunks": 128, "err": null}
+{"w": 10, "seq": 26, "start": 1794337088.7132897, "ttft": 0.5313193798065186, "end": 1794337095.0548534, "chunks": 128, "err": null}
+{"w": 5, "seq": 26, "start": 1794337089.2050617, "ttft": 0.5990400314331055, "end": 1794337095.5476391, "chunks": 128, "err": null}
+{"w": 2, "seq": 29, "start": 1794337089.4662943, "ttft": 0.6174478530883789, "end": 1794337095.797625, "chunks": 128, "err": null}
+{"w": 13, "seq": 28, "start": 1794337089.8050334, "ttft": 0.6061348915100098, "end": 1794337096.122102, "chunks": 127, "err": null}
+{"w": 9, "seq": 28, "start": 1794337090.1289542, "ttft": 0.5587952136993408, "end": 1794337096.403272, "chunks": 128, "err": null}
+{"w": 15, "seq": 25, "start": 1794337090.6176493, "ttft": 0.5273752212524414, "end": 1794337096.8548305, "chunks": 128, "err": null}
+{"w": 3, "seq": 26, "start": 1794337090.9539049, "ttft": 0.5611538887023926, "end": 1794337097.2081873, "chunks": 128, "err": null}
+{"w": 14, "seq": 27, "start": 1794337091.2349513, "ttft": 0.6061966419219971, "end": 1794337097.5293891, "chunks": 128, "err": null}
+{"w": 12, "seq": 24, "start": 1794337091.560554, "ttft": 0.5638046264648438, "end": 1794337097.8083923, "chunks": 128, "err": null}
+{"w": 1, "seq": 26, "start": 1794337091.886432, "ttft": 0.5674126148223877, "end": 1794337098.122293, "chunks": 128, "err": null}
+{"w": 4, "seq": 27, "start": 1794337092.2133968, "ttft": 0.5508904457092285, "end": 1794337098.4509244, "chunks": 128, "err": null}
+{"w": 7, "seq": 27, "start": 1794337092.724145, "ttft": 0.5202634334564209, "end": 1794337098.968797, "chunks": 128, "err": null}
+{"w": 6, "seq": 24, "start": 1794337093.2039905, "ttft": 0.5274562835693359, "end": 1794337099.4323108, "chunks": 128, "err": null}
+{"w": 11, "seq": 29, "start": 1794337093.7306578, "ttft": 0.519014835357666, "end": 1794337099.948198, "chunks": 128, "err": null}
+{"w": 0, "seq": 25, "start": 1794337094.2272046, "ttft": 0.5672218799591064, "end": 1794337100.478277, "chunks": 128, "err": null}
+{"w": 8, "seq": 28, "start": 1794337094.5133147, "ttft": 0.5915722846984863, "end": 1794337100.7817526, "chunks": 128, "err": null}
+{"w": 10, "seq": 27, "start": 1794337095.054917, "ttft": 0.522897481918335, "end": 1794337101.286098, "chunks": 128, "err": null}
+{"w": 5, "seq": 27, "start": 1794337095.5476909, "ttft": 0.5292520523071289, "end": 1794337101.7660904, "chunks": 128, "err": null}
+{"w": 2, "seq": 30, "start": 1794337095.7977235, "ttft": 0.6053402423858643, "end": 1794337102.0714378, "chunks": 128, "err": null}
+{"w": 13, "seq": 29, "start": 1794337096.1221695, "ttft": 0.5993027687072754, "end": 1794337102.4030864, "chunks": 128, "err": null}
+{"w": 9, "seq": 29, "start": 1794337096.4033418, "ttft": 0.6285490989685059, "end": 1794337102.72784, "chunks": 128, "err": null}
+{"w": 15, "seq": 26, "start": 1794337096.8548927, "ttft": 0.5414018630981445, "end": 1794337103.0933335, "chunks": 126, "err": null}
+{"w": 3, "seq": 27, "start": 1794337097.2082393, "ttft": 0.554835319519043, "end": 1794337103.4597027, "chunks": 128, "err": null}
+{"w": 14, "seq": 28, "start": 1794337097.529454, "ttft": 0.5464339256286621, "end": 1794337103.7833314, "chunks": 128, "err": null}
+{"w": 12, "seq": 25, "start": 1794337097.8084652, "ttft": 0.5980510711669922, "end": 1794337104.1178744, "chunks": 128, "err": null}
+{"w": 1, "seq": 27, "start": 1794337098.1223578, "ttft": 0.6019008159637451, "end": 1794337104.473999, "chunks": 128, "err": null}
+{"w": 4, "seq": 28, "start": 1794337098.4510014, "ttft": 0.5868217945098877, "end": 1794337104.7904844, "chunks": 126, "err": null}
+{"w": 7, "seq": 28, "start": 1794337098.9688573, "ttft": 0.5036654472351074, "end": 1794337105.297558, "chunks": 128, "err": null}
+{"w": 6, "seq": 25, "start": 1794337099.4323776, "ttft": 0.5152790546417236, "end": 1794337105.7888787, "chunks": 128, "err": null}
+{"w": 11, "seq": 30, "start": 1794337099.948254, "ttft": 0.5296955108642578, "end": 1794337106.2994363, "chunks": 128, "err": null}
+{"w": 0, "seq": 26, "start": 1794337100.4783344, "ttft": 0.5334057807922363, "end": 1794337106.8306494, "chunks": 128, "err": null}
+{"w": 8, "seq": 29, "start": 1794337100.7818441, "ttft": 0.5464391708374023, "end": 1794337107.135444, "chunks": 128, "err": null}
+{"w": 10, "seq": 28, "start": 1794337101.2861648, "ttft": 0.520479679107666, "end": 1794337107.6539981, "chunks": 128, "err": null}
+{"w": 5, "seq": 28, "start": 1794337101.7661552, "ttft": 0.5450253486633301, "end": 1794337108.1390393, "chunks": 128, "err": null}
+{"w": 2, "seq": 31, "start": 1794337102.071547, "ttft": 0.5668737888336182, "end": 1794337108.4522686, "chunks": 128, "err": null}
+{"w": 13, "seq": 30, "start": 1794337102.4031422, "ttft": 0.5570242404937744, "end": 1794337108.774385, "chunks": 128, "err": null}
+{"w": 9, "seq": 30, "start": 1794337102.7279084, "ttft": 0.5561995506286621, "end": 1794337109.1015882, "chunks": 128, "err": null}
+{"w": 15, "seq": 27, "start": 1794337103.093397, "ttft": 0.557084321975708, "end": 1794337109.464746, "chunks": 128, "err": null}
+{"w": 3, "seq": 28, "start": 1794337103.4597785, "ttft": 0.5651280879974365, "end": 1794337109.8247344, "chunks": 128, "err": null}
+{"w": 14, "seq": 29, "start": 1794337103.7833984, "ttft": 0.6068556308746338, "end": 1794337110.1508546, "chunks": 128, "err": null}
+{"w": 12, "seq": 26, "start": 1794337104.1179354, "ttft": 0.538400411605835, "end": 1794337110.4281554, "chunks": 128, "err": null}
+{"w": 1, "seq": 28, "start": 1794337104.4740658, "ttft": 0.5678501129150391, "end": 1794337110.8028238, "chunks": 128, "err": null}
+{"w": 4, "seq": 29, "start": 1794337104.7905488, "ttft": 0.5602197647094727, "end": 1794337111.117841, "chunks": 128, "err": null}
+{"w": 7, "seq": 29, "start": 1794337105.2976272, "ttft": 0.5551741123199463, "end": 1794337111.6525304, "chunks": 128, "err": null}
+{"w": 6, "seq": 26, "start": 1794337105.7889435, "ttft": 0.5488102436065674, "end": 1794337112.120531, "chunks": 128, "err": null}
+{"w": 11, "seq": 31, "start": 1794337106.2995043, "ttft": 0.5304152965545654, "end": 1794337112.6202736, "chunks": 128, "err": null}
+{"w": 0, "seq": 27, "start": 1794337106.8306985, "ttft": 0.5434267520904541, "end": 1794337113.1315157, "chunks": 128, "err": null}
+{"w": 8, "seq": 30, "start": 1794337107.1355085, "ttft": 0.5523252487182617, "end": 1794337113.437103, "chunks": 128, "err": null}
+{"w": 10, "seq": 29, "start": 1794337107.654069, "ttft": 0.5313265323638916, "end": 1794337113.9327717, "chunks": 128, "err": null}
+{"w": 5, "seq": 29, "start": 1794337108.1391068, "ttft": 0.54679274559021, "end": 1794337114.4248328, "chunks": 128, "err": null}
+{"w": 2, "seq": 32, "start": 1794337108.4523215, "ttft": 0.5604498386383057, "end": 1794337114.7302222, "chunks": 128, "err": null}
+{"w": 13, "seq": 31, "start": 1794337108.7744355, "ttft": 0.5606822967529297, "end": 1794337115.0575771, "chunks": 128, "err": null}
+{"w": 9, "seq": 31, "start": 1794337109.1016388, "ttft": 0.546797513961792, "end": 1794337115.3746157, "chunks": 128, "err": null}
+{"w": 15, "seq": 28, "start": 1794337109.4648216, "ttft": 0.5536417961120605, "end": 1794337115.7498906, "chunks": 128, "err": null}
+{"w": 3, "seq": 29, "start": 1794337109.8247995, "ttft": 0.5580079555511475, "end": 1794337116.111029, "chunks": 128, "err": null}
+{"w": 14, "seq": 30, "start": 1794337110.150933, "ttft": 0.5608108043670654, "end": 1794337116.4375532, "chunks": 128, "err": null}
+{"w": 12, "seq": 27, "start": 1794337110.4282212, "ttft": 0.6010830402374268, "end": 1794337116.7657695, "chunks": 128, "err": null}
+{"w": 1, "seq": 29, "start": 1794337110.8028822, "ttft": 0.5536918640136719, "end": 1794337117.08376, "chunks": 128, "err": null}
+{"w": 4, "seq": 30, "start": 1794337111.117911, "ttft": 0.5664370059967041, "end": 1794337117.4083285, "chunks": 128, "err": null}
+{"w": 7, "seq": 30, "start": 1794337111.652601, "ttft": 0.541764497756958, "end": 1794337117.9605918, "chunks": 128, "err": null}
+{"w": 6, "seq": 27, "start": 1794337112.1205854, "ttft": 0.5357117652893066, "end": 1794337118.4200156, "chunks": 128, "err": null}
+{"w": 11, "seq": 32, "start": 1794337112.6203415, "ttft": 0.5100665092468262, "end": 1794337118.8965988, "chunks": 128, "err": null}
+{"w": 0, "seq": 28, "start": 1794337113.131584, "ttft": 0.5409986972808838, "end": 1794337119.4258218, "chunks": 128, "err": null}
+{"w": 8, "seq": 31, "start": 1794337113.4371712, "ttft": 0.5346972942352295, "end": 1794337119.7314942, "chunks": 128, "err": null}
+{"w": 10, "seq": 30, "start": 1794337113.9328191, "ttft": 0.5331201553344727, "end": 1794337120.2408228, "chunks": 127, "err": null}
+{"w": 5, "seq": 30, "start": 1794337114.4248798, "ttft": 0.5436079502105713, "end": 1794337120.729574, "chunks": 128, "err": null}
+{"w": 2, "seq": 33, "start": 1794337114.7302692, "ttft": 0.5552706718444824, "end": 1794337121.034025, "chunks": 128, "err": null}
+{"w": 13, "seq": 32, "start": 1794337115.0576272, "ttft": 0.5607478618621826, "end": 1794337121.3640983, "chunks": 126, "err": null}
+{"w": 9, "seq": 32, "start": 1794337115.3746827, "ttft": 0.5589361190795898, "end": 1794337121.6963131, "chunks": 128, "err": null}
+{"w": 15, "seq": 29, "start": 1794337115.7499685, "ttft": 0.5543367862701416, "end": 1794337122.0656183, "chunks": 128, "err": null}
+{"w": 3, "seq": 30, "start": 1794337116.111098, "ttft": 0.5661842823028564, "end": 1794337122.432814, "chunks": 127, "err": null}
+{"w": 14, "seq": 31, "start": 1794337116.4376066, "ttft": 0.5576717853546143, "end": 1794337122.759844, "chunks": 128, "err": null}
+{"w": 12, "seq": 28, "start": 1794337116.7658281, "ttft": 0.5535600185394287, "end": 1794337123.0843167, "chunks": 128, "err": null}
+{"w": 1, "seq": 30, "start": 1794337117.083822, "ttft": 0.5586566925048828, "end": 1794337123.4085555, "chunks": 128, "err": null}
+{"w": 4, "seq": 31, "start": 1794337117.4084034, "ttft": 0.5519840717315674, "end": 1794337123.731117, "chunks": 128, "err": null}
+{"w": 7, "seq": 31, "start": 1794337117.9606578, "ttft": 0.521559476852417, "end": 1794337124.2693274, "chunks": 128, "err": null}
+{"w": 6, "seq": 28, "start": 1794337118.4200795, "ttft": 0.555243968963623, "end": 1794337124.7541006, "chunks": 127, "err": null}
+{"w": 11, "seq": 33, "start": 1794337118.8966668, "ttft": 0.5286741256713867, "end": 1794337125.2034118, "chunks": 128, "err": null}
+{"w": 0, "seq": 29, "start": 1794337119.4258685, "ttft": 0.5446023941040039, "end": 1794337125.7242267, "chunks": 128, "err": null}
+{"w": 8, "seq": 32, "start": 1794337119.7315543, "ttft": 0.5494241714477539, "end": 1794337126.029803, "chunks": 126, "err": null}
+{"w": 10, "seq": 31, "start": 1794337120.2408745, "ttft": 0.5279397964477539, "end": 1794337126.5314617, "chunks": 128, "err": null}
+{"w": 5, "seq": 31, "start": 1794337120.7296236, "ttft": 0.545701265335083, "end": 1794337127.0259254, "chunks": 128, "err": null}
+{"w": 2, "seq": 34, "start": 1794337121.034101, "ttft": 0.5719115734100342, "end": 1794337127.3240428, "chunks": 128, "err": null}
+{"w": 13, "seq": 33, "start": 1794337121.364162, "ttft": 0.5700416564941406, "end": 1794337127.6408978, "chunks": 128, "err": null}
+{"w": 9, "seq": 33, "start": 1794337121.696386, "ttft": 0.5616061687469482, "end": 1794337127.9687974, "chunks": 126, "err": null}
+{"w": 15, "seq": 30, "start": 1794337122.0656817, "ttft": 0.5596835613250732, "end": 1794337128.332321, "chunks": 128, "err": null}
+{"w": 3, "seq": 31, "start": 1794337122.432874, "ttft": 0.5632643699645996, "end": 1794337128.6868863, "chunks": 127, "err": null}
+{"w": 14, "seq": 32, "start": 1794337122.759922, "ttft": 0.5586652755737305, "end": 1794337129.0103939, "chunks": 128, "err": null}
+{"w": 12, "seq": 29, "start": 1794337123.084387, "ttft": 0.5575997829437256, "end": 1794337129.3243642, "chunks": 128, "err": null}
+{"w": 1, "seq": 31, "start": 1794337123.408608, "ttft": 0.5589032173156738, "end": 1794337129.6529207, "chunks": 128, "err": null}
+{"w": 4, "seq": 32, "start": 1794337123.73117, "ttft": 0.5381307601928711, "end": 1794337129.9681456, "chunks": 128, "err": null}
+{"w": 7, "seq": 32, "start": 1794337124.2693954, "ttft": 0.5255746841430664, "end": 1794337130.5186906, "chunks": 128, "err": null}
+{"w": 6, "seq": 29, "start": 1794337124.7541614, "ttft": 0.5244977474212646, "end": 1794337131.0009997, "chunks": 128, "err": null}
+{"w": 11, "seq": 34, "start": 1794337125.203461, "ttft": 0.5201709270477295, "end": 1794337131.4567716, "chunks": 128, "err": null}
+{"w": 0, "seq": 30, "start": 1794337125.724279, "ttft": 0.5424032211303711, "end": 1794337131.9751146, "chunks": 128, "err": null}
+{"w": 8, "seq": 33, "start": 1794337126.029859, "ttft": 0.5424046516418457, "end": 1794337132.281632, "chunks": 128, "err": null}
+{"w": 10, "seq": 32, "start": 1794337126.531509, "ttft": 0.5284199714660645, "end": 1794337132.786413, "chunks": 128, "err": null}
+{"w": 5, "seq": 32, "start": 1794337127.0259833, "ttft": 0.5253441333770752, "end": 1794337133.2700005, "chunks": 128, "err": null}
+{"w": 2, "seq": 35, "start": 1794337127.3241062, "ttft": 0.5544588565826416, "end": 1794337133.5716512, "chunks": 128, "err": null}
+{"w": 13, "seq": 34, "start": 1794337127.6410563, "ttft": 0.5585494041442871, "end": 1794337133.8976498, "chunks": 126, "err": null}
+{"w": 9, "seq": 34, "start": 1794337127.9688466, "ttft": 0.5409073829650879, "end": 1794337134.2232008, "chunks": 128, "err": null}
+{"w": 15, "seq": 31, "start": 1794337128.332382, "ttft": 0.5449023246765137, "end": 1794337134.5904703, "chunks": 128, "err": null}
+{"w": 3, "seq": 32, "start": 1794337128.6869533, "ttft": 0.5481455326080322, "end": 1794337134.958317, "chunks": 128, "err": null}
+{"w": 14, "seq": 33, "start": 1794337129.0104525, "ttft": 0.5514657497406006, "end": 1794337135.2821853, "chunks": 128, "err": null}
+{"w": 12, "seq": 30, "start": 1794337129.324426, "ttft": 0.553884744644165, "end": 1794337135.6092806, "chunks": 128, "err": null}
+{"w": 1, "seq": 32, "start": 1794337129.652972, "ttft": 0.5547356605529785, "end": 1794337135.9367535, "chunks": 128, "err": null}
+{"w": 4, "seq": 33, "start": 1794337129.9682071, "ttft": 0.5501275062561035, "end": 1794337136.2643077, "chunks": 128, "err": null}
+{"w": 7, "seq": 33, "start": 1794337130.5187495, "ttft": 0.5255126953125, "end": 1794337136.814345, "chunks": 128, "err": null}
+{"w": 7, "seq": 34, "start": 1794337136.8144069, "ttft": null, "end": 1794337137.1480658, "chunks": 0, "err": "http 503: {\"message\":\"Service temporarily unavailable\",\"type\":\"Service Unavailable\",\"code\":503}"}
+{"w": 6, "seq": 30, "start": 1794337131.001047, "ttft": 0.5339252948760986, "end": 1794337137.2854717, "chunks": 128, "err": null}
+{"w": 6, "seq": 31, "start": 1794337137.2855213, "ttft": null, "end": 1794337137.286347, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 35, "start": 1794337137.6486235, "ttft": null, "end": 1794337137.649631, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 35, "start": 1794337131.4568305, "ttft": 0.5173919200897217, "end": 1794337137.6820402, "chunks": 128, "err": null}
+{"w": 11, "seq": 36, "start": 1794337137.6821167, "ttft": null, "end": 1794337137.6829314, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 32, "start": 1794337137.7866929, "ttft": null, "end": 1794337137.7875907, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 31, "start": 1794337131.9751718, "ttft": 0.5471961498260498, "end": 1794337138.1496072, "chunks": 128, "err": null}
+{"w": 0, "seq": 32, "start": 1794337138.1496718, "ttft": null, "end": 1794337138.1505961, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 36, "start": 1794337138.1501095, "ttft": null, "end": 1794337138.150875, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 37, "start": 1794337138.1850429, "ttft": null, "end": 1794337138.185932, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 33, "start": 1794337138.288026, "ttft": null, "end": 1794337138.2888215, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 34, "start": 1794337132.2816787, "ttft": 0.5453720092773438, "end": 1794337138.392182, "chunks": 128, "err": null}
+{"w": 8, "seq": 35, "start": 1794337138.3922346, "ttft": null, "end": 1794337138.393265, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 37, "start": 1794337138.6514425, "ttft": null, "end": 1794337138.6527653, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 33, "start": 1794337138.6511495, "ttft": null, "end": 1794337138.6528218, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 38, "start": 1794337138.6862178, "ttft": null, "end": 1794337138.6870427, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 33, "start": 1794337132.7864745, "ttft": 0.5218043327331543, "end": 1794337138.7709618, "chunks": 128, "err": null}
+{"w": 10, "seq": 34, "start": 1794337138.770999, "ttft": null, "end": 1794337138.772034, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 34, "start": 1794337138.7893703, "ttft": null, "end": 1794337138.7901046, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 36, "start": 1794337138.893827, "ttft": null, "end": 1794337138.8948007, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 33, "start": 1794337133.2700522, "ttft": 0.5383098125457764, "end": 1794337139.1482034, "chunks": 128, "err": null}
+{"w": 5, "seq": 34, "start": 1794337139.1482635, "ttft": null, "end": 1794337139.1492279, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 34, "start": 1794337139.1531196, "ttft": null, "end": 1794337139.1542294, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 38, "start": 1794337139.1529255, "ttft": null, "end": 1794337139.1542802, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 39, "start": 1794337139.187753, "ttft": null, "end": 1794337139.1885595, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 35, "start": 1794337139.2725842, "ttft": null, "end": 1794337139.2733696, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 35, "start": 1794337139.2906578, "ttft": null, "end": 1794337139.2913425, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 36, "start": 1794337133.5717058, "ttft": 0.5599155426025391, "end": 1794337139.3854673, "chunks": 128, "err": null}
+{"w": 2, "seq": 37, "start": 1794337139.385502, "ttft": null, "end": 1794337139.3861675, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 37, "start": 1794337139.3953707, "ttft": null, "end": 1794337139.3961866, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 35, "start": 1794337133.8976982, "ttft": 0.5612199306488037, "end": 1794337139.589115, "chunks": 128, "err": null}
+{"w": 13, "seq": 36, "start": 1794337139.589151, "ttft": null, "end": 1794337139.5897954, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 35, "start": 1794337139.649586, "ttft": null, "end": 1794337139.650202, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 35, "start": 1794337139.6545098, "ttft": null, "end": 1794337139.655221, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 39, "start": 1794337139.6548643, "ttft": null, "end": 1794337139.6556103, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 40, "start": 1794337139.6891208, "ttft": null, "end": 1794337139.6898286, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 36, "start": 1794337139.7739196, "ttft": null, "end": 1794337139.77471, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 36, "start": 1794337139.7918963, "ttft": null, "end": 1794337139.7926862, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 35, "start": 1794337134.223259, "ttft": 0.5592551231384277, "end": 1794337139.7942746, "chunks": 128, "err": null}
+{"w": 9, "seq": 36, "start": 1794337139.7945156, "ttft": null, "end": 1794337139.7953162, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 38, "start": 1794337139.886725, "ttft": null, "end": 1794337139.8876905, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 38, "start": 1794337139.896743, "ttft": null, "end": 1794337139.897563, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 32, "start": 1794337134.5905173, "ttft": 0.5590353012084961, "end": 1794337140.0225222, "chunks": 128, "err": null}
+{"w": 15, "seq": 33, "start": 1794337140.0225844, "ttft": null, "end": 1794337140.0236216, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 37, "start": 1794337140.0901084, "ttft": null, "end": 1794337140.0908487, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 36, "start": 1794337140.1507604, "ttft": null, "end": 1794337140.1516368, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 36, "start": 1794337140.155471, "ttft": null, "end": 1794337140.1564379, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 40, "start": 1794337140.156128, "ttft": null, "end": 1794337140.156899, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 41, "start": 1794337140.1901011, "ttft": null, "end": 1794337140.1908739, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 33, "start": 1794337134.9583757, "ttft": 0.5619301795959473, "end": 1794337140.2459385, "chunks": 128, "err": null}
+{"w": 3, "seq": 34, "start": 1794337140.2459803, "ttft": null, "end": 1794337140.2466497, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 37, "start": 1794337140.2752223, "ttft": null, "end": 1794337140.2760503, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 37, "start": 1794337140.2932324, "ttft": null, "end": 1794337140.293821, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 37, "start": 1794337140.2958643, "ttft": null, "end": 1794337140.296471, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 39, "start": 1794337140.3882408, "ttft": null, "end": 1794337140.3890646, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 39, "start": 1794337140.398102, "ttft": null, "end": 1794337140.398764, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 34, "start": 1794337135.2823288, "ttft": 0.5645370483398438, "end": 1794337140.405292, "chunks": 128, "err": null}
+{"w": 14, "seq": 35, "start": 1794337140.4053345, "ttft": null, "end": 1794337140.4059927, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 34, "start": 1794337140.5238912, "ttft": null, "end": 1794337140.5246842, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 31, "start": 1794337135.6093383, "ttft": 0.5657870769500732, "end": 1794337140.5582285, "chunks": 128, "err": null}
+{"w": 12, "seq": 32, "start": 1794337140.5582597, "ttft": null, "end": 1794337140.5589309, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 38, "start": 1794337140.5911841, "ttft": null, "end": 1794337140.5918195, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 37, "start": 1794337140.6522, "ttft": null, "end": 1794337140.6528332, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 37, "start": 1794337140.656995, "ttft": null, "end": 1794337140.6578085, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 41, "start": 1794337140.6572692, "ttft": null, "end": 1794337140.6578546, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 42, "start": 1794337140.6914375, "ttft": null, "end": 1794337140.6921728, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 33, "start": 1794337135.936813, "ttft": 0.5640184879302979, "end": 1794337140.7166657, "chunks": 128, "err": null}
+{"w": 1, "seq": 34, "start": 1794337140.716706, "ttft": null, "end": 1794337140.717309, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 35, "start": 1794337140.7471962, "ttft": null, "end": 1794337140.7478, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 38, "start": 1794337140.7766, "ttft": null, "end": 1794337140.7771378, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 38, "start": 1794337140.794102, "ttft": null, "end": 1794337140.7947257, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 38, "start": 1794337140.797042, "ttft": null, "end": 1794337140.7978268, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 34, "start": 1794337136.264373, "ttft": 0.5488758087158203, "end": 1794337140.8456275, "chunks": 128, "err": null}
+{"w": 4, "seq": 35, "start": 1794337140.845675, "ttft": null, "end": 1794337140.8465836, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 40, "start": 1794337140.8895404, "ttft": null, "end": 1794337140.890381, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 40, "start": 1794337140.8993082, "ttft": null, "end": 1794337140.8998911, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 36, "start": 1794337140.9060981, "ttft": null, "end": 1794337140.9069831, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 35, "start": 1794337141.0252502, "ttft": null, "end": 1794337141.026608, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 33, "start": 1794337141.059083, "ttft": null, "end": 1794337141.0598686, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 39, "start": 1794337141.0923693, "ttft": null, "end": 1794337141.0930579, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 38, "start": 1794337141.1533854, "ttft": null, "end": 1794337141.1539493, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 42, "start": 1794337141.158095, "ttft": null, "end": 1794337141.1587565, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 38, "start": 1794337141.1584115, "ttft": null, "end": 1794337141.1590219, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 43, "start": 1794337141.1927247, "ttft": null, "end": 1794337141.1934097, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 35, "start": 1794337141.2178514, "ttft": null, "end": 1794337141.218443, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 36, "start": 1794337141.248342, "ttft": null, "end": 1794337141.2489488, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 39, "start": 1794337141.2774477, "ttft": null, "end": 1794337141.2780042, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 39, "start": 1794337141.2952785, "ttft": null, "end": 1794337141.295972, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 39, "start": 1794337141.2983785, "ttft": null, "end": 1794337141.2989671, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 36, "start": 1794337141.3471384, "ttft": null, "end": 1794337141.3476799, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 41, "start": 1794337141.3909292, "ttft": null, "end": 1794337141.3916223, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 41, "start": 1794337141.4004338, "ttft": null, "end": 1794337141.4009693, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 37, "start": 1794337141.4073484, "ttft": null, "end": 1794337141.407921, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 36, "start": 1794337141.5271695, "ttft": null, "end": 1794337141.5281365, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 12, "seq": 34, "start": 1794337141.5604286, "ttft": null, "end": 1794337141.5610478, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 13, "seq": 40, "start": 1794337141.5936043, "ttft": null, "end": 1794337141.5943546, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 5, "seq": 39, "start": 1794337141.6544938, "ttft": null, "end": 1794337141.6550965, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 0, "seq": 39, "start": 1794337141.659487, "ttft": null, "end": 1794337141.6602592, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 7, "seq": 43, "start": 1794337141.6592522, "ttft": null, "end": 1794337141.6602933, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 11, "seq": 44, "start": 1794337141.6939647, "ttft": null, "end": 1794337141.6946187, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 1, "seq": 36, "start": 1794337141.7189956, "ttft": null, "end": 1794337141.7197895, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 3, "seq": 37, "start": 1794337141.7492707, "ttft": null, "end": 1794337141.7500007, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 10, "seq": 40, "start": 1794337141.7785497, "ttft": null, "end": 1794337141.7791407, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 6, "seq": 40, "start": 1794337141.79635, "ttft": null, "end": 1794337141.7969613, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 9, "seq": 40, "start": 1794337141.7995176, "ttft": null, "end": 1794337141.8000517, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 4, "seq": 37, "start": 1794337141.848016, "ttft": null, "end": 1794337141.8486476, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 2, "seq": 42, "start": 1794337141.8921645, "ttft": null, "end": 1794337141.8926976, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 8, "seq": 42, "start": 1794337141.901508, "ttft": null, "end": 1794337141.9020212, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 14, "seq": 38, "start": 1794337141.9081297, "ttft": null, "end": 1794337141.9087024, "chunks": 0, "err": "http 503: {\"message\":\"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deployment may still be starting up or is not fully provisioned. Please retry shortly.\",\"type\":\"Service Unavailable\",\"code\":50"}
+{"w": 15, "seq": 37, "start": 1794337142.028967, "ttft": null, "end": 1794337142.0298874, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 35, "start": 1794337142.061118, "ttft": null, "end": 1794337142.0621057, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 41, "start": 1794337142.0949242, "ttft": null, "end": 1794337142.0959754, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 40, "start": 1794337142.1556492, "ttft": null, "end": 1794337142.1565692, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 40, "start": 1794337142.160821, "ttft": null, "end": 1794337142.1615262, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 44, "start": 1794337142.1611786, "ttft": null, "end": 1794337142.1618495, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 45, "start": 1794337142.1951687, "ttft": null, "end": 1794337142.195973, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 37, "start": 1794337142.2203352, "ttft": null, "end": 1794337142.2210982, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 38, "start": 1794337142.2501068, "ttft": null, "end": 1794337142.25094, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 41, "start": 1794337142.2796972, "ttft": null, "end": 1794337142.2804391, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 41, "start": 1794337142.297517, "ttft": null, "end": 1794337142.2982187, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 41, "start": 1794337142.3004024, "ttft": null, "end": 1794337142.300979, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 38, "start": 1794337142.3488388, "ttft": null, "end": 1794337142.3495345, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 43, "start": 1794337142.3932447, "ttft": null, "end": 1794337142.3938422, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 43, "start": 1794337142.4020913, "ttft": null, "end": 1794337142.4027371, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 39, "start": 1794337142.4092414, "ttft": null, "end": 1794337142.4097736, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 38, "start": 1794337142.5304496, "ttft": null, "end": 1794337142.5313265, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 36, "start": 1794337142.5626857, "ttft": null, "end": 1794337142.5635486, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 42, "start": 1794337142.5967205, "ttft": null, "end": 1794337142.5983949, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 41, "start": 1794337142.6571302, "ttft": null, "end": 1794337142.658107, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 41, "start": 1794337142.6623256, "ttft": null, "end": 1794337142.663169, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 45, "start": 1794337142.6621099, "ttft": null, "end": 1794337142.6632063, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 46, "start": 1794337142.6963782, "ttft": null, "end": 1794337142.6972513, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 38, "start": 1794337142.7216568, "ttft": null, "end": 1794337142.7223816, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 39, "start": 1794337142.7515087, "ttft": null, "end": 1794337142.7523944, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 42, "start": 1794337142.7809901, "ttft": null, "end": 1794337142.78176, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 42, "start": 1794337142.798559, "ttft": null, "end": 1794337142.7991571, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 42, "start": 1794337142.80152, "ttft": null, "end": 1794337142.8021448, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 39, "start": 1794337142.8501022, "ttft": null, "end": 1794337142.8508923, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 44, "start": 1794337142.8941145, "ttft": null, "end": 1794337142.8950088, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 44, "start": 1794337142.9032848, "ttft": null, "end": 1794337142.9039125, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 40, "start": 1794337142.9100971, "ttft": null, "end": 1794337142.910625, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 39, "start": 1794337143.0319, "ttft": null, "end": 1794337143.0328135, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 37, "start": 1794337143.0641074, "ttft": null, "end": 1794337143.0650942, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 43, "start": 1794337143.0984938, "ttft": null, "end": 1794337143.0993123, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 42, "start": 1794337143.1587021, "ttft": null, "end": 1794337143.1596892, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 42, "start": 1794337143.163302, "ttft": null, "end": 1794337143.1640468, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 46, "start": 1794337143.1637673, "ttft": null, "end": 1794337143.16461, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 47, "start": 1794337143.1978114, "ttft": null, "end": 1794337143.1987753, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 39, "start": 1794337143.222653, "ttft": null, "end": 1794337143.2234018, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 40, "start": 1794337143.252982, "ttft": null, "end": 1794337143.2537282, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 43, "start": 1794337143.2821083, "ttft": null, "end": 1794337143.2828894, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 43, "start": 1794337143.299723, "ttft": null, "end": 1794337143.3005621, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 43, "start": 1794337143.3027093, "ttft": null, "end": 1794337143.3033295, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 40, "start": 1794337143.3514686, "ttft": null, "end": 1794337143.352225, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 45, "start": 1794337143.3955848, "ttft": null, "end": 1794337143.3964508, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 45, "start": 1794337143.4044638, "ttft": null, "end": 1794337143.4051104, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 41, "start": 1794337143.4111693, "ttft": null, "end": 1794337143.4118006, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 40, "start": 1794337143.533378, "ttft": null, "end": 1794337143.5342722, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 38, "start": 1794337143.5654395, "ttft": null, "end": 1794337143.5663369, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 44, "start": 1794337143.6010199, "ttft": null, "end": 1794337143.6019287, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 43, "start": 1794337143.6602502, "ttft": null, "end": 1794337143.661156, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 43, "start": 1794337143.66427, "ttft": null, "end": 1794337143.664842, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 47, "start": 1794337143.6651561, "ttft": null, "end": 1794337143.6656156, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 48, "start": 1794337143.6993365, "ttft": null, "end": 1794337143.7003455, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 40, "start": 1794337143.7244525, "ttft": null, "end": 1794337143.7254145, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 41, "start": 1794337143.7541118, "ttft": null, "end": 1794337143.7549744, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 44, "start": 1794337143.7834606, "ttft": null, "end": 1794337143.7842581, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 44, "start": 1794337143.8011124, "ttft": null, "end": 1794337143.8020072, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 44, "start": 1794337143.803888, "ttft": null, "end": 1794337143.8045928, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 41, "start": 1794337143.8528323, "ttft": null, "end": 1794337143.8536615, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 46, "start": 1794337143.8970332, "ttft": null, "end": 1794337143.897825, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 46, "start": 1794337143.905534, "ttft": null, "end": 1794337143.9062166, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 42, "start": 1794337143.9118884, "ttft": null, "end": 1794337143.9124458, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 41, "start": 1794337144.0346172, "ttft": null, "end": 1794337144.0353801, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 39, "start": 1794337144.0669017, "ttft": null, "end": 1794337144.0676837, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 45, "start": 1794337144.1021168, "ttft": null, "end": 1794337144.1028569, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 44, "start": 1794337144.1617339, "ttft": null, "end": 1794337144.1625988, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 44, "start": 1794337144.165421, "ttft": null, "end": 1794337144.1661627, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 48, "start": 1794337144.1661994, "ttft": null, "end": 1794337144.1666846, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 49, "start": 1794337144.200929, "ttft": null, "end": 1794337144.2019763, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 41, "start": 1794337144.2259948, "ttft": null, "end": 1794337144.22684, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 42, "start": 1794337144.255548, "ttft": null, "end": 1794337144.2566464, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 45, "start": 1794337144.2848182, "ttft": null, "end": 1794337144.2855978, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 45, "start": 1794337144.3021386, "ttft": null, "end": 1794337144.3030617, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 45, "start": 1794337144.3051977, "ttft": null, "end": 1794337144.3058307, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 42, "start": 1794337144.3542285, "ttft": null, "end": 1794337144.3551385, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 47, "start": 1794337144.3981118, "ttft": null, "end": 1794337144.398826, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 47, "start": 1794337144.4067764, "ttft": null, "end": 1794337144.4075253, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 43, "start": 1794337144.4129934, "ttft": null, "end": 1794337144.413745, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 42, "start": 1794337144.5355642, "ttft": null, "end": 1794337144.5364714, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 40, "start": 1794337144.5679567, "ttft": null, "end": 1794337144.5689595, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 46, "start": 1794337144.60343, "ttft": null, "end": 1794337144.604373, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 45, "start": 1794337144.6631002, "ttft": null, "end": 1794337144.6639614, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 45, "start": 1794337144.6668727, "ttft": null, "end": 1794337144.6675556, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 49, "start": 1794337144.6672351, "ttft": null, "end": 1794337144.668066, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 50, "start": 1794337144.7021081, "ttft": null, "end": 1794337144.702779, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 42, "start": 1794337144.7274163, "ttft": null, "end": 1794337144.7281442, "chunks": 0, "err": "http 404: "}
+{"w": 3, "seq": 43, "start": 1794337144.757219, "ttft": null, "end": 1794337144.7581458, "chunks": 0, "err": "http 404: "}
+{"w": 10, "seq": 46, "start": 1794337144.786122, "ttft": null, "end": 1794337144.7870586, "chunks": 0, "err": "http 404: "}
+{"w": 6, "seq": 46, "start": 1794337144.803279, "ttft": null, "end": 1794337144.8039923, "chunks": 0, "err": "http 404: "}
+{"w": 9, "seq": 46, "start": 1794337144.8061078, "ttft": null, "end": 1794337144.806668, "chunks": 0, "err": "http 404: "}
+{"w": 4, "seq": 43, "start": 1794337144.855701, "ttft": null, "end": 1794337144.8565247, "chunks": 0, "err": "http 404: "}
+{"w": 2, "seq": 48, "start": 1794337144.8993871, "ttft": null, "end": 1794337144.9003725, "chunks": 0, "err": "http 404: "}
+{"w": 8, "seq": 48, "start": 1794337144.908089, "ttft": null, "end": 1794337144.9089396, "chunks": 0, "err": "http 404: "}
+{"w": 14, "seq": 44, "start": 1794337144.9140992, "ttft": null, "end": 1794337144.9147427, "chunks": 0, "err": "http 404: "}
+{"w": 15, "seq": 43, "start": 1794337145.036862, "ttft": null, "end": 1794337145.0377522, "chunks": 0, "err": "http 404: "}
+{"w": 12, "seq": 41, "start": 1794337145.0695348, "ttft": null, "end": 1794337145.0703206, "chunks": 0, "err": "http 404: "}
+{"w": 13, "seq": 47, "start": 1794337145.1049516, "ttft": null, "end": 1794337145.1057155, "chunks": 0, "err": "http 404: "}
+{"w": 5, "seq": 46, "start": 1794337145.164527, "ttft": null, "end": 1794337145.1653755, "chunks": 0, "err": "http 404: "}
+{"w": 0, "seq": 46, "start": 1794337145.1679418, "ttft": null, "end": 1794337145.1685488, "chunks": 0, "err": "http 404: "}
+{"w": 7, "seq": 50, "start": 1794337145.168607, "ttft": null, "end": 1794337145.1690266, "chunks": 0, "err": "http 404: "}
+{"w": 11, "seq": 51, "start": 1794337145.2033362, "ttft": null, "end": 1794337145.2041824, "chunks": 0, "err": "http 404: "}
+{"w": 1, "seq": 43, "start": 1794337145.2285905, "ttft": 0.46163105964660645, "end": 1794337148.9683216, "chunks": 128, "err": null}
+{"w": 3, "seq": 44, "start": 1794337145.258728, "ttft": 0.7645373344421387, "end": 1794337149.288133, "chunks": 126, "err": null}
+{"w": 10, "seq": 47, "start": 1794337145.2874799, "ttft": 1.0828485488891602, "end": 1794337149.6756797, "chunks": 128, "err": null}
+{"w": 6, "seq": 47, "start": 1794337145.3045585, "ttft": 1.4734468460083008, "end": 1794337150.0710523, "chunks": 128, "err": null}
+{"w": 9, "seq": 47, "start": 1794337145.3069537, "ttft": 1.6246912479400635, "end": 1794337150.2100616, "chunks": 128, "err": null}
+{"w": 4, "seq": 44, "start": 1794337145.3571012, "ttft": 1.97621488571167, "end": 1794337150.6546412, "chunks": 128, "err": null}
+{"w": 2, "seq": 49, "start": 1794337145.4006982, "ttft": 2.292602300643921, "end": 1794337151.0139306, "chunks": 128, "err": null}
+{"w": 8, "seq": 49, "start": 1794337145.4090228, "ttft": 2.6654889583587646, "end": 1794337151.3996627, "chunks": 127, "err": null}
+{"w": 14, "seq": 45, "start": 1794337145.4149244, "ttft": 2.8608734607696533, "end": 1794337151.5760021, "chunks": 128, "err": null}
+{"w": 15, "seq": 44, "start": 1794337145.538284, "ttft": 3.116466760635376, "end": 1794337151.964052, "chunks": 128, "err": null}
+{"w": 12, "seq": 42, "start": 1794337145.570882, "ttft": 3.45485520362854, "end": 1794337152.3315275, "chunks": 128, "err": null}
+{"w": 13, "seq": 48, "start": 1794337145.606121, "ttft": 3.8040528297424316, "end": 1794337152.7777147, "chunks": 128, "err": null}
+{"w": 5, "seq": 47, "start": 1794337145.6659694, "ttft": 3.9188828468322754, "end": 1794337152.9962509, "chunks": 128, "err": null}
+{"w": 7, "seq": 51, "start": 1794337145.6691303, "ttft": 4.333090782165527, "end": 1794337153.41543, "chunks": 127, "err": null}
+{"w": 0, "seq": 47, "start": 1794337145.6693404, "ttft": 4.671665191650391, "end": 1794337153.7822645, "chunks": 128, "err": null}
+{"w": 11, "seq": 52, "start": 1794337145.7047632, "ttft": 4.865282773971558, "end": 1794337154.026118, "chunks": 128, "err": null}
+{"w": 1, "seq": 44, "start": 1794337148.9683754, "ttft": 1.9760103225708008, "end": 1794337154.3886044, "chunks": 128, "err": null}
+{"w": 3, "seq": 45, "start": 1794337149.2881947, "ttft": 2.041342258453369, "end": 1794337154.7813094, "chunks": 126, "err": null}
+{"w": 10, "seq": 48, "start": 1794337149.6757278, "ttft": 2.0387492179870605, "end": 1794337155.1857226, "chunks": 128, "err": null}
+{"w": 6, "seq": 48, "start": 1794337150.071116, "ttft": 1.844944715499878, "end": 1794337155.4194183, "chunks": 128, "err": null}
+{"w": 9, "seq": 48, "start": 1794337150.2101288, "ttft": 2.072671890258789, "end": 1794337155.777, "chunks": 128, "err": null}
+{"w": 4, "seq": 45, "start": 1794337150.654692, "ttft": 2.0312163829803467, "end": 1794337156.1537058, "chunks": 127, "err": null}
+{"w": 2, "seq": 50, "start": 1794337151.0139937, "ttft": 2.031266689300537, "end": 1794337156.5107572, "chunks": 128, "err": null}
+{"w": 8, "seq": 50, "start": 1794337151.3997123, "ttft": 1.8443918228149414, "end": 1794337156.7338634, "chunks": 128, "err": null}
+{"w": 14, "seq": 46, "start": 1794337151.5760472, "ttft": 2.0592331886291504, "end": 1794337157.1327243, "chunks": 128, "err": null}
+{"w": 15, "seq": 45, "start": 1794337151.964114, "ttft": 2.061431407928467, "end": 1794337157.568435, "chunks": 128, "err": null}
+{"w": 12, "seq": 43, "start": 1794337152.3315895, "ttft": 1.8650264739990234, "end": 1794337157.7161307, "chunks": 128, "err": null}
+{"w": 13, "seq": 49, "start": 1794337152.777767, "ttft": 1.8124873638153076, "end": 1794337158.1352866, "chunks": 128, "err": null}
+{"w": 5, "seq": 48, "start": 1794337152.9962997, "ttft": 1.9978806972503662, "end": 1794337158.5493972, "chunks": 128, "err": null}
+{"w": 7, "seq": 52, "start": 1794337153.4155066, "ttft": 1.9737930297851562, "end": 1794337158.9094024, "chunks": 128, "err": null}
+{"w": 0, "seq": 48, "start": 1794337153.782319, "ttft": 1.7583184242248535, "end": 1794337159.0241807, "chunks": 128, "err": null}
+{"w": 11, "seq": 53, "start": 1794337154.0262592, "ttft": 1.9105181694030762, "end": 1794337159.4375277, "chunks": 127, "err": null}
+{"w": 1, "seq": 45, "start": 1794337154.3886673, "ttft": 1.9259016513824463, "end": 1794337159.8180592, "chunks": 128, "err": null}
+{"w": 3, "seq": 46, "start": 1794337154.7814448, "ttft": 1.9273273944854736, "end": 1794337160.1668184, "chunks": 128, "err": null}
+{"w": 10, "seq": 49, "start": 1794337155.185786, "ttft": 1.697606086730957, "end": 1794337160.328071, "chunks": 128, "err": null}
+{"w": 6, "seq": 49, "start": 1794337155.4194753, "ttft": 1.8612580299377441, "end": 1794337160.7287207, "chunks": 128, "err": null}
+{"w": 9, "seq": 49, "start": 1794337155.7770488, "ttft": 1.8678174018859863, "end": 1794337161.06774, "chunks": 128, "err": null}
+{"w": 4, "seq": 46, "start": 1794337156.1537564, "ttft": 1.8872904777526855, "end": 1794337161.462045, "chunks": 128, "err": null}
+{"w": 2, "seq": 51, "start": 1794337156.5108182, "ttft": 1.7081642150878906, "end": 1794337161.6313455, "chunks": 128, "err": null}
+{"w": 8, "seq": 51, "start": 1794337156.733941, "ttft": 1.887357234954834, "end": 1794337162.0064106, "chunks": 128, "err": null}
+{"w": 14, "seq": 47, "start": 1794337157.1327865, "ttft": 1.8219237327575684, "end": 1794337162.353522, "chunks": 128, "err": null}
+{"w": 15, "seq": 46, "start": 1794337157.5684998, "ttft": 1.6122550964355469, "end": 1794337162.582681, "chunks": 127, "err": null}
+{"w": 12, "seq": 44, "start": 1794337157.7161818, "ttft": 1.8303098678588867, "end": 1794337162.9234226, "chunks": 128, "err": null}
+{"w": 13, "seq": 50, "start": 1794337158.1353555, "ttft": 1.8110754489898682, "end": 1794337163.318651, "chunks": 126, "err": null}
+{"w": 5, "seq": 49, "start": 1794337158.549454, "ttft": 1.7536075115203857, "end": 1794337163.6590889, "chunks": 126, "err": null}
+{"w": 7, "seq": 53, "start": 1794337158.909467, "ttft": 1.625060796737671, "end": 1794337163.8669317, "chunks": 128, "err": null}
+{"w": 0, "seq": 49, "start": 1794337159.024241, "ttft": 1.8580026626586914, "end": 1794337164.2261062, "chunks": 128, "err": null}
+{"w": 11, "seq": 54, "start": 1794337159.4375823, "ttft": 1.8625457286834717, "end": 1794337164.6139758, "chunks": 128, "err": null}
+{"w": 1, "seq": 46, "start": 1794337159.8181329, "ttft": 1.8371543884277344, "end": 1794337164.970814, "chunks": 128, "err": null}
+{"w": 3, "seq": 47, "start": 1794337160.1668987, "ttft": 1.7004954814910889, "end": 1794337165.1619034, "chunks": 128, "err": null}
+{"w": 10, "seq": 50, "start": 1794337160.3281186, "ttft": 1.9183094501495361, "end": 1794337165.5748954, "chunks": 128, "err": null}
+{"w": 6, "seq": 50, "start": 1794337160.7287703, "ttft": 1.9243009090423584, "end": 1794337165.9551954, "chunks": 128, "err": null}
+{"w": 9, "seq": 50, "start": 1794337161.067804, "ttft": 1.7424557209014893, "end": 1794337166.0933046, "chunks": 128, "err": null}
+{"w": 4, "seq": 47, "start": 1794337161.4621243, "ttft": 1.7499103546142578, "end": 1794337166.4654315, "chunks": 127, "err": null}
+{"w": 2, "seq": 52, "start": 1794337161.6313882, "ttft": 1.957345962524414, "end": 1794337166.882476, "chunks": 128, "err": null}
+{"w": 8, "seq": 52, "start": 1794337162.0064561, "ttft": 1.986337423324585, "end": 1794337167.2819467, "chunks": 128, "err": null}
+{"w": 14, "seq": 48, "start": 1794337162.3535829, "ttft": 1.8258702754974365, "end": 1794337167.4537578, "chunks": 128, "err": null}
+{"w": 15, "seq": 47, "start": 1794337162.5827355, "ttft": 1.9853050708770752, "end": 1794337167.8721504, "chunks": 128, "err": null}
+{"w": 12, "seq": 45, "start": 1794337162.9234874, "ttft": 2.0027883052825928, "end": 1794337168.242869, "chunks": 128, "err": null}
+{"w": 13, "seq": 51, "start": 1794337163.3187115, "ttft": 2.012007713317871, "end": 1794337168.6430206, "chunks": 128, "err": null}
+{"w": 5, "seq": 50, "start": 1794337163.6591656, "ttft": 1.8645753860473633, "end": 1794337168.816881, "chunks": 128, "err": null}
+{"w": 7, "seq": 54, "start": 1794337163.8669903, "ttft": 2.0423622131347656, "end": 1794337169.224841, "chunks": 128, "err": null}
+{"w": 0, "seq": 50, "start": 1794337164.2261662, "ttft": 2.0545859336853027, "end": 1794337169.6165125, "chunks": 128, "err": null}
+{"w": 11, "seq": 55, "start": 1794337164.6140246, "ttft": 2.0738179683685303, "end": 1794337170.0304246, "chunks": 128, "err": null}
+{"w": 1, "seq": 47, "start": 1794337164.9708672, "ttft": 1.910632848739624, "end": 1794337170.1965935, "chunks": 128, "err": null}
+{"w": 3, "seq": 48, "start": 1794337165.1619453, "ttft": 2.1191012859344482, "end": 1794337170.6730936, "chunks": 124, "err": null}
+{"w": 10, "seq": 51, "start": 1794337165.5749493, "ttft": 2.060420036315918, "end": 1794337171.0245476, "chunks": 128, "err": null}
+{"w": 6, "seq": 51, "start": 1794337165.9552424, "ttft": 1.893897533416748, "end": 1794337171.2400377, "chunks": 128, "err": null}
+{"w": 9, "seq": 51, "start": 1794337166.0933561, "ttft": 2.14900803565979, "end": 1794337171.608747, "chunks": 128, "err": null}
+{"w": 4, "seq": 48, "start": 1794337166.4654918, "ttft": 2.132185935974121, "end": 1794337171.9807181, "chunks": 128, "err": null}
+{"w": 2, "seq": 53, "start": 1794337166.8825321, "ttft": 2.0981132984161377, "end": 1794337172.3569572, "chunks": 128, "err": null}
+{"w": 8, "seq": 53, "start": 1794337167.281995, "ttft": 1.9202072620391846, "end": 1794337172.6016643, "chunks": 128, "err": null}
+{"w": 14, "seq": 49, "start": 1794337167.453806, "ttft": 2.1381101608276367, "end": 1794337172.9969306, "chunks": 128, "err": null}
+{"w": 15, "seq": 48, "start": 1794337167.8722026, "ttft": 2.0856590270996094, "end": 1794337173.3615897, "chunks": 128, "err": null}
+{"w": 12, "seq": 46, "start": 1794337168.2429173, "ttft": 2.1346724033355713, "end": 1794337173.7545507, "chunks": 128, "err": null}
+{"w": 13, "seq": 52, "start": 1794337168.6431043, "ttft": 1.8965375423431396, "end": 1794337173.8791175, "chunks": 126, "err": null}
+{"w": 5, "seq": 51, "start": 1794337168.8169348, "ttft": 2.0906102657318115, "end": 1794337174.2497215, "chunks": 128, "err": null}
+{"w": 7, "seq": 55, "start": 1794337169.2249022, "ttft": 2.060750722885132, "end": 1794337174.6130137, "chunks": 128, "err": null}
+{"w": 0, "seq": 51, "start": 1794337169.6165636, "ttft": 1.872988224029541, "end": 1794337174.8075202, "chunks": 128, "err": null}
+{"w": 11, "seq": 56, "start": 1794337170.0304732, "ttft": 1.8605360984802246, "end": 1794337175.1997669, "chunks": 126, "err": null}
+{"w": 1, "seq": 48, "start": 1794337170.1966422, "ttft": 2.0677812099456787, "end": 1794337175.5803814, "chunks": 126, "err": null}
+{"w": 3, "seq": 49, "start": 1794337170.6731553, "ttft": 2.015312671661377, "end": 1794337175.979525, "chunks": 128, "err": null}
+{"w": 10, "seq": 52, "start": 1794337171.0246074, "ttft": 1.8096458911895752, "end": 1794337176.0891943, "chunks": 128, "err": null}
+{"w": 6, "seq": 52, "start": 1794337171.2400875, "ttft": 1.9774720668792725, "end": 1794337176.4896612, "chunks": 128, "err": null}
+{"w": 9, "seq": 52, "start": 1794337171.6088057, "ttft": 2.006218671798706, "end": 1794337176.8808386, "chunks": 128, "err": null}
+{"w": 4, "seq": 49, "start": 1794337171.9807851, "ttft": 2.011136531829834, "end": 1794337177.262109, "chunks": 128, "err": null}
+{"w": 2, "seq": 54, "start": 1794337172.357005, "ttft": 1.823115348815918, "end": 1794337177.4253418, "chunks": 128, "err": null}
+{"w": 8, "seq": 54, "start": 1794337172.6017134, "ttft": 1.9875376224517822, "end": 1794337177.8577197, "chunks": 128, "err": null}
+{"w": 14, "seq": 50, "start": 1794337172.9970498, "ttft": 1.946075439453125, "end": 1794337178.2239668, "chunks": 128, "err": null}
+{"w": 15, "seq": 49, "start": 1794337173.3616385, "ttft": 1.7918848991394043, "end": 1794337178.4340568, "chunks": 128, "err": null}
+{"w": 12, "seq": 47, "start": 1794337173.7546082, "ttft": 1.8010380268096924, "end": 1794337178.8288884, "chunks": 128, "err": null}
+{"w": 13, "seq": 53, "start": 1794337173.8791788, "ttft": 2.0780277252197266, "end": 1794337179.237148, "chunks": 126, "err": null}
+{"w": 5, "seq": 52, "start": 1794337174.2497687, "ttft": 2.052659273147583, "end": 1794337179.605933, "chunks": 128, "err": null}
+{"w": 7, "seq": 56, "start": 1794337174.613073, "ttft": 1.900627851486206, "end": 1794337179.7929342, "chunks": 128, "err": null}
+{"w": 0, "seq": 52, "start": 1794337174.8075786, "ttft": 2.0945305824279785, "end": 1794337180.2222335, "chunks": 128, "err": null}
+{"w": 11, "seq": 57, "start": 1794337175.1998215, "ttft": 2.0854885578155518, "end": 1794337180.610925, "chunks": 128, "err": null}
+{"w": 1, "seq": 49, "start": 1794337175.5804284, "ttft": 2.0832104682922363, "end": 1794337181.0063946, "chunks": 128, "err": null}
+{"w": 3, "seq": 50, "start": 1794337175.9795735, "ttft": 1.9010977745056152, "end": 1794337181.2711306, "chunks": 128, "err": null}
+{"w": 10, "seq": 53, "start": 1794337176.0892484, "ttft": 2.1839821338653564, "end": 1794337181.6862838, "chunks": 128, "err": null}
+{"w": 6, "seq": 53, "start": 1794337176.48971, "ttft": 2.130366563796997, "end": 1794337182.0259814, "chunks": 128, "err": null}
+{"w": 9, "seq": 53, "start": 1794337176.880886, "ttft": 2.1422433853149414, "end": 1794337182.4489527, "chunks": 128, "err": null}
+{"w": 4, "seq": 50, "start": 1794337177.2622316, "ttft": 1.9509451389312744, "end": 1794337182.6575713, "chunks": 128, "err": null}
+{"w": 2, "seq": 55, "start": 1794337177.4254053, "ttft": 2.2029566764831543, "end": 1794337183.0643594, "chunks": 127, "err": null}
+{"w": 8, "seq": 55, "start": 1794337177.8577805, "ttft": 2.139383554458618, "end": 1794337183.4355588, "chunks": 128, "err": null}
+{"w": 14, "seq": 51, "start": 1794337178.2240283, "ttft": 1.9740257263183594, "end": 1794337183.6376083, "chunks": 128, "err": null}
+{"w": 15, "seq": 50, "start": 1794337178.4341395, "ttft": 2.129455089569092, "end": 1794337184.0060008, "chunks": 128, "err": null}
+{"w": 12, "seq": 48, "start": 1794337178.8289344, "ttft": 2.1539466381073, "end": 1794337184.408451, "chunks": 128, "err": null}
+{"w": 13, "seq": 54, "start": 1794337179.2372174, "ttft": 2.1253767013549805, "end": 1794337184.7405257, "chunks": 128, "err": null}
+{"w": 5, "seq": 53, "start": 1794337179.6059964, "ttft": 1.9324250221252441, "end": 1794337184.8825738, "chunks": 128, "err": null}
+{"w": 7, "seq": 57, "start": 1794337179.7929986, "ttft": 2.11569881439209, "end": 1794337185.2573693, "chunks": 128, "err": null}
+{"w": 0, "seq": 53, "start": 1794337180.2222905, "ttft": 2.0794341564178467, "end": 1794337185.654484, "chunks": 128, "err": null}
+{"w": 11, "seq": 58, "start": 1794337180.6109838, "ttft": 2.0947446823120117, "end": 1794337186.0338745, "chunks": 128, "err": null}
+{"w": 1, "seq": 50, "start": 1794337181.0064573, "ttft": 1.8696393966674805, "end": 1794337186.1842408, "chunks": 128, "err": null}
+{"w": 3, "seq": 51, "start": 1794337181.2711809, "ttft": 2.0002567768096924, "end": 1794337186.591941, "chunks": 128, "err": null}
+{"w": 10, "seq": 54, "start": 1794337181.6863475, "ttft": 1.95090651512146, "end": 1794337186.959817, "chunks": 128, "err": null}
+{"w": 6, "seq": 54, "start": 1794337182.0260303, "ttft": 1.827376127243042, "end": 1794337187.136567, "chunks": 126, "err": null}
+{"w": 9, "seq": 54, "start": 1794337182.4490108, "ttft": 1.768676996231079, "end": 1794337187.494854, "chunks": 128, "err": null}
+{"w": 4, "seq": 51, "start": 1794337182.6576324, "ttft": 1.9587891101837158, "end": 1794337187.9004376, "chunks": 128, "err": null}
+{"w": 2, "seq": 56, "start": 1794337183.064419, "ttft": 1.9467582702636719, "end": 1794337188.2931721, "chunks": 128, "err": null}
+{"w": 8, "seq": 56, "start": 1794337183.4356124, "ttft": 1.7551906108856201, "end": 1794337188.4516509, "chunks": 128, "err": null}
+{"w": 14, "seq": 52, "start": 1794337183.6376545, "ttft": 1.9465382099151611, "end": 1794337188.8813488, "chunks": 128, "err": null}
+{"w": 15, "seq": 51, "start": 1794337184.006066, "ttft": 1.9570412635803223, "end": 1794337189.2589855, "chunks": 128, "err": null}
+{"w": 12, "seq": 49, "start": 1794337184.4085062, "ttft": 1.9488978385925293, "end": 1794337189.6652539, "chunks": 128, "err": null}
+{"w": 13, "seq": 55, "start": 1794337184.7405844, "ttft": 1.8021786212921143, "end": 1794337189.8396208, "chunks": 128, "err": null}
+{"w": 5, "seq": 54, "start": 1794337184.8826315, "ttft": 2.050666093826294, "end": 1794337190.2616537, "chunks": 128, "err": null}
+{"w": 7, "seq": 58, "start": 1794337185.257416, "ttft": 2.0754024982452393, "end": 1794337190.7166975, "chunks": 128, "err": null}
+{"w": 0, "seq": 54, "start": 1794337185.6545482, "ttft": 2.0385921001434326, "end": 1794337191.137856, "chunks": 128, "err": null}
+{"w": 11, "seq": 59, "start": 1794337186.0339231, "ttft": 1.8896851539611816, "end": 1794337191.3537276, "chunks": 128, "err": null}
+{"w": 1, "seq": 51, "start": 1794337186.1842842, "ttft": 2.128476858139038, "end": 1794337191.7396667, "chunks": 128, "err": null}
+{"w": 3, "seq": 52, "start": 1794337186.5920002, "ttft": 2.1173605918884277, "end": 1794337192.136868, "chunks": 128, "err": null}
+{"w": 10, "seq": 55, "start": 1794337186.9598637, "ttft": 1.9204466342926025, "end": 1794337192.3243098, "chunks": 126, "err": null}
+{"w": 6, "seq": 55, "start": 1794337187.1366148, "ttft": 2.121365547180176, "end": 1794337192.732678, "chunks": 128, "err": null}
+{"w": 9, "seq": 55, "start": 1794337187.4949157, "ttft": 2.1699655055999756, "end": 1794337193.1164033, "chunks": 126, "err": null}
+{"w": 4, "seq": 52, "start": 1794337187.9004967, "ttft": 2.130674362182617, "end": 1794337193.4928203, "chunks": 127, "err": null}
+{"w": 2, "seq": 57, "start": 1794337188.293218, "ttft": 1.9441468715667725, "end": 1794337193.698752, "chunks": 128, "err": null}
+{"w": 8, "seq": 57, "start": 1794337188.4517105, "ttft": 2.175644636154175, "end": 1794337194.0646877, "chunks": 128, "err": null}
+{"w": 14, "seq": 53, "start": 1794337188.8814085, "ttft": 2.1089026927948, "end": 1794337194.4084442, "chunks": 128, "err": null}
+{"w": 15, "seq": 52, "start": 1794337189.2590442, "ttft": 2.122236490249634, "end": 1794337194.7841527, "chunks": 128, "err": null}
+{"w": 12, "seq": 50, "start": 1794337189.6653242, "ttft": 1.9068808555603027, "end": 1794337194.9938416, "chunks": 128, "err": null}
+{"w": 13, "seq": 56, "start": 1794337189.839671, "ttft": 2.1319384574890137, "end": 1794337195.3706431, "chunks": 128, "err": null}
+{"w": 5, "seq": 55, "start": 1794337190.2617016, "ttft": 2.090531826019287, "end": 1794337195.75068, "chunks": 128, "err": null}
+{"w": 7, "seq": 59, "start": 1794337190.7167497, "ttft": 1.8409242630004883, "end": 1794337195.9472778, "chunks": 128, "err": null}
+{"w": 0, "seq": 55, "start": 1794337191.1379185, "ttft": 1.7875311374664307, "end": 1794337196.2825105, "chunks": 128, "err": null}
+{"w": 11, "seq": 60, "start": 1794337191.3537924, "ttft": 1.9732029438018799, "end": 1794337196.7546978, "chunks": 128, "err": null}
+{"w": 1, "seq": 52, "start": 1794337191.7397149, "ttft": 1.9593634605407715, "end": 1794337197.117803, "chunks": 128, "err": null}
+{"w": 3, "seq": 53, "start": 1794337192.1369288, "ttft": 1.7692887783050537, "end": 1794337197.323761, "chunks": 126, "err": null}
+{"w": 10, "seq": 56, "start": 1794337192.3243694, "ttft": 1.942039966583252, "end": 1794337197.694401, "chunks": 128, "err": null}
+{"w": 6, "seq": 56, "start": 1794337192.7327278, "ttft": 1.9366214275360107, "end": 1794337198.0938787, "chunks": 128, "err": null}
+{"w": 9, "seq": 56, "start": 1794337193.116465, "ttft": 1.9464030265808105, "end": 1794337198.4723063, "chunks": 128, "err": null}
+{"w": 4, "seq": 53, "start": 1794337193.492884, "ttft": 1.7614467144012451, "end": 1794337198.6885905, "chunks": 128, "err": null}
+{"w": 2, "seq": 58, "start": 1794337193.6988199, "ttft": 1.9217467308044434, "end": 1794337199.0347667, "chunks": 128, "err": null}
+{"w": 8, "seq": 58, "start": 1794337194.0647328, "ttft": 1.9482097625732422, "end": 1794337199.44665, "chunks": 128, "err": null}
+{"w": 14, "seq": 54, "start": 1794337194.4085002, "ttft": 2.0032737255096436, "end": 1794337199.8355665, "chunks": 128, "err": null}
+{"w": 15, "seq": 53, "start": 1794337194.7841995, "ttft": 1.8288235664367676, "end": 1794337200.0094178, "chunks": 128, "err": null}
+{"w": 12, "seq": 51, "start": 1794337194.9938872, "ttft": 1.9836509227752686, "end": 1794337200.364327, "chunks": 128, "err": null}
+{"w": 13, "seq": 57, "start": 1794337195.3706908, "ttft": 1.974963665008545, "end": 1794337200.7474957, "chunks": 128, "err": null}
+{"w": 5, "seq": 56, "start": 1794337195.7507362, "ttft": 1.8153083324432373, "end": 1794337200.9675362, "chunks": 128, "err": null}
+{"w": 7, "seq": 60, "start": 1794337195.947325, "ttft": 2.0200247764587402, "end": 1794337201.3439941, "chunks": 128, "err": null}
+{"w": 0, "seq": 56, "start": 1794337196.2825553, "ttft": 2.0278303623199463, "end": 1794337201.6875057, "chunks": 128, "err": null}
+{"w": 11, "seq": 61, "start": 1794337196.7547615, "ttft": 1.9800183773040771, "end": 1794337202.0910425, "chunks": 128, "err": null}
+{"w": 1, "seq": 53, "start": 1794337197.117847, "ttft": 1.7741649150848389, "end": 1794337202.2389596, "chunks": 128, "err": null}
+{"w": 3, "seq": 54, "start": 1794337197.323833, "ttft": 2.0067667961120605, "end": 1794337202.6707466, "chunks": 123, "err": null}
+{"w": 10, "seq": 57, "start": 1794337197.6944854, "ttft": 1.9909369945526123, "end": 1794337203.0459402, "chunks": 128, "err": null}
+{"w": 6, "seq": 57, "start": 1794337198.0939333, "ttft": 1.97597336769104, "end": 1794337203.407658, "chunks": 128, "err": null}
+{"w": 9, "seq": 57, "start": 1794337198.472365, "ttft": 1.7808244228363037, "end": 1794337203.5886183, "chunks": 128, "err": null}
+{"w": 4, "seq": 54, "start": 1794337198.6886337, "ttft": 1.9736199378967285, "end": 1794337203.9961805, "chunks": 128, "err": null}
+{"w": 2, "seq": 59, "start": 1794337199.034831, "ttft": 2.0016841888427734, "end": 1794337204.3630078, "chunks": 128, "err": null}
+{"w": 8, "seq": 59, "start": 1794337199.4467316, "ttft": 1.7798683643341064, "end": 1794337204.5298104, "chunks": 128, "err": null}
+{"w": 14, "seq": 55, "start": 1794337199.835628, "ttft": 1.7827935218811035, "end": 1794337204.9630933, "chunks": 128, "err": null}
+{"w": 15, "seq": 54, "start": 1794337200.009491, "ttft": 1.9894957542419434, "end": 1794337205.3555372, "chunks": 128, "err": null}
+{"w": 12, "seq": 52, "start": 1794337200.364382, "ttft": 2.018775224685669, "end": 1794337205.7486725, "chunks": 128, "err": null}
+{"w": 13, "seq": 58, "start": 1794337200.7475553, "ttft": 1.8280339241027832, "end": 1794337205.9185, "chunks": 128, "err": null}
+{"w": 5, "seq": 57, "start": 1794337200.9675832, "ttft": 2.0225138664245605, "end": 1794337206.3814397, "chunks": 128, "err": null}
+{"w": 7, "seq": 61, "start": 1794337201.3440437, "ttft": 2.0159049034118652, "end": 1794337206.768223, "chunks": 128, "err": null}
+{"w": 0, "seq": 57, "start": 1794337201.6875682, "ttft": 2.040733814239502, "end": 1794337207.125956, "chunks": 128, "err": null}
+{"w": 11, "seq": 62, "start": 1794337202.0910907, "ttft": 1.8579211235046387, "end": 1794337207.358175, "chunks": 126, "err": null}
+{"w": 1, "seq": 54, "start": 1794337202.2390163, "ttft": 2.100348711013794, "end": 1794337207.760555, "chunks": 128, "err": null}
+{"w": 3, "seq": 55, "start": 1794337202.6708195, "ttft": 2.0503504276275635, "end": 1794337208.1605084, "chunks": 128, "err": null}
+{"w": 10, "seq": 58, "start": 1794337203.0459874, "ttft": 1.893254280090332, "end": 1794337208.3777704, "chunks": 128, "err": null}
+{"w": 6, "seq": 58, "start": 1794337203.4077177, "ttft": 1.899765968322754, "end": 1794337208.758499, "chunks": 128, "err": null}
+{"w": 9, "seq": 58, "start": 1794337203.5886703, "ttft": 2.089799165725708, "end": 1794337209.1285906, "chunks": 128, "err": null}
+{"w": 4, "seq": 55, "start": 1794337203.9962304, "ttft": 2.0787408351898193, "end": 1794337209.5167184, "chunks": 128, "err": null}
+{"w": 2, "seq": 60, "start": 1794337204.3630748, "ttft": 1.9151453971862793, "end": 1794337209.7235196, "chunks": 128, "err": null}
+{"w": 8, "seq": 60, "start": 1794337204.5298796, "ttft": 2.13101863861084, "end": 1794337210.0766468, "chunks": 128, "err": null}
+{"w": 14, "seq": 56, "start": 1794337204.9631593, "ttft": 2.0686538219451904, "end": 1794337210.4429457, "chunks": 128, "err": null}
+{"w": 15, "seq": 55, "start": 1794337205.355597, "ttft": 2.0800397396087646, "end": 1794337210.8450127, "chunks": 128, "err": null}
+{"w": 12, "seq": 53, "start": 1794337205.748724, "ttft": 1.8681859970092773, "end": 1794337211.0135908, "chunks": 128, "err": null}
+{"w": 13, "seq": 59, "start": 1794337205.9185634, "ttft": 2.098515748977661, "end": 1794337211.4329336, "chunks": 128, "err": null}
+{"w": 5, "seq": 58, "start": 1794337206.3814976, "ttft": 2.0219614505767822, "end": 1794337211.8104556, "chunks": 126, "err": null}
+{"w": 7, "seq": 62, "start": 1794337206.768275, "ttft": 1.9894514083862305, "end": 1794337212.1448412, "chunks": 128, "err": null}
+{"w": 0, "seq": 58, "start": 1794337207.126028, "ttft": 1.8260822296142578, "end": 1794337212.3250945, "chunks": 128, "err": null}
+{"w": 11, "seq": 63, "start": 1794337207.35824, "ttft": 1.9923474788665771, "end": 1794337212.7597663, "chunks": 128, "err": null}
+{"w": 1, "seq": 55, "start": 1794337207.7606173, "ttft": 1.9864070415496826, "end": 1794337213.1566198, "chunks": 128, "err": null}
+{"w": 3, "seq": 56, "start": 1794337208.1605718, "ttft": 1.773967981338501, "end": 1794337213.344942, "chunks": 128, "err": null}
+{"w": 10, "seq": 59, "start": 1794337208.37782, "ttft": 1.9491479396820068, "end": 1794337213.7331607, "chunks": 128, "err": null}
+{"w": 6, "seq": 59, "start": 1794337208.758556, "ttft": 1.9414293766021729, "end": 1794337214.1004038, "chunks": 128, "err": null}
+{"w": 9, "seq": 59, "start": 1794337209.1286447, "ttft": 1.9581024646759033, "end": 1794337214.523397, "chunks": 126, "err": null}
+{"w": 4, "seq": 56, "start": 1794337209.5167732, "ttft": 1.7800734043121338, "end": 1794337214.7182221, "chunks": 126, "err": null}
+{"w": 2, "seq": 61, "start": 1794337209.72361, "ttft": 1.9532594680786133, "end": 1794337215.0720072, "chunks": 128, "err": null}
+{"w": 8, "seq": 61, "start": 1794337210.0766945, "ttft": 1.9744360446929932, "end": 1794337215.4542258, "chunks": 128, "err": null}
+{"w": 14, "seq": 57, "start": 1794337210.4430223, "ttft": 2.000256299972534, "end": 1794337215.8486953, "chunks": 128, "err": null}
+{"w": 15, "seq": 56, "start": 1794337210.8450768, "ttft": 1.8149209022521973, "end": 1794337216.0532944, "chunks": 128, "err": null}
+{"w": 12, "seq": 54, "start": 1794337211.0136533, "ttft": 2.01505970954895, "end": 1794337216.4185932, "chunks": 128, "err": null}
+{"w": 13, "seq": 60, "start": 1794337211.4329817, "ttft": 1.9587297439575195, "end": 1794337216.785698, "chunks": 128, "err": null}
+{"w": 5, "seq": 59, "start": 1794337211.8105068, "ttft": 1.802994966506958, "end": 1794337217.0218775, "chunks": 128, "err": null}
+{"w": 7, "seq": 63, "start": 1794337212.144961, "ttft": 1.8320302963256836, "end": 1794337217.3472755, "chunks": 126, "err": null}
+{"w": 0, "seq": 59, "start": 1794337212.325157, "ttft": 2.0521721839904785, "end": 1794337217.7463884, "chunks": 128, "err": null}
+{"w": 11, "seq": 64, "start": 1794337212.759822, "ttft": 2.0080325603485107, "end": 1794337218.1473625, "chunks": 128, "err": null}
+{"w": 1, "seq": 56, "start": 1794337213.1566818, "ttft": 1.8011877536773682, "end": 1794337218.3242843, "chunks": 128, "err": null}
+{"w": 3, "seq": 57, "start": 1794337213.3450036, "ttft": 2.014106273651123, "end": 1794337218.7613328, "chunks": 128, "err": null}
+{"w": 10, "seq": 60, "start": 1794337213.7332284, "ttft": 1.9893367290496826, "end": 1794337219.1312227, "chunks": 128, "err": null}
+{"w": 6, "seq": 60, "start": 1794337214.100453, "ttft": 2.024022340774536, "end": 1794337219.533431, "chunks": 128, "err": null}
+{"w": 9, "seq": 60, "start": 1794337214.523469, "ttft": 1.8001835346221924, "end": 1794337219.7397697, "chunks": 126, "err": null}
+{"w": 4, "seq": 57, "start": 1794337214.7184126, "ttft": 1.973384141921997, "end": 1794337220.1369035, "chunks": 128, "err": null}
+{"w": 2, "seq": 62, "start": 1794337215.0720537, "ttft": 2.020843029022217, "end": 1794337220.5374696, "chunks": 128, "err": null}
+{"w": 8, "seq": 62, "start": 1794337215.4542768, "ttft": 2.0237269401550293, "end": 1794337220.945008, "chunks": 128, "err": null}
+{"w": 14, "seq": 58, "start": 1794337215.8487663, "ttft": 1.8269782066345215, "end": 1794337221.1781118, "chunks": 128, "err": null}
+{"w": 15, "seq": 57, "start": 1794337216.0533593, "ttft": 2.015625476837158, "end": 1794337221.566316, "chunks": 128, "err": null}
+{"w": 12, "seq": 55, "start": 1794337216.4186416, "ttft": 2.035991907119751, "end": 1794337221.9380739, "chunks": 126, "err": null}
+{"w": 13, "seq": 61, "start": 1794337216.785757, "ttft": 1.8776750564575195, "end": 1794337222.141082, "chunks": 128, "err": null}
+{"w": 5, "seq": 60, "start": 1794337217.021926, "ttft": 2.0114941596984863, "end": 1794337222.5162838, "chunks": 128, "err": null}
+{"w": 7, "seq": 64, "start": 1794337217.3473344, "ttft": 2.054558277130127, "end": 1794337222.873503, "chunks": 128, "err": null}
+{"w": 0, "seq": 60, "start": 1794337217.7464464, "ttft": 2.044240951538086, "end": 1794337223.2556815, "chunks": 128, "err": null}
+{"w": 11, "seq": 65, "start": 1794337218.1474123, "ttft": 1.8489415645599365, "end": 1794337223.4543514, "chunks": 128, "err": null}
+{"w": 1, "seq": 57, "start": 1794337218.3243337, "ttft": 2.0462253093719482, "end": 1794337223.7759576, "chunks": 128, "err": null}
+{"w": 3, "seq": 58, "start": 1794337218.7613876, "ttft": 2.0173182487487793, "end": 1794337224.1747081, "chunks": 128, "err": null}
+{"w": 10, "seq": 61, "start": 1794337219.1312685, "ttft": 2.045374631881714, "end": 1794337224.5452037, "chunks": 128, "err": null}
+{"w": 6, "seq": 61, "start": 1794337219.5334973, "ttft": 1.8208961486816406, "end": 1794337224.68601, "chunks": 128, "err": null}
+{"w": 9, "seq": 61, "start": 1794337219.739818, "ttft": 1.9826056957244873, "end": 1794337225.080651, "chunks": 128, "err": null}
+{"w": 4, "seq": 58, "start": 1794337220.1369638, "ttft": 1.9790141582489014, "end": 1794337225.5055225, "chunks": 127, "err": null}
+{"w": 2, "seq": 63, "start": 1794337220.5375335, "ttft": 1.7678439617156982, "end": 1794337225.699656, "chunks": 128, "err": null}
+{"w": 8, "seq": 63, "start": 1794337220.9450665, "ttft": 1.7424814701080322, "end": 1794337226.0234723, "chunks": 128, "err": null}
+{"w": 14, "seq": 59, "start": 1794337221.1781719, "ttft": 1.9022667407989502, "end": 1794337226.4381325, "chunks": 128, "err": null}
+{"w": 15, "seq": 58, "start": 1794337221.5663764, "ttft": 1.9107468128204346, "end": 1794337226.8409626, "chunks": 127, "err": null}
+{"w": 12, "seq": 56, "start": 1794337221.9381301, "ttft": 1.7232041358947754, "end": 1794337226.9979193, "chunks": 126, "err": null}
+{"w": 13, "seq": 62, "start": 1794337222.1411293, "ttft": 1.91792631149292, "end": 1794337227.405881, "chunks": 128, "err": null}
+{"w": 5, "seq": 61, "start": 1794337222.5163312, "ttft": 1.935866117477417, "end": 1794337227.7860165, "chunks": 128, "err": null}
+{"w": 7, "seq": 65, "start": 1794337222.87355, "ttft": 1.9428398609161377, "end": 1794337228.1587224, "chunks": 128, "err": null}
+{"w": 0, "seq": 61, "start": 1794337223.2557528, "ttft": 1.7503094673156738, "end": 1794337228.3306727, "chunks": 128, "err": null}
+{"w": 11, "seq": 66, "start": 1794337223.4544106, "ttft": 1.9864296913146973, "end": 1794337228.7606127, "chunks": 128, "err": null}
+{"w": 1, "seq": 58, "start": 1794337223.7760103, "ttft": 1.9938490390777588, "end": 1794337229.0889752, "chunks": 128, "err": null}
+{"w": 3, "seq": 59, "start": 1794337224.1747787, "ttft": 1.986515998840332, "end": 1794337229.4977198, "chunks": 128, "err": null}
+{"w": 10, "seq": 62, "start": 1794337224.5452597, "ttft": 1.8448033332824707, "end": 1794337229.6890485, "chunks": 128, "err": null}
+{"w": 6, "seq": 62, "start": 1794337224.6860704, "ttft": 2.0845868587493896, "end": 1794337230.0813015, "chunks": 126, "err": null}
+{"w": 9, "seq": 62, "start": 1794337225.080701, "ttft": 2.0629825592041016, "end": 1794337230.4650984, "chunks": 128, "err": null}
+{"w": 4, "seq": 59, "start": 1794337225.5055883, "ttft": 1.8540840148925781, "end": 1794337230.6539676, "chunks": 128, "err": null}
+{"w": 2, "seq": 64, "start": 1794337225.6997705, "ttft": 2.0396475791931152, "end": 1794337231.0565863, "chunks": 128, "err": null}
+{"w": 8, "seq": 64, "start": 1794337226.023535, "ttft": 2.1129488945007324, "end": 1794337231.4502335, "chunks": 128, "err": null}
+{"w": 14, "seq": 60, "start": 1794337226.4381945, "ttft": 2.059183359146118, "end": 1794337231.809503, "chunks": 128, "err": null}
+{"w": 15, "seq": 59, "start": 1794337226.8410287, "ttft": 1.8720223903656006, "end": 1794337232.0028625, "chunks": 128, "err": null}
+{"w": 12, "seq": 57, "start": 1794337226.997995, "ttft": 2.1140620708465576, "end": 1794337232.4236457, "chunks": 128, "err": null}
+{"w": 13, "seq": 63, "start": 1794337227.4059284, "ttft": 2.0686659812927246, "end": 1794337232.8113978, "chunks": 127, "err": null}
+{"w": 5, "seq": 62, "start": 1794337227.7861848, "ttft": 2.081197500228882, "end": 1794337233.2025933, "chunks": 128, "err": null}
+{"w": 7, "seq": 66, "start": 1794337228.1587822, "ttft": 1.8984200954437256, "end": 1794337233.3693159, "chunks": 128, "err": null}
+{"w": 0, "seq": 62, "start": 1794337228.3307486, "ttft": 2.111717462539673, "end": 1794337233.7838638, "chunks": 128, "err": null}
+{"w": 11, "seq": 67, "start": 1794337228.7606795, "ttft": 2.0563931465148926, "end": 1794337234.182751, "chunks": 128, "err": null}
+{"w": 1, "seq": 59, "start": 1794337229.089031, "ttft": 1.938145637512207, "end": 1794337234.369371, "chunks": 128, "err": null}
+{"w": 3, "seq": 60, "start": 1794337229.4977686, "ttft": 1.9520535469055176, "end": 1794337234.7987955, "chunks": 128, "err": null}
+{"w": 10, "seq": 63, "start": 1794337229.6891108, "ttft": 2.1195356845855713, "end": 1794337235.1593013, "chunks": 127, "err": null}
+{"w": 6, "seq": 63, "start": 1794337230.0813482, "ttft": 2.1122331619262695, "end": 1794337235.5643327, "chunks": 128, "err": null}
+{"w": 9, "seq": 63, "start": 1794337230.465151, "ttft": 1.9327332973480225, "end": 1794337235.7213686, "chunks": 128, "err": null}
+{"w": 4, "seq": 60, "start": 1794337230.6540148, "ttft": 2.1120076179504395, "end": 1794337236.100433, "chunks": 125, "err": null}
+{"w": 2, "seq": 65, "start": 1794337231.0566597, "ttft": 2.123077630996704, "end": 1794337236.571363, "chunks": 128, "err": null}
+{"w": 8, "seq": 65, "start": 1794337231.4502788, "ttft": 2.120739459991455, "end": 1794337236.960271, "chunks": 128, "err": null}
+{"w": 14, "seq": 61, "start": 1794337231.8095555, "ttft": 1.9279654026031494, "end": 1794337237.1137416, "chunks": 128, "err": null}
+{"w": 15, "seq": 60, "start": 1794337232.002917, "ttft": 2.1562187671661377, "end": 1794337237.5734618, "chunks": 128, "err": null}
+{"w": 12, "seq": 58, "start": 1794337232.423694, "ttft": 2.0911920070648193, "end": 1794337237.9400644, "chunks": 128, "err": null}
+{"w": 13, "seq": 64, "start": 1794337232.8114455, "ttft": 1.9194514751434326, "end": 1794337238.168162, "chunks": 127, "err": null}
+{"w": 5, "seq": 63, "start": 1794337233.202656, "ttft": 1.9119935035705566, "end": 1794337238.557395, "chunks": 128, "err": null}
+{"w": 7, "seq": 67, "start": 1794337233.3693614, "ttft": 2.146123170852661, "end": 1794337238.9320176, "chunks": 126, "err": null}
+{"w": 0, "seq": 63, "start": 1794337233.7839105, "ttft": 2.0957775115966797, "end": 1794337239.3191576, "chunks": 128, "err": null}
+{"w": 11, "seq": 68, "start": 1794337234.182811, "ttft": 1.9575200080871582, "end": 1794337239.5601695, "chunks": 128, "err": null}
+{"w": 1, "seq": 60, "start": 1794337234.3694313, "ttft": 2.1070828437805176, "end": 1794337239.858926, "chunks": 126, "err": null}
+{"w": 3, "seq": 61, "start": 1794337234.7988443, "ttft": 2.045340061187744, "end": 1794337240.2303507, "chunks": 128, "err": null}
+{"w": 10, "seq": 64, "start": 1794337235.159358, "ttft": 2.0825231075286865, "end": 1794337240.6402469, "chunks": 128, "err": null}
+{"w": 6, "seq": 64, "start": 1794337235.5643935, "ttft": 1.8687479496002197, "end": 1794337240.780422, "chunks": 128, "err": null}
+{"w": 9, "seq": 64, "start": 1794337235.7214146, "ttft": 2.1026713848114014, "end": 1794337241.1976395, "chunks": 126, "err": null}
+{"w": 4, "seq": 61, "start": 1794337236.100479, "ttft": 2.1136374473571777, "end": 1794337241.6028888, "chunks": 128, "err": null}
+{"w": 2, "seq": 66, "start": 1794337236.5714276, "ttft": 2.0325727462768555, "end": 1794337242.048249, "chunks": 128, "err": null}
+{"w": 8, "seq": 66, "start": 1794337236.9603188, "ttft": 1.831808090209961, "end": 1794337242.240482, "chunks": 128, "err": null}
+{"w": 14, "seq": 62, "start": 1794337237.1137977, "ttft": 2.034717559814453, "end": 1794337242.605324, "chunks": 128, "err": null}
+{"w": 15, "seq": 61, "start": 1794337237.573517, "ttft": 1.9864897727966309, "end": 1794337242.9908605, "chunks": 128, "err": null}
+{"w": 12, "seq": 59, "start": 1794337237.9401126, "ttft": 1.8048648834228516, "end": 1794337243.1999493, "chunks": 128, "err": null}
+{"w": 13, "seq": 65, "start": 1794337238.1682277, "ttft": 1.9906208515167236, "end": 1794337243.5801268, "chunks": 128, "err": null}
+{"w": 5, "seq": 64, "start": 1794337238.5574665, "ttft": 1.967071294784546, "end": 1794337243.9268537, "chunks": 128, "err": null}
+{"w": 7, "seq": 68, "start": 1794337238.9320846, "ttft": 1.9773011207580566, "end": 1794337244.3223135, "chunks": 124, "err": null}
+{"w": 0, "seq": 64, "start": 1794337239.3192568, "ttft": 1.8087663650512695, "end": 1794337244.5528803, "chunks": 127, "err": null}
+{"w": 11, "seq": 69, "start": 1794337239.560225, "ttft": 1.9731831550598145, "end": 1794337244.927074, "chunks": 128, "err": null}
+{"w": 1, "seq": 61, "start": 1794337239.858975, "ttft": 2.0619239807128906, "end": 1794337245.2756238, "chunks": 128, "err": null}
+{"w": 3, "seq": 62, "start": 1794337240.2304068, "ttft": 2.0317695140838623, "end": 1794337245.6212547, "chunks": 126, "err": null}
+{"w": 10, "seq": 65, "start": 1794337240.6403728, "ttft": 1.8401403427124023, "end": 1794337245.8154864, "chunks": 128, "err": null}
+{"w": 6, "seq": 65, "start": 1794337240.7804792, "ttft": 2.071659564971924, "end": 1794337246.1911283, "chunks": 128, "err": null}
+{"w": 9, "seq": 65, "start": 1794337241.1976852, "ttft": 2.0486865043640137, "end": 1794337246.6176312, "chunks": 128, "err": null}
+{"w": 4, "seq": 62, "start": 1794337241.6029494, "ttft": 1.838669776916504, "end": 1794337246.7759318, "chunks": 128, "err": null}
+{"w": 2, "seq": 67, "start": 1794337242.0483067, "ttft": 1.788607120513916, "end": 1794337247.169382, "chunks": 125, "err": null}
+{"w": 8, "seq": 67, "start": 1794337242.2405288, "ttft": 1.9897632598876953, "end": 1794337247.6017354, "chunks": 128, "err": null}
+{"w": 14, "seq": 63, "start": 1794337242.605379, "ttft": 1.9955754280090332, "end": 1794337247.987772, "chunks": 128, "err": null}
+{"w": 15, "seq": 62, "start": 1794337242.9909155, "ttft": 1.7966163158416748, "end": 1794337248.153111, "chunks": 128, "err": null}
+{"w": 12, "seq": 60, "start": 1794337243.2000048, "ttft": 1.9845502376556396, "end": 1794337248.5793405, "chunks": 128, "err": null}
+{"w": 13, "seq": 66, "start": 1794337243.5801892, "ttft": 1.9955377578735352, "end": 1794337248.964822, "chunks": 128, "err": null}
+{"w": 5, "seq": 65, "start": 1794337243.926916, "ttft": 2.0334959030151367, "end": 1794337249.3585522, "chunks": 126, "err": null}
+{"w": 7, "seq": 69, "start": 1794337244.3223696, "ttft": 1.8258311748504639, "end": 1794337249.5327184, "chunks": 128, "err": null}
+{"w": 0, "seq": 65, "start": 1794337244.552931, "ttft": 2.017265558242798, "end": 1794337249.964052, "chunks": 128, "err": null}
+{"w": 11, "seq": 70, "start": 1794337244.9271214, "ttft": 2.0055084228515625, "end": 1794337250.3193102, "chunks": 128, "err": null}
+{"w": 1, "seq": 62, "start": 1794337245.2756739, "ttft": 2.0491411685943604, "end": 1794337250.7068713, "chunks": 128, "err": null}
+{"w": 3, "seq": 63, "start": 1794337245.6213007, "ttft": 1.9067621231079102, "end": 1794337250.8779504, "chunks": 128, "err": null}
+{"w": 10, "seq": 66, "start": 1794337245.8155317, "ttft": 2.0891940593719482, "end": 1794337251.2657979, "chunks": 128, "err": null}
+{"w": 6, "seq": 66, "start": 1794337246.191203, "ttft": 2.081815719604492, "end": 1794337251.6421618, "chunks": 126, "err": null}
+{"w": 9, "seq": 66, "start": 1794337246.6176994, "ttft": 1.8898792266845703, "end": 1794337251.8257372, "chunks": 126, "err": null}
+{"w": 4, "seq": 63, "start": 1794337246.7759771, "ttft": 2.0956037044525146, "end": 1794337252.206142, "chunks": 128, "err": null}
+{"w": 2, "seq": 68, "start": 1794337247.1694427, "ttft": 2.0960264205932617, "end": 1794337252.6016254, "chunks": 126, "err": null}
+{"w": 8, "seq": 68, "start": 1794337247.6017969, "ttft": 2.051485538482666, "end": 1794337252.997115, "chunks": 128, "err": null}
+{"w": 14, "seq": 64, "start": 1794337247.9878209, "ttft": 1.8411600589752197, "end": 1794337253.144233, "chunks": 127, "err": null}
+{"w": 15, "seq": 63, "start": 1794337248.1531694, "ttft": 2.071392774581909, "end": 1794337253.5428884, "chunks": 128, "err": null}
+{"w": 12, "seq": 61, "start": 1794337248.5793917, "ttft": 2.0375399589538574, "end": 1794337253.938038, "chunks": 126, "err": null}
+{"w": 13, "seq": 67, "start": 1794337248.9648712, "ttft": 2.0384225845336914, "end": 1794337254.331149, "chunks": 128, "err": null}
+{"w": 5, "seq": 66, "start": 1794337249.3586006, "ttft": 1.837843894958496, "end": 1794337254.491127, "chunks": 128, "err": null}
+{"w": 7, "seq": 70, "start": 1794337249.5327652, "ttft": 2.061056613922119, "end": 1794337254.8865466, "chunks": 128, "err": null}
+{"w": 0, "seq": 66, "start": 1794337249.9641137, "ttft": 2.00710129737854, "end": 1794337255.2767305, "chunks": 128, "err": null}
+{"w": 11, "seq": 71, "start": 1794337250.319358, "ttft": 1.8642735481262207, "end": 1794337255.4703465, "chunks": 128, "err": null}
+{"w": 1, "seq": 63, "start": 1794337250.706918, "ttft": 1.847236156463623, "end": 1794337255.833477, "chunks": 126, "err": null}
+{"w": 3, "seq": 64, "start": 1794337250.8780096, "ttft": 2.0747547149658203, "end": 1794337256.2267153, "chunks": 128, "err": null}
+{"w": 10, "seq": 67, "start": 1794337251.265856, "ttft": 2.0691375732421875, "end": 1794337256.6210058, "chunks": 128, "err": null}
+{"w": 6, "seq": 67, "start": 1794337251.6422226, "ttft": 1.8770911693572998, "end": 1794337256.7932959, "chunks": 128, "err": null}
+{"w": 9, "seq": 67, "start": 1794337251.825787, "ttft": 2.111647844314575, "end": 1794337257.2173834, "chunks": 128, "err": null}
+{"w": 4, "seq": 64, "start": 1794337252.2063527, "ttft": 2.1004281044006348, "end": 1794337257.5830698, "chunks": 127, "err": null}
+{"w": 2, "seq": 69, "start": 1794337252.6017003, "ttft": 2.0793943405151367, "end": 1794337257.973719, "chunks": 128, "err": null}
+{"w": 8, "seq": 69, "start": 1794337252.9971638, "ttft": 1.8891255855560303, "end": 1794337258.165357, "chunks": 128, "err": null}
+{"w": 14, "seq": 65, "start": 1794337253.144279, "ttft": 2.1327667236328125, "end": 1794337258.5820243, "chunks": 128, "err": null}
+{"w": 15, "seq": 64, "start": 1794337253.5429413, "ttft": 2.1330678462982178, "end": 1794337258.9720545, "chunks": 128, "err": null}
+{"w": 12, "seq": 62, "start": 1794337253.9381142, "ttft": 2.0967187881469727, "end": 1794337259.3680358, "chunks": 128, "err": null}
+{"w": 13, "seq": 68, "start": 1794337254.3312132, "ttft": 1.9179420471191406, "end": 1794337259.5526683, "chunks": 128, "err": null}
+{"w": 5, "seq": 67, "start": 1794337254.4911723, "ttft": 2.15193247795105, "end": 1794337259.9552543, "chunks": 128, "err": null}
+{"w": 7, "seq": 71, "start": 1794337254.8865955, "ttft": 2.133991241455078, "end": 1794337260.3541021, "chunks": 128, "err": null}
+{"w": 0, "seq": 67, "start": 1794337255.2767997, "ttft": 1.9643731117248535, "end": 1794337260.5363238, "chunks": 128, "err": null}
+{"w": 11, "seq": 72, "start": 1794337255.4703903, "ttft": 2.1601696014404297, "end": 1794337260.9357545, "chunks": 128, "err": null}
+{"w": 1, "seq": 64, "start": 1794337255.833523, "ttft": 2.164780616760254, "end": 1794337261.307514, "chunks": 128, "err": null}
+{"w": 3, "seq": 65, "start": 1794337256.2267728, "ttft": 2.1592774391174316, "end": 1794337261.6926453, "chunks": 128, "err": null}
+{"w": 10, "seq": 68, "start": 1794337256.6210644, "ttft": 1.9863662719726562, "end": 1794337261.879412, "chunks": 128, "err": null}
+{"w": 6, "seq": 68, "start": 1794337256.793345, "ttft": 2.2001774311065674, "end": 1794337262.286621, "chunks": 128, "err": null}
+{"w": 9, "seq": 68, "start": 1794337257.217448, "ttft": 2.149860382080078, "end": 1794337262.6634116, "chunks": 128, "err": null}
+{"w": 4, "seq": 65, "start": 1794337257.5831172, "ttft": 2.158508777618408, "end": 1794337263.0481393, "chunks": 126, "err": null}
+{"w": 2, "seq": 70, "start": 1794337257.9737773, "ttft": 1.9808645248413086, "end": 1794337263.2392857, "chunks": 128, "err": null}
+{"w": 8, "seq": 70, "start": 1794337258.1654136, "ttft": 2.165119171142578, "end": 1794337263.621623, "chunks": 128, "err": null}
+{"w": 14, "seq": 66, "start": 1794337258.5820718, "ttft": 2.1173176765441895, "end": 1794337264.003708, "chunks": 128, "err": null}
+{"w": 15, "seq": 65, "start": 1794337258.9721205, "ttft": 1.939227819442749, "end": 1794337264.1924088, "chunks": 128, "err": null}
+{"w": 12, "seq": 63, "start": 1794337259.3682523, "ttft": 1.9651756286621094, "end": 1794337264.6288104, "chunks": 128, "err": null}
+{"w": 13, "seq": 69, "start": 1794337259.5527208, "ttft": 2.140394687652588, "end": 1794337265.0057998, "chunks": 128, "err": null}
+{"w": 5, "seq": 68, "start": 1794337259.9553041, "ttft": 2.1186163425445557, "end": 1794337265.381977, "chunks": 128, "err": null}
+{"w": 7, "seq": 72, "start": 1794337260.3541675, "ttft": 1.932706594467163, "end": 1794337265.5619667, "chunks": 128, "err": null}
+{"w": 0, "seq": 68, "start": 1794337260.5363822, "ttft": 2.126345634460449, "end": 1794337265.874218, "chunks": 128, "err": null}
+{"w": 11, "seq": 73, "start": 1794337260.9358037, "ttft": 2.111537218093872, "end": 1794337266.209142, "chunks": 128, "err": null}
+{"w": 1, "seq": 65, "start": 1794337261.3075771, "ttft": 2.118385076522827, "end": 1794337266.5647178, "chunks": 128, "err": null}
+{"w": 3, "seq": 66, "start": 1794337261.6927245, "ttft": 1.9508721828460693, "end": 1794337266.746666, "chunks": 128, "err": null}
+{"w": 10, "seq": 69, "start": 1794337261.8794625, "ttft": 2.147631883621216, "end": 1794337267.0832074, "chunks": 126, "err": null}
+{"w": 6, "seq": 69, "start": 1794337262.2869291, "ttft": 2.123359203338623, "end": 1794337267.436228, "chunks": 128, "err": null}
+{"w": 9, "seq": 69, "start": 1794337262.6634688, "ttft": 1.9650671482086182, "end": 1794337267.6267958, "chunks": 128, "err": null}
+{"w": 4, "seq": 66, "start": 1794337263.0482025, "ttft": 1.9801709651947021, "end": 1794337267.9919832, "chunks": 128, "err": null}
+{"w": 2, "seq": 71, "start": 1794337263.239333, "ttft": 2.0522196292877197, "end": 1794337268.2198029, "chunks": 128, "err": null}

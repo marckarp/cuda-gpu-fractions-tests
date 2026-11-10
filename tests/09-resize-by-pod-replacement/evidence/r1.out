@@ -1,0 +1,53 @@
+## does KAI let SM requests exceed 100%? (60+35+5 booked, asking for 50 more)
+error: no objects passed to apply
+Error from server (NotFound): pods "overbook" not found
+Error from server (NotFound): pods "overbook" not found
+[18:35:20] load started (16 clients)
+[18:36:05] delete prefill-a (60%)
+[18:36:36] prefill-a gone; create prefill-b (35%)
+[18:37:41] prefill-b ready
+[18:38:01] delete decode-a (35%)
+[18:38:09] decode-a gone; create decode-b (60%)
+[18:39:22] decode-b ready
+[18:40:56] load finished
+  t(s)   ok  err   tok/s  TTFT avg  TTFT max ITL avg ms  events
+     0   23    0     294      1.84      4.24       28.2  
+    10   38    0     486      0.54      0.67       29.3  
+    20   37    0     473      0.56      0.60       29.3  
+    30   38    0     486      0.55      0.58       29.3  
+    40   34  111     435      0.56      0.60       28.2  +45s delete prefill-a (60%)
+    50    0  320       0       nan       nan        nan  
+    60    0  319       0       nan       nan        nan  
+    70    0  319       0       nan       nan        nan  +76s prefill-a gone; create prefill-b (35%)
+    80    0  320       0       nan       nan        nan  
+    90    0  320       0       nan       nan        nan  
+   100    0  318       0       nan       nan        nan  
+   110    0  320       0       nan       nan        nan  
+   120    0  318       0       nan       nan        nan  
+   130    0  315       0       nan       nan        nan  
+   140   16    0     204      3.41      6.19       24.5  +141s prefill-b ready
+   150   25    0     320      3.38      3.52       24.7  
+   160   10  209     128      3.40      3.56       23.8  +161s delete decode-a (35%); +169s decode-a gone; create decode-b (60%)
+   170    0  259       0       nan       nan        nan  
+   180    0  259       0       nan       nan        nan  
+   190    0  308       0       nan       nan        nan  
+   200    0  318       0       nan       nan        nan  
+   210    0  318       0       nan       nan        nan  
+   220    0  319       0       nan       nan        nan  
+   230    0  320       0       nan       nan        nan  
+   240    2   73      26      1.64      2.73       29.7  +241s decode-b ready
+   250   12    0     153     10.40     13.12       25.9  
+   260   17    0     217      9.15     17.53       24.9  
+   270   24    0     307      3.75      4.07       24.2  
+   280   23    0     294      3.77      3.94       24.5  
+   290   23    0     294      3.72      3.91       24.5  
+   300   24    0     306      3.74      3.90       24.1  
+   310   23    0     294      3.87      4.07       23.9  
+   320   23    0     294      3.88      4.02       23.7  
+   330   16    0     204      3.96      4.06       23.3  +336s load finished
+
+total requests 5771, errors 5363
+  3077 x http 503: {"message":"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deploy
+  2278 x http 404: 
+     8 x http 503: {"message":"Service temporarily unavailable","type":"Service Unavailable","code"
+first error at +45.1s, last at +242.2s

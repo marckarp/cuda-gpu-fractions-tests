@@ -1,0 +1,10 @@
+1794337317.235210414 load started (16 clients), active decode-s2 35%
+1794337317.351838725 create standby decode-s3 (15%)
+1794337402.595819255 decode-s3 parked
+1794337422.598587545 force-kill decode-s2 (active, 35%)
+1794337425.267468393 decode-s3 active (15%)
+1794337470.553025099 create standby decode-s4 (35%)
+1794337538.029498010 decode-s4 parked
+1794337553.032271328 force-kill decode-s3 (active, 15%)
+1794337555.746469145 decode-s4 active (35%)
+1794337673.665240836 load finished

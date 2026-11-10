@@ -1,0 +1,44 @@
+## GPU memory
+7779 MiB, 81920 MiB
+64291, 32 MiB, nvidia-cuda-mps-server
+## engine PIDs on the host (to map the rows above)
+gms: 92138 
+prefill: 2 3 4 5 6 8 10 11 12 13 14 15 16 18 19 20 21 22 24 25 26 27 28 30 31 32 33 34 36 37 38 39 40 42 43 44 45 46 48 49 50 51 52 54 55 56 57 58 60 61 62 63 64 66 67 68 69 70 72 73 74 75 76 78 79 80 81 82 84 85 86 87 89 90 91 92 93 94 141 142 143 145 146 147 148 149 151 154 156 157 159 160 161 162 164 165 166 167 178 184 185 192 215 233 259 260 262 267 279 281 287 288 291 295 297 301 322 323 324 327 333 334 335 336 337 339 340 341 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 382 430 431 519 525 531 534 537 538 539 610 615 651 652 1010 1012 1013 1782 3161 3345 4913 29969 31946 34876 39636 46323 48988 51019 51679 52814 53361 54759 55983 60467 64293 64294 64295 67483 69266 69932 70514 70518 71170 72240 73111 73568 75295 80646 81336 81487 82369 82534 86773 88609 88692 89240 89242 89243 89244 90138 90887 90913 90921 91139 91456 91677 94243 
+decode: 2 3 4 5 6 8 10 11 12 13 14 15 16 18 19 20 21 22 24 25 26 27 28 30 31 32 33 34 36 37 38 39 40 42 43 44 45 46 48 49 50 51 52 54 55 56 57 58 60 61 62 63 64 66 67 68 69 70 72 73 74 75 76 78 79 80 81 82 84 85 86 87 89 90 91 92 93 94 141 142 143 145 146 147 148 149 151 154 156 157 159 160 161 162 164 165 166 167 178 184 185 192 215 233 259 260 262 267 279 281 287 288 291 295 297 301 322 323 324 327 333 334 335 336 337 339 340 341 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 382 430 431 519 525 531 534 537 538 539 610 615 651 652 1010 1012 1013 1782 3161 3345 4913 29969 31946 34876 39636 46323 48988 51019 51679 52814 53361 54759 55983 60467 64293 64294 64295 67483 69266 69932 70514 70518 71170 72240 73111 73568 75295 80646 81336 81487 82369 82534 86773 88609 88692 89240 89242 89243 89244 90138 90887 90913 90921 91139 91456 91677 94243 
+## what the engines report
+--- prefill
+[2m2026-11-10T18:02:31.526420Z[0m [32m INFO[0m [2mdynamo_runtime::worker[0m[2m:[0m dynamo runtime configuration: num_worker_threads=12, max_blocking_threads=12, system_host=0.0.0.0, system_port=8082, use_endpoint_health_st
+(EngineCore pid=228) INFO 11-10 18:03:06 [patches.py:51] [GMS] Patched torch.cuda.empty_cache
+(EngineCore pid=228) INFO 11-10 18:03:06 [worker.py:73] [GMS] Worker module loaded - model loader registered, all patches applied
+(EngineCore pid=228) INFO 11-10 18:03:27 [session.py:98] Connected with rw_or_ro lock (granted=ro), committed=True
+(EngineCore pid=228) INFO 11-10 18:03:27 [allocator.py:172] [GMS] Created ro allocator for tag=weights (device=0)
+(EngineCore pid=228) INFO 11-10 18:03:28 [model_loader.py:273] [GMS] Read mode: imported 7.56 GiB
+(EngineCore pid=228) INFO 11-10 18:03:28 [model_runner.py:380] Model loading took 0.01 GiB memory and 1.428214 seconds
+(EngineCore pid=228) INFO 11-10 18:03:28 [worker.py:351] [GMS] Corrected vLLM model_memory_usage for KV sizing: 0.01 GiB -> 7.56 GiB (weights 7.56 GiB + offset 0.00 GiB)
+(EngineCore pid=228) INFO 11-10 18:03:31 [gpu_worker.py:578] Available KV cache memory: 9.84 GiB
+(EngineCore pid=228) INFO 11-10 18:03:31 [kv_cache_utils.py:1869] GPU KV cache size: 71,664 tokens, Maximum concurrency for 8,192 tokens per request: 8.75x
+--- decode
+(EngineCore pid=429) INFO 11-10 18:03:07 [patches.py:71] [GMS] RW mode - skipping committed memory adjustment
+(EngineCore pid=429) INFO 11-10 18:03:23 [default_loader.py:430] Loading weights took 1.19 seconds
+(EngineCore pid=429) INFO 11-10 18:03:23 [allocator.py:316] [GMS] Pruned 3 unreferenced allocations (0.74 GiB); kept 147 registered allocations
+(EngineCore pid=429) INFO 11-10 18:03:23 [model_loader.py:340] [GMS] Write mode: prepared 7.56 GiB for publication after profiling (vLLM memory offset 1.10 GiB)
+(EngineCore pid=429) INFO 11-10 18:03:24 [model_runner.py:380] Model loading took 7.56 GiB memory and 17.006601 seconds
+(EngineCore pid=429) INFO 11-10 18:03:24 [worker.py:351] [GMS] Corrected vLLM model_memory_usage for KV sizing: 7.56 GiB -> 8.65 GiB (weights 7.56 GiB + offset 1.10 GiB)
+(EngineCore pid=429) INFO 11-10 18:03:24 [patches.py:71] [GMS] RW mode - skipping committed memory adjustment
+(EngineCore pid=429) INFO 11-10 18:03:27 [patches.py:71] [GMS] RW mode - skipping committed memory adjustment
+(EngineCore pid=429) INFO 11-10 18:03:27 [gpu_worker.py:578] Available KV cache memory: 17.22 GiB
+(EngineCore pid=429) INFO 11-10 18:03:27 [session.py:98] Connected with ro lock (granted=ro), committed=True
+(EngineCore pid=429) INFO 11-10 18:03:27 [model_loader.py:128] [GMS] Published 7.56 GiB after vLLM memory profiling and switched to read mode
+(EngineCore pid=429) INFO 11-10 18:03:27 [kv_cache_utils.py:1869] GPU KV cache size: 125,360 tokens, Maximum concurrency for 8,192 tokens per request: 15.30x
+--- gms
+2026-11-10 18:03:08,336 - gpu_memory_service.server.allocations - DEBUG - Allocated eeb5b7a3-e49d-449a-bbcb-1e45a417511e: size=20971520, aligned=20971520, tag=weights, slot=146
+2026-11-10 18:03:08,338 - gpu_memory_service.server.allocations - DEBUG - Allocated d32316f5-4116-4e04-8776-b379bde69a83: size=100663296, aligned=100663296, tag=weights, slot=147
+2026-11-10 18:03:08,340 - gpu_memory_service.server.allocations - DEBUG - Allocated 7d2c1fa3-4bc5-42bf-bbe3-354805d32b84: size=50331648, aligned=50331648, tag=weights, slot=148
+2026-11-10 18:03:08,343 - gpu_memory_service.server.allocations - DEBUG - Allocated 7bbb5ab4-0f3e-432c-9051-a20558169193: size=778043392, aligned=778043392, tag=weights, slot=149
+2026-11-10 18:03:23,846 - gpu_memory_service.server.allocations - DEBUG - Freed allocation: 2cca6f83-c596-4d5f-91ea-96ded3d14039
+2026-11-10 18:03:23,846 - gpu_memory_service.server.allocations - DEBUG - Freed allocation: 67f7776b-f569-4abd-8cc9-1944c2a24096
+2026-11-10 18:03:23,846 - gpu_memory_service.server.allocations - DEBUG - Freed allocation: 7bbb5ab4-0f3e-432c-9051-a20558169193
+2026-11-10 18:03:27,135 - gpu_memory_service.server.gms - INFO - Committed layout with state hash: 44212c188bec62f6...
+## one request
+
+## KV transfer

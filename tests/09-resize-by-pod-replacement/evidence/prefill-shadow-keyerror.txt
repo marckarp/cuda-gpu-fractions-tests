@@ -1,0 +1,21 @@
+2026-11-10T19:16:35.856863Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request received request_id=3b50816e-d11b-4b8a-bf0b-a0b68110da33 otel.kind="server" request_id="3b50816e-d11b-4b8a-bf0b-a0b68110da33" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+2026-11-10T19:16:36.093846Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request completed request_id=39357672-4848-4188-83e5-42d5be1b6328 otel.kind="server" request_id="39357672-4848-4188-83e5-42d5be1b6328" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+(EngineCore pid=228) Exception in thread nixl_handshake_listener:
+(EngineCore pid=228) Traceback (most recent call last):
+(EngineCore pid=228)   File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+(EngineCore pid=228)     self.run()
+(EngineCore pid=228)   File "/usr/lib/python3.12/threading.py", line 1010, in run
+(EngineCore pid=228)     self._target(*self._args, **self._kwargs)
+(EngineCore pid=228)   File "/usr/local/lib/python3.12/dist-packages/vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_scheduler.py", line 369, in _nixl_handshake_listener
+(EngineCore pid=228)     (identity, b"", encoded_data[(target_pp_rank, target_tp_rank)], ts)
+(EngineCore pid=228)                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=228) KeyError: (0, 0)
+2026-11-10T19:16:36.430013Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request completed request_id=7024756c-3f0d-4d8c-8171-6d4d6bbdaafa otel.kind="server" request_id="7024756c-3f0d-4d8c-8171-6d4d6bbdaafa" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+2026-11-10T19:16:36.771440Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request completed request_id=9ef17a63-e611-40dc-8866-394f9e56684a otel.kind="server" request_id="9ef17a63-e611-40dc-8866-394f9e56684a" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+2026-11-10T19:16:36.950827Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request completed request_id=8af276d9-4b6b-4d16-aa1b-2ab88e99a842 otel.kind="server" request_id="8af276d9-4b6b-4d16-aa1b-2ab88e99a842" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+2026-11-10T19:16:37.286992Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request completed request_id=4ad875b9-650f-4303-9320-22a50f546e8b otel.kind="server" request_id="4ad875b9-650f-4303-9320-22a50f546e8b" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+2026-11-10T19:16:37.538531Z  INFO handle_payload: dynamo_runtime::pipeline::network::ingress::push_handler: request completed request_id=53e54884-ebfc-4e6a-997b-72b5ad2776ea otel.kind="server" request_id="53e54884-ebfc-4e6a-997b-72b5ad2776ea" component="prefill" endpoint="generate" namespace="dynamo" instance_id=2261940821636329999
+(EngineCore pid=431) ERROR 11-10 19:18:42 [scheduler.py:2984] Failing 2 request(s) due to KV load failure (failure_policy=fail, 7090 tokens affected). Request IDs: {'3cea1eda-00dd-4055-9cb9-19a763c94580-84acc04d', '80880c0c-91ff-4303-9886-eb8af2c29a47-bd2de418'}
+(EngineCore pid=431) ERROR 11-10 19:19:03 [base_worker.py:907] zmq.error.Again: Resource temporarily unavailable
+(EngineCore pid=431) ERROR 11-10 19:19:03 [base_worker.py:939] zmq.error.Again: Resource temporarily unavailable
+(EngineCore pid=431) ERROR 11-10 19:19:03 [scheduler.py:2984] Failing 1 request(s) due to KV load failure (failure_policy=fail, 3517 tokens affected). Request IDs: {'0989d4ca-fb2a-46dd-9c30-d7ddfd28d045-9db145a4'}

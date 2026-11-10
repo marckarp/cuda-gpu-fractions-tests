@@ -1,0 +1,16 @@
+### t09-A-p60-d35
+│                      Time to First Token (ms) │  5,764.13 │   654.58 │ 10,503.70 │  9,938.10 │  6,118.50 │ 5,730.92 │ 1,188.18 │
+│                          Request Latency (ms) │  9,649.02 │ 4,287.55 │ 14,428.75 │ 13,832.78 │ 10,073.30 │ 9,663.61 │ 1,236.68 │
+│                      Inter Token Latency (ms) │     30.59 │    22.76 │     33.08 │     32.62 │     31.58 │    30.90 │     1.45 │
+│ E2E Output Token Throughput (tokens/sec/user) │     13.55 │     8.87 │     29.85 │     26.62 │     13.96 │    13.25 │     2.46 │
+│          Output Token Throughput (tokens/sec) │    397.88 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│             Request Throughput (requests/sec) │      3.11 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│                      Request Count (requests) │    192.00 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+### t09-B-p35-d60
+│                      Time to First Token (ms) │ 11,877.58 │   590.15 │ 15,845.44 │ 14,921.09 │ 12,862.94 │ 12,589.66 │ 2,458.92 │
+│                          Request Latency (ms) │ 15,090.55 │ 3,748.79 │ 19,196.57 │ 18,338.93 │ 16,107.04 │ 15,799.31 │ 2,454.43 │
+│                      Inter Token Latency (ms) │     25.30 │    22.36 │     27.47 │     27.35 │     26.78 │     25.15 │     1.02 │
+│ E2E Output Token Throughput (tokens/sec/user) │      9.02 │     6.67 │     34.14 │     26.82 │      9.55 │      8.10 │     3.54 │
+│          Output Token Throughput (tokens/sec) │    251.00 │      N/A │       N/A │       N/A │       N/A │       N/A │      N/A │
+│             Request Throughput (requests/sec) │      1.96 │      N/A │       N/A │       N/A │       N/A │       N/A │      N/A │
+│                      Request Count (requests) │    192.00 │      N/A │       N/A │       N/A │       N/A │       N/A │      N/A │

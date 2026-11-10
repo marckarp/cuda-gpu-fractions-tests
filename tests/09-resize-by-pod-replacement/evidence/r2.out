@@ -1,0 +1,86 @@
+[18:56:13] load started (16 clients), active decode-s0 35%
+[18:56:58] delete decode-s0 (active, 35%)
+[18:57:06] decode-s1 active (15%)
+[18:57:06] decode-s0 pod gone
+[18:57:26] create standby decode-s2 (35%)
+[18:58:36] decode-s2 parked
+[18:58:56] delete decode-s1 (active, 15%)
+[18:59:04] decode-s2 active (35%)
+[19:01:08] load finished
+  t(s)   ok  err   tok/s  TTFT avg  TTFT max ITL avg ms  events
+     0    0    0       0       nan       nan        nan  
+     5    0    0       0       nan       nan        nan  
+    10    9    0     230      9.78     10.70       28.0  
+    15    3    0      77     11.84     12.99       31.6  
+    20   11    0     282     11.55     18.93       27.0  
+    25   16    0     410      3.31      7.52       26.9  
+    30   11    0     281      1.75      1.85       30.0  
+    35   14    0     358      3.42      4.64       28.0  
+    40   16    0     407      1.69      2.47       26.9  +45s delete decode-s0 (active, 35%)
+    45   11  118     281      1.83      1.96       25.8  
+    50    0  112       0       nan       nan        nan  +52s decode-s1 active (15%); +53s decode-s0 pod gone
+    55    0    0       0       nan       nan        nan  
+    60    0    0       0       nan       nan        nan  
+    65    0    0       0       nan       nan        nan  
+    70    0    0       0       nan       nan        nan  +73s create standby decode-s2 (35%)
+    75    1    0      26     22.28     22.28       32.7  
+    80   11    0     281     24.08     25.48       40.4  
+    85   12    0     307      9.18     26.67       44.9  
+    90   13    0     332      0.59      0.73       44.9  
+    95   14    0     358      0.56      0.60       44.5  
+   100   12    0     307      0.54      0.60       45.1  
+   105   13    0     332      0.55      0.61       45.0  
+   110   12    0     305      0.55      0.58       44.9  
+   115   13    0     332      0.55      0.59       45.5  
+   120   14    0     358      0.57      0.62       45.1  
+   125   12    0     307      0.56      0.63       44.9  
+   130   12    0     307      0.55      0.60       45.7  
+   135   13    0     333      0.56      0.61       45.5  
+   140   13    0     333      0.56      0.60       45.2  +143s decode-s2 parked
+   145   13    0     332      0.55      0.57       45.5  
+   150   12    0     306      0.55      0.57       45.4  
+   155   13    0     333      0.54      0.56       45.0  
+   160   13   10     332      0.54      0.56       45.0  +163s delete decode-s1 (active, 15%)
+   165   11  135     282      0.55      0.57       37.9  
+   170    0   53       0       nan       nan        nan  +171s decode-s2 active (35%)
+   175   14    0     358      2.42      4.33       26.2  
+   180   15    0     383      2.35      4.87       27.5  
+   185   15    0     383      1.83      1.97       27.1  
+   190   15    0     383      1.85      2.00       26.1  
+   195   15    0     383      2.04      2.15       26.5  
+   200   16    0     408      1.96      2.13       26.0  
+   205   14    0     358      2.05      2.20       26.5  
+   210   16    0     409      1.98      2.15       26.3  
+   215   14    0     357      2.02      2.17       26.8  
+   220   15    0     384      1.98      2.18       26.9  
+   225   15    0     383      1.93      2.03       26.7  
+   230   15    0     384      1.94      2.10       26.6  
+   235   15    0     384      1.99      2.13       26.9  
+   240   15    0     383      1.92      2.05       26.8  
+   245   15    0     383      1.97      2.05       27.3  
+   250   15    0     383      1.90      2.05       26.5  
+   255   15    0     383      2.00      2.11       26.1  
+   260   15    0     383      2.04      2.16       26.7  
+   265   15    0     383      2.01      2.15       27.0  
+   270   15    0     382      1.94      2.07       26.7  
+   275   15    0     382      2.00      2.10       26.6  
+   280   14    0     357      1.99      2.11       26.0  
+   285   15    0     384      2.10      2.20       26.0  
+   290   16    0     409      2.06      2.17       25.0  +295s load finished
+
+total requests 1105, errors 428
+   211 x http 503: {"message":"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deploy
+   211 x http 404: 
+     6 x http 503: {"message":"Service temporarily unavailable","type":"Service Unavailable","code"
+first error at +45.3s, last at +171.6s
+## wake timing from the engines' own logs
+2026-11-10T18:57:45.090236734Z 2026-11-10T18:57:45.090144Z  INFO failover_metrics.set_state: [Shadow] failover_state engine=2 -> init
+2026-11-10T18:58:36.596371095Z 2026-11-10T18:58:36.596269Z  INFO failover_metrics.set_state: [Shadow] failover_state engine=2 -> standby
+2026-11-10T18:59:03.757770925Z 2026-11-10T18:59:03.757730Z  INFO lifecycle.elect_and_wake: [Shadow] Lock acquired, waking engine
+2026-11-10T18:59:03.758182506Z 2026-11-10T18:59:03.757856Z  INFO failover_metrics.set_state: [Shadow] failover_state engine=2 -> waking
+2026-11-10T18:59:04.031232689Z 2026-11-10T18:59:04.031138Z  INFO failover_metrics.set_state: [Shadow] failover_state engine=2 -> active
+aiperf      1/1   Running   0     30m
+decode-s2   1/1   Running   0     3m42s
+frontend    1/1   Running   0     5m34s
+gms         1/1   Running   0     9m5s
+prefill-s   1/1   Running   0     9m1s

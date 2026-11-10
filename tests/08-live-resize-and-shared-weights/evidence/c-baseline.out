@@ -1,0 +1,29 @@
+prefill ready after 104 s
+decode ready after 104 s
+## GPU memory
+31390 MiB, 81920 MiB
+64291, 32 MiB, nvidia-cuda-mps-server
+86088, 11940 MiB, VLLM::EngineCore
+86081, 19408 MiB, VLLM::EngineCore
+## engine PIDs on the host (to map the rows above)
+prefill: 83162 86087 86088 
+decode: 83380 86080 86081 
+## what the engines report
+--- prefill
+[2m2026-11-10T18:00:16.990747Z[0m [32m INFO[0m [2mdynamo_runtime::worker[0m[2m:[0m dynamo runtime configuration: num_worker_threads=12, max_blocking_threads=12, system_host=0.0.0.0, system_port=8082, use_endpoint_health_st
+(EngineCore pid=229) INFO 11-10 18:01:30 [default_loader.py:430] Loading weights took 32.54 seconds
+(EngineCore pid=229) INFO 11-10 18:01:31 [model_runner.py:380] Model loading took 7.56 GiB memory and 34.168425 seconds
+(EngineCore pid=229) INFO 11-10 18:01:35 [gpu_worker.py:578] Available KV cache memory: 2.96 GiB
+(EngineCore pid=229) INFO 11-10 18:01:35 [kv_cache_utils.py:1869] GPU KV cache size: 21,520 tokens, Maximum concurrency for 8,192 tokens per request: 2.63x
+[2m2026-11-10T18:01:43.504602Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint[0m[2m:[0m Registered endpoint 'dynamo.prefill.clear_kv_blocks' with shared TCP server on 10.1.65.224:38967
+--- decode
+[2m2026-11-10T18:00:17.276791Z[0m [32m INFO[0m [2mdynamo_runtime::worker[0m[2m:[0m dynamo runtime configuration: num_worker_threads=12, max_blocking_threads=12, system_host=0.0.0.0, system_port=8081, use_endpoint_health_st
+(EngineCore pid=429) INFO 11-10 18:01:30 [default_loader.py:430] Loading weights took 32.56 seconds
+(EngineCore pid=429) INFO 11-10 18:01:31 [model_runner.py:380] Model loading took 7.56 GiB memory and 34.182749 seconds
+(EngineCore pid=429) INFO 11-10 18:01:35 [gpu_worker.py:578] Available KV cache memory: 10.34 GiB
+(EngineCore pid=429) INFO 11-10 18:01:35 [kv_cache_utils.py:1869] GPU KV cache size: 75,312 tokens, Maximum concurrency for 8,192 tokens per request: 9.19x
+[2m2026-11-10T18:01:43.504589Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint[0m[2m:[0m Registered endpoint 'dynamo.backend.clear_kv_blocks' with shared TCP server on 10.1.65.245:33637
+## one request
+{"id":"chatcmpl-32b407e8-0fb6-4049-ac9c-945e1d485bf6","choices":[{"index":0,"message":{"content":"Hello! How can I assist you today?","role":"assistant","reasoning_content":null},"finish_reason":"stop","logprobs":null}],"created":1794333705,"model":"Qwen/Qwen3-4B","service_tier":null,"system_fingerprint":null,"object":"chat.completion","usage":{"prompt_tokens":18,"completion_tokens":10,"total_toke
+
+## KV transfer

@@ -1,0 +1,45 @@
+prefill ready after 65 s
+decode ready after 65 s
+## GPU memory
+22982 MiB, 81920 MiB
+64291, 32 MiB, nvidia-cuda-mps-server
+105382, 11142 MiB, VLLM::EngineCore
+105389, 4060 MiB, VLLM::EngineCore
+## what the engines report
+--- prefill
+[2m2026-11-10T18:04:56.693652Z[0m [32m INFO[0m [2mdynamo_runtime::worker[0m[2m:[0m dynamo runtime configuration: num_worker_threads=12, max_blocking_threads=12, system_host=0.0.0.0, system_port=8082, use_endpoint_health_st
+(EngineCore pid=228) INFO 11-10 18:05:32 [patches.py:51] [GMS] Patched torch.cuda.empty_cache
+(EngineCore pid=228) INFO 11-10 18:05:32 [worker.py:73] [GMS] Worker module loaded - model loader registered, all patches applied
+(EngineCore pid=228) INFO 11-10 18:05:33 [session.py:98] Connected with rw_or_ro lock (granted=ro), committed=True
+(EngineCore pid=228) INFO 11-10 18:05:33 [allocator.py:172] [GMS] Created ro allocator for tag=weights (device=0)
+(EngineCore pid=228) INFO 11-10 18:05:34 [model_loader.py:273] [GMS] Read mode: imported 7.56 GiB
+(EngineCore pid=228) INFO 11-10 18:05:34 [model_runner.py:380] Model loading took 0.01 GiB memory and 1.471740 seconds
+(EngineCore pid=228) INFO 11-10 18:05:34 [worker.py:351] [GMS] Corrected vLLM model_memory_usage for KV sizing: 0.01 GiB -> 7.56 GiB (weights 7.56 GiB + offset 0.00 GiB)
+(EngineCore pid=228) INFO 11-10 18:05:37 [gpu_worker.py:578] Available KV cache memory: 2.87 GiB
+(EngineCore pid=228) INFO 11-10 18:05:37 [kv_cache_utils.py:1869] GPU KV cache size: 20,896 tokens, Maximum concurrency for 8,192 tokens per request: 2.55x
+[2m2026-11-10T18:05:43.727914Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint[0m[2m:[0m Registered endpoint 'dynamo.prefill.clear_kv_blocks' with shared TCP server on 10.1.65.196:45203
+--- decode
+[2m2026-11-10T18:04:56.774127Z[0m [32m INFO[0m [2mdynamo_runtime::worker[0m[2m:[0m dynamo runtime configuration: num_worker_threads=12, max_blocking_threads=12, system_host=0.0.0.0, system_port=8081, use_endpoint_health_st
+(EngineCore pid=429) INFO 11-10 18:05:32 [patches.py:51] [GMS] Patched torch.cuda.empty_cache
+(EngineCore pid=429) INFO 11-10 18:05:32 [worker.py:73] [GMS] Worker module loaded - model loader registered, all patches applied
+(EngineCore pid=429) INFO 11-10 18:05:32 [session.py:98] Connected with rw_or_ro lock (granted=ro), committed=True
+(EngineCore pid=429) INFO 11-10 18:05:32 [allocator.py:172] [GMS] Created ro allocator for tag=weights (device=0)
+(EngineCore pid=429) INFO 11-10 18:05:34 [model_loader.py:273] [GMS] Read mode: imported 7.56 GiB
+(EngineCore pid=429) INFO 11-10 18:05:34 [model_runner.py:380] Model loading took 0.01 GiB memory and 1.477866 seconds
+(EngineCore pid=429) INFO 11-10 18:05:34 [worker.py:351] [GMS] Corrected vLLM model_memory_usage for KV sizing: 0.01 GiB -> 7.56 GiB (weights 7.56 GiB + offset 0.00 GiB)
+(EngineCore pid=429) INFO 11-10 18:05:37 [gpu_worker.py:578] Available KV cache memory: 9.89 GiB
+(EngineCore pid=429) INFO 11-10 18:05:37 [kv_cache_utils.py:1869] GPU KV cache size: 72,032 tokens, Maximum concurrency for 8,192 tokens per request: 8.79x
+[2m2026-11-10T18:05:43.542401Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint[0m[2m:[0m Registered endpoint 'dynamo.backend.clear_kv_blocks' with shared TCP server on 10.1.65.213:44625
+--- gms
+2026-11-10 18:03:08,336 - gpu_memory_service.server.allocations - DEBUG - Allocated eeb5b7a3-e49d-449a-bbcb-1e45a417511e: size=20971520, aligned=20971520, tag=weights, slot=146
+2026-11-10 18:03:08,338 - gpu_memory_service.server.allocations - DEBUG - Allocated d32316f5-4116-4e04-8776-b379bde69a83: size=100663296, aligned=100663296, tag=weights, slot=147
+2026-11-10 18:03:08,340 - gpu_memory_service.server.allocations - DEBUG - Allocated 7d2c1fa3-4bc5-42bf-bbe3-354805d32b84: size=50331648, aligned=50331648, tag=weights, slot=148
+2026-11-10 18:03:08,343 - gpu_memory_service.server.allocations - DEBUG - Allocated 7bbb5ab4-0f3e-432c-9051-a20558169193: size=778043392, aligned=778043392, tag=weights, slot=149
+2026-11-10 18:03:23,846 - gpu_memory_service.server.allocations - DEBUG - Freed allocation: 2cca6f83-c596-4d5f-91ea-96ded3d14039
+2026-11-10 18:03:23,846 - gpu_memory_service.server.allocations - DEBUG - Freed allocation: 67f7776b-f569-4abd-8cc9-1944c2a24096
+2026-11-10 18:03:23,846 - gpu_memory_service.server.allocations - DEBUG - Freed allocation: 7bbb5ab4-0f3e-432c-9051-a20558169193
+2026-11-10 18:03:27,135 - gpu_memory_service.server.gms - INFO - Committed layout with state hash: 44212c188bec62f6...
+## one request
+{"id":"chatcmpl-712b5d56-d271-4a11-9e91-b9574d6f1c44","choices":[{"index":0,"message":{"content":"Hello! How can I assist you today?","role":"assistant","reasoning_content":null},"finish_reason":"stop","logprobs":null}],"created":1794333944,"model":"Qwen/Qwen3-4B","service_tier":null,"system_fingerprint":null,"object":"chat.completion","usage":{"prompt_tokens":18,"completion_tokens":10,"total_toke
+
+## KV transfer

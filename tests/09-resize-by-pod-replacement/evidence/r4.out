@@ -1,0 +1,83 @@
+[19:13:27] load started (16 clients); prefill-s 45% and prefill-p0 10% both active
+[19:14:07] delete prefill-s (45%)
+[19:14:38] prefill-s gone; create standby prefill-p1 (45%)
+[19:15:45] prefill-p1 parked
+[19:16:05] delete prefill-p0 (active, 10%)
+[19:16:35] prefill-p1 active (45%)
+[19:18:42] load finished
+  t(s)   ok  err   tok/s  TTFT avg  TTFT max ITL avg ms  events
+     0    4    0     102      1.02      1.48       26.7  
+     5    8    4     205      1.44      2.81       26.4  
+    10    5    2     128      0.64      0.93       24.9  
+    15    3    0      76      0.46      0.47       25.2  
+    20    2    0      51      0.44      0.48       24.6  
+    25    0    0       0       nan       nan        nan  
+    30    0    0       0       nan       nan        nan  
+    35    0    4       0       nan       nan        nan  +40s delete prefill-s (45%)
+    40    2    2      51      0.63      0.81       25.8  
+    45    0    0       0       nan       nan        nan  
+    50    0    0       0       nan       nan        nan  
+    55    0    0       0       nan       nan        nan  
+    60    0    0       0       nan       nan        nan  
+    65    0    4       0       nan       nan        nan  
+    70    0    0       0       nan       nan        nan  +71s prefill-s gone; create standby prefill-p1 (45%)
+    75    0    2       0       nan       nan        nan  
+    80    0    0       0       nan       nan        nan  
+    85    0    0       0       nan       nan        nan  
+    90    0    0       0       nan       nan        nan  
+    95    0    0       0       nan       nan        nan  
+   100    0    4       0       nan       nan        nan  
+   105    0    2       0       nan       nan        nan  
+   110    0    0       0       nan       nan        nan  
+   115    0    0       0       nan       nan        nan  
+   120    0    0       0       nan       nan        nan  
+   125    0    0       0       nan       nan        nan  
+   130    0    4       0       nan       nan        nan  
+   135    0    2       0       nan       nan        nan  +138s prefill-p1 parked
+   140    0    0       0       nan       nan        nan  
+   145    0    0       0       nan       nan        nan  
+   150    0    0       0       nan       nan        nan  
+   155    0    0       0       nan       nan        nan  +158s delete prefill-p0 (active, 10%)
+   160    0   74       0       nan       nan        nan  
+   165    0  160       0       nan       nan        nan  
+   170    0  160       0       nan       nan        nan  
+   175    0  160       0       nan       nan        nan  
+   180    0  160       0       nan       nan        nan  
+   185    0   96       0       nan       nan        nan  +188s prefill-p1 active (45%)
+   190    0    6       0       nan       nan        nan  
+   195    0    0       0       nan       nan        nan  
+   200    0    0       0       nan       nan        nan  
+   205    0    0       0       nan       nan        nan  
+   210    0    0       0       nan       nan        nan  
+   215    0    0       0       nan       nan        nan  
+   220    0    6       0       nan       nan        nan  
+   225    0    0       0       nan       nan        nan  
+   230    0    0       0       nan       nan        nan  
+   235    0    0       0       nan       nan        nan  
+   240    0    0       0       nan       nan        nan  
+   245    0    0       0       nan       nan        nan  
+   250    0    6       0       nan       nan        nan  
+   255    0    0       0       nan       nan        nan  
+   260    0    0       0       nan       nan        nan  
+   265    0    0       0       nan       nan        nan  
+   270    0    0       0       nan       nan        nan  
+   275    0    0       0       nan       nan        nan  
+   280    0    6       0       nan       nan        nan  
+   285    0    0       0       nan       nan        nan  
+   290    0    0       0       nan       nan        nan  
+   295    0    0       0       nan       nan        nan  
+   300    0    0       0       nan       nan        nan  
+   305    0    0       0       nan       nan        nan  
+   310    0    4       0       nan       nan        nan  
+
+total requests 892, errors 868
+   794 x http 503: {"message":"Model `Qwen/Qwen3-4B` is not ready to serve requests yet. The deploy
+    61 x stream error: {'message': 'Internal server error', 'type': 'internal_server_error', 'code'
+    13 x http 500: {"message":"Failed to generate completions","type":"Internal Server Error","code
+first error at +6.8s, last at +314.7s
+aiperf           1/1   Running   0     48m
+decode-s4        1/1   Running   0     14m
+frontend         1/1   Running   0     23m
+gms              1/1   Running   0     26m
+gms-prefill-kv   1/1   Running   0     6m37s
+prefill-p1       1/1   Running   0     4m4s

@@ -1,0 +1,30 @@
+# Test 08 A2/B2: a fraction pod that stays up with no CUDA process (sleep), so the
+# probe can be started and stopped with `kubectl exec` while the pod, its MPS
+# namespace and its KAI booking stay in place. 30% SMs, 10000 MiB.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resize-shell
+  labels: { app: t08, kai.scheduler/queue: default-queue }
+  annotations:
+    nvidia.com/container.main.gpu-compute.request: "0.3"
+    nvidia.com/container.main.gpu-memory.request: 10000Mi
+    nvidia.com/container.main.gpu-memory.limit: 10000Mi
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+spec:
+  schedulerName: kai-scheduler
+  runtimeClassName: nvidia
+  restartPolicy: Never
+  securityContext: { runAsNonRoot: true, runAsUser: 1000, runAsGroup: 1000 }
+  containers:
+    - name: main
+      image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+      imagePullPolicy: IfNotPresent
+      command: ["sleep", "infinity"]
+      env:
+        - { name: PROBE_MIB, value: "12000" }
+      volumeMounts:
+        - { name: t08, mountPath: /opt/t08 }
+  volumes:
+    - name: t08
+      hostPath: { path: /opt/t08, type: Directory }
