@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Test 10. Run on the box. Proves each request reaches the engine of the model it
+# Run on the box. Proves each request reaches the engine of the model it
 # names: through every frontend Service, send 12 requests for Qwen3-4B and 7 for
 # Qwen3-0.6B, mixed and 8 at a time, and compare with the per-engine counter
 # vllm:request_success_total read from each worker pod before and after.

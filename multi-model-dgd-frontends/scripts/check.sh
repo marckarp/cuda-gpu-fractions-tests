@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Test 10. Run on the box. Shows the state of everything in the default namespace
+# Run on the box. Shows the state of everything in the default namespace
 # and, for every frontend Service, which models it lists and whether each of the
 # two models answers through it.
 #   check.sh [seconds to wait for pods to be Ready, default 240]
