@@ -10,7 +10,7 @@ vLLM worker in its own GPU fraction of the same GPU (40% SMs / 14000 MiB and
 
 | Question | Answer |
 |---|---|
-| Does it need a frontend per model? | **No.** One frontend serves both models. |
+| Does it need a frontend per model? | **No, for two models.** One frontend serves both. Not shown for larger numbers (see the warning below). |
 | One frontend and several models in **one DGD**? | **Yes.** |
 | Several frontends in one DGD? | **Yes.** Each frontend serves all the models of that DGD. |
 | One frontend for models in **different DGDs**? | **Yes**, if the other DGD's worker sets a Dynamo namespace that starts with the frontend's prefix. Without that, each DGD's frontend sees only its own models. |
@@ -64,13 +64,25 @@ The per-model namespace is still accepted (shape A) but no longer required.
 ## What this means for many models on shared GPUs
 
 - One DGD per model, each with its own frontend (the layout in Dynamo's public
-  `examples/gpu-sharing`), is not required. One frontend can front any number of
-  model workers, in one DGD or spread over several.
+  `examples/gpu-sharing`), is not required for two models. One frontend fronted
+  both, in one DGD or spread over two. **This was only tested with two models;
+  see the warning below before relying on it for more.**
 - One DGD holding all models is the simplest. Separate DGDs with one shared
   frontend (shape D) keep each model's lifecycle independent, at the cost of
   setting one environment variable per worker.
 - Several frontends in one DGD give more than one entry point to the same set of
   models; they do not partition the models between them.
+
+## Warning: more than two models
+
+Two models is all this test covers. An earlier test of the same shape on Dynamo
+1.3.0 (one frontend, N workers started together, all serving the same weights
+under different names) lost models: 1 of 4 at N=4 and 9 of 16 at N=16, twice,
+while N=1, 2 and 8 were clean. Every pod was Running; the frontend failed to
+resolve some models' tokenizer files while resolving several at once, did not
+retry, and `/v1/models` silently listed fewer models than were deployed. Whether
+1.5.0 still does this is being tested; until then, check `/v1/models` against
+the number of models deployed.
 
 ## Not tested
 

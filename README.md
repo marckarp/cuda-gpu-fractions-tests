@@ -50,7 +50,8 @@ All of this is on the PR #147 fork, not the released stack (see
 [`multi-model-dgd-frontends/`](multi-model-dgd-frontends/README.md): two models as
 fractions of one GPU. One frontend serves both, in one DGD or across DGDs; two
 frontends in one DGD both serve both; requests reach the right engine (counted
-per engine).
+per engine). Tested with two models only; an earlier run
+on Dynamo 1.3.0 lost models at N=4 and N=16.
 
 ## How to request a GPU fraction
 
