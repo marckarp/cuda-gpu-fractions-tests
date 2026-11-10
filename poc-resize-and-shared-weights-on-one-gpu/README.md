@@ -16,10 +16,27 @@ Qwen3-4B on one A100 80GB, Dynamo 1.5.0 unmodified, 2026-11-10.
 | Change it with a standby engine? | **Decode: yes**, the standby serves 3 to 8 s after the old one is removed. **Prefill: no**, broken in Dynamo 1.5.0. |
 | Share one copy of the weights? | **Yes.** 23.0 GB used instead of 31.4 GB, same KV cache sizes. |
 | Share the KV cache (zero copy)? | **Not tested.** Still copied from prefill to decode. |
+| Does it beat one aggregated engine? | **Partly.** About the same throughput, inter-token latency 2.5x better at 32 concurrent, TTFT worse. |
+
+### Against one aggregated engine on the whole GPU
+
+Same box, CUDA graphs on (no `--enforce-eager`) for both layouts:
+
+| Layout | 32 concurrent (AIPerf): tok/s, TTFT, inter-token | 16 concurrent: tok/s, TTFT, inter-token |
+|---|---|---|
+| Aggregated, whole GPU | 407, 1.0 s, 71 ms | 455, 0.42 s, 32 ms |
+| Prefill 60% + decode 35%, shared weights | **413**, 5.8 s, **28 ms** | **481**, 0.69 s, **28 ms** |
+
+The split layout gives slightly more throughput and a flat inter-token latency
+(2.5x better at 32 concurrent). It does not beat aggregated on TTFT: prefill only
+has 60% of the GPU, and a 5x larger prefill KV cache made no difference, so that
+gap is compute, not memory. It is a trade of first-token time for steady token
+delivery, not a win on every axis.
 
 ### The split matters
 
-16 concurrent requests, 3.5k-token prompts, 128 output tokens:
+16 concurrent requests, 3.5k-token prompts, 128 output tokens (these runs used
+`--enforce-eager`):
 
 | Prefill / decode share of the GPU's SMs | Output tok/s | TTFT | Inter-token latency |
 |---|---|---|---|
@@ -48,6 +65,25 @@ Done naively that is over a minute of downtime, almost all of it engine start-up
 (the weights take 1.4 s once they are shared). A standby engine removes the wait:
 it starts in the background at the new share, maps the shared weights, parks
 without a KV cache, and takes over in 0.27 s when the active engine exits.
+
+## Layout
+
+```mermaid
+flowchart LR
+  FE["Frontend"] --> P
+  FE --> D
+  subgraph GPU["One GPU: 100% of its SMs, divided between pods by MPS"]
+    G["gms pod, 5% SMs<br/>one copy of the weights (7.56 GiB)<br/>and the decode KV pool"]
+    P["prefill pod<br/>45 to 60% SMs"]
+    D["decode pod, ACTIVE<br/>current share, holds the lock"]
+    S["decode pod, STANDBY<br/>new share, parked, no KV cache"]
+    G -. "weights mapped, not copied" .-> P
+    G -. "weights mapped" .-> D
+    G -. "weights mapped" .-> S
+    P -- "KV copied inside the GPU" --> D
+  end
+  D == "resize: active exits, lock released,<br/>standby serves 0.27 s later" ==> S
+```
 
 ## What we deployed
 
@@ -121,6 +157,7 @@ Shortest path to a usable resize: 3, 4 and 6 for decode; 1 and 2 for prefill.
 ## Caveats
 
 One run per scenario; 4B model only; an 80 GB card rather than the 40 GB card of
-the first PoC; engines ran with `--enforce-eager` as before; swap timings come
+the first PoC; the swap and split-comparison runs used `--enforce-eager` as before, the
+aggregated comparison did not; swap timings come
 from a simple closed-loop load generator, the split comparison was also confirmed
 with AIPerf (398 vs 251 tok/s at concurrency 32).

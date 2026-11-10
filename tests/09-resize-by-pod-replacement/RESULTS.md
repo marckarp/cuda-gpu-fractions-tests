@@ -132,6 +132,31 @@ What goes wrong around the swap:
    and fails the request (`Failing 1 request(s) due to KV load failure`),
    clients get 500 (`evidence/prefill-shadow-keyerror.txt`).
 
+## 7. Against aggregated, without `--enforce-eager`
+
+Added after the runs above. Aggregated engine on the whole GPU (PoC manifest
+`10-agg-1gpu.yaml`) against prefill 60% / decode 35% with shared weights.
+`evidence/aiperf-summary-vs-agg.txt`, `agg.out`, `aggg.out`, `g1.out`, `h1.out`.
+
+| Layout | AIPerf, 32 concurrent: tok/s / TTFT avg / ITL avg (p99) | 16 clients: tok/s / TTFT / ITL |
+|---|---|---|
+| Aggregated, `--enforce-eager` | 398 / 1.05 s / 71.8 (78.9) ms | 375 / 0.40 s / 40 ms |
+| Aggregated, CUDA graphs | 407 / 1.03 s / 70.7 (78.0) ms | 455 / 0.42 s / 32 ms |
+| Split 60/35, `--enforce-eager` | 398 / 5.76 s / 30.6 (33.1) ms | 480 / 0.55 s / 29 ms |
+| Split 60/35, CUDA graphs | 413 / 5.79 s / 28.2 (29.8) ms | 481 / 0.69 s / 28 ms |
+| Split 60/35, CUDA graphs, prefill KV 83k tokens instead of 16k | 413 / 5.80 s / 28.1 (29.7) ms | 482 / 0.70 s / 28 ms |
+
+- Throughput is about equal; ITL is 2.5x better for the split at 32 concurrent;
+  TTFT is 5.6x worse at 32 concurrent and 0.27 s worse at 16.
+- CUDA graphs help aggregated at 16 clients (375 to 455 tok/s) and barely change the split.
+- A larger prefill KV cache does not help, so prefill is limited by its SM share.
+- Giving prefill a larger KV cache needed a larger decode memory cap as well
+  (40000 MiB): with the 25000 MiB cap every request failed with 500, the
+  headroom rule from the first PoC (decode maps prefill's KV, and the mapping
+  counts against decode's cap).
+- CUDA graphs take about 0.6 GiB per engine; utilization was raised to 0.34 /
+  0.48 to keep the KV caches (`scripts/graphs.py`).
+
 ## What Dynamo would need
 
 | # | Gap | Evidence | Where |

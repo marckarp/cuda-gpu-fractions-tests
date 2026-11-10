@@ -1,0 +1,91 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    nvidia.com/container.main.gpu-compute.mode: sm-sharing
+    nvidia.com/container.main.gpu-compute.request: '0.6'
+    nvidia.com/container.main.gpu-memory.limit: 14000Mi
+    nvidia.com/container.main.gpu-memory.request: 14000Mi
+  labels:
+    app: dyn-frac
+    kai.scheduler/queue: default-queue
+    role: prefill
+    t09-share: '0.6'
+  name: prefill-g
+spec:
+  containers:
+  - args:
+    - --model
+    - Qwen/Qwen3-4B
+    - --disaggregation-mode
+    - prefill
+    - --kv-transfer-config
+    - '{"kv_connector":"NixlConnector","kv_role":"kv_producer"}'
+    - --gpu-memory-utilization
+    - '0.34'
+    - --max-model-len
+    - '8192'
+    - --load-format
+    - gms
+    command:
+    - python3
+    - -m
+    - dynamo.vllm
+    env:
+    - name: DYN_DISCOVERY_BACKEND
+      value: file
+    - name: DYN_FILE_KV
+      value: /opt/dyn-discovery
+    - name: DYN_SYSTEM_PORT
+      value: '8082'
+    - name: HF_HOME
+      value: /opt/hf-cache
+    - name: VLLM_NIXL_SIDE_CHANNEL_PORT
+      value: '20097'
+    - name: VLLM_NIXL_SIDE_CHANNEL_HOST
+      valueFrom:
+        fieldRef:
+          fieldPath: status.podIP
+    - name: DYN_LOG
+      value: info
+    - name: UCX_RCACHE_MAX_UNRELEASED
+      value: '1024'
+    - name: GMS_SOCKET_DIR
+      value: /opt/gms
+    image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0
+    imagePullPolicy: IfNotPresent
+    name: main
+    volumeMounts:
+    - mountPath: /opt/dyn-discovery
+      name: discovery
+    - mountPath: /opt/hf-cache
+      name: hf
+    - mountPath: /dev/shm
+      name: shm
+    - mountPath: /opt/gms
+      name: gms
+  restartPolicy: Never
+  runtimeClassName: nvidia
+  schedulerName: kai-scheduler
+  securityContext:
+    runAsGroup: 1000
+    runAsNonRoot: true
+    runAsUser: 1000
+  volumes:
+  - hostPath:
+      path: /opt/dyn-discovery
+      type: Directory
+    name: discovery
+  - hostPath:
+      path: /opt/hf-cache
+      type: Directory
+    name: hf
+  - emptyDir:
+      medium: Memory
+      sizeLimit: 8Gi
+    name: shm
+  - hostPath:
+      path: /opt/gms
+      type: Directory
+    name: gms
+
