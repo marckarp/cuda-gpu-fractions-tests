@@ -13,7 +13,7 @@ vLLM worker in its own GPU fraction of the same GPU (40% SMs / 14000 MiB and
 | Does it need a frontend per model? | **No.** One frontend served both models, and listed all of 4, 8 and 16 models in the larger runs below. |
 | One frontend and several models in **one DGD**? | **Yes.** |
 | Several frontends in one DGD? | **Yes.** Each frontend serves all the models of that DGD. |
-| One frontend for models in **different DGDs**? | **Yes**, if the other DGD's worker sets a Dynamo namespace that starts with the frontend's prefix. Without that, each DGD's frontend sees only its own models. |
+| One frontend for models in **different DGDs**? | **On 1.5.0, yes**, if the other DGD's worker sets a Dynamo namespace that starts with the frontend's prefix. **On 1.6.2, no**: a later rerun of the same setup never listed the second DGD's model. Without it, each DGD's frontend sees only its own models. |
 | Does each request reach the right model? | **Yes**, checked on the engines' own request counters in every shape. |
 
 | Shape | Manifest | Frontends see | Routing check |
@@ -23,6 +23,15 @@ vLLM worker in its own GPU fraction of the same GPU (40% SMs / 14000 MiB and
 | B. One DGD, two frontends, two models | [`b-one-dgd-two-frontends.yaml`](manifests/b-one-dgd-two-frontends.yaml) | both frontends: both models | PASS through each frontend: [check](evidence/b.out), [routing](evidence/b-routing.out) |
 | C. Two DGDs, each a frontend and one model | [`c1.yaml`](manifests/c1.yaml), [`c2.yaml`](manifests/c2.yaml) | each frontend: only its own model; the other returns 404 | PASS for the model each frontend owns: [check](evidence/c.out), [routing](evidence/c-routing.out) |
 | D. C's first DGD plus a worker-only DGD for the second model, namespace `default-mm-c1-qwen06b` | [`c1.yaml`](manifests/c1.yaml), [`d-worker-only-dgd.yaml`](manifests/d-worker-only-dgd.yaml) | the one frontend: both models | PASS: [check](evidence/d.out), [routing](evidence/d-routing.out) |
+
+## Rerun on Dynamo 1.6.2
+
+Later the same day the platform and runtime were moved to 1.6.2 and the main
+shapes rerun: one DGD with one frontend passed with 2 and 4 Qwen3-4B models and
+with 16 Qwen3-0.6B models (every model listed, every request counted by the
+right worker), and one DGD with two frontends passed. Shape D did not: the
+frontend received the discovery event for the worker-only DGD's model but never
+listed it. Everything else on this page is from the 1.5.0 runs.
 
 ## How routing was checked
 

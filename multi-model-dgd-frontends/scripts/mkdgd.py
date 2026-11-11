@@ -14,7 +14,9 @@ import sys
 
 import yaml
 
-IMAGE = "nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0"
+import os
+
+IMAGE = os.environ.get("IMAGE", "nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.5.0")
 name, frontends = sys.argv[1], sys.argv[2]
 components = []
 

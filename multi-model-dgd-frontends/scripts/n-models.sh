@@ -7,7 +7,12 @@
 N=${1:?N}; L=${2:?label}
 cd /opt/t10
 workers=""
-for i in $(seq -w 1 $N); do workers="$workers m$i:Qwen/Qwen3-0.6B:0.05:4500:-:m$i"; done
+# NS_PER_MODEL=1 gives each worker its own Dynamo namespace (needed on Dynamo 1.3.0,
+# where two models cannot register in one namespace). IMAGE selects the runtime image.
+for i in $(seq -w 1 $N); do
+  ns=-; [ -n "$NS_PER_MODEL" ] && ns=default-nm-m$i
+  workers="$workers m$i:Qwen/Qwen3-0.6B:0.05:4500:$ns:m$i"
+done
 python3 mkdgd.py nm Frontend $workers > nm-$L.yaml
 kubectl apply -f nm-$L.yaml </dev/null >/dev/null
 T0=$(date +%s)
